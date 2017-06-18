@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>领券</title>
+    <!--#include file="/html/include/common/intro.html"-->
+    <link rel="stylesheet" type="text/css" href="//s1.bbgstatic.com/gshop/css/module/coupon/coupon-common.css">
+</head>
+<body>
+
+
+
+<div class="coupon-container">
+
+    <!--目前有3种主题：( theme-green , theme-wathetBlue , theme-pinkRed) 在coupon-item元素上应用相应的样式名称就可以-->
+    <div class="coupon-item theme-pinkRed">
+        <div class="coupon-item-inner">
+            <div class="coupon-up">
+                <div class="coupon-logo">
+                    <div class="logo-content">
+                        <div class="logo-img"></div>
+                        <!--logo处的标题-->
+                        <div class="logo-text">云猴超市</div>
+                    </div>
+                </div>
+                <div class="coupon-title">
+                    <div class="coupon-val">
+                        <!--优惠券面值-->
+                        <div class="coupon-number">10</div>
+                    </div>
+                    <div class="coupon-note">
+                        <div class="coupon-yuan">YUAN</div>
+                        <!--面值右侧的卡券类型，最多3个字-->
+                        <div class="coupon-quan">食品券</div>
+                    </div>
+                </div>
+            </div>
+            <div class="coupon-down">
+                <div class="coupon-info">
+                    <!--优惠券说明，自行用br 标签换行，最多只能显示4行，每行最多15个字-->
+                    <div class="coupon-info-content">
+                        我就是不说，急不急？<br/>
+                        我就是不说，急不急？<br/>
+                        我就是不说，急不急？<br/>
+                        我就是不说，急不急？<br/>
+                    </div>
+                    <div class="coupon-info-ico">!</div>
+                </div>
+                <div class="coupon-btns">
+                    <!--标签上属性是业务属性，根据相应的业务自行绑定-->
+                    <span class="get-btn jFetch-btn" data-cpnsid="820" data-partnerKey="" data-outlucky="">立即领取</span>
+                </div>
+            </div>
+            <div class="split-left"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="split-right"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+    </div>
+
+
+    <div class="coupon-item theme-green">
+        <div class="coupon-item-inner">
+            <div class="coupon-up">
+                <div class="coupon-logo">
+                    <div class="logo-content">
+                        <div class="logo-img"></div>
+                        <!--logo处的标题-->
+                        <div class="logo-text">微信粉丝专享</div>
+                    </div>
+                </div>
+                <div class="coupon-title">
+                    <div class="coupon-val">
+                        <!--优惠券面值-->
+                        <div class="coupon-number">5</div>
+                    </div>
+                    <div class="coupon-note">
+                        <div class="coupon-yuan">YUAN</div>
+                        <!--面值右侧的卡券类型，最多3个字-->
+                        <div class="coupon-quan">现金券</div>
+                    </div>
+                </div>
+            </div>
+            <div class="coupon-down">
+                <div class="coupon-info">
+                    <!--优惠券说明，自行用br 标签换行，最多只能显示4行，每行最多15个字-->
+                    <div class="coupon-info-content">我就是不说，急不急？</div>
+                    <div class="coupon-info-ico">!</div>
+                </div>
+                <div class="coupon-btns">
+                    <!--标签上属性是业务属性，根据相应的业务自行绑定-->
+                    <span class="get-btn jFetch-btn" data-cpnsid="817" data-partnerKey="" data-outlucky="">立即领取</span>
+                </div>
+            </div>
+            <div class="split-left"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="split-right"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+    </div>
+
+</div>
+
+<script src="//s1.bbgstatic.com/lib/require/2.1/require.js"></script>
+<script src="//s1.bbgstatic.com/gshop/js/app.js?v=3.0.11.3"></script>
+<script>require(['conf/coupon/coupon-common']);</script>
+
+<!--#include file="/html/include/common/statistics.html"-->
+</body></html>

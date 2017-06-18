@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+/*a standard modal box*/
+._mod-share {
+
+    .mod-box {
+
+        .mod-box-hd {
+            height: rem(90);
+            margin: 0;
+            padding: 0;
+            color: #333;
+            font-size: rem(32);
+            line-height: rem(90);
+            text-align: center;
+            // border-bottom: 1px solid #dfdfdf;
+
+        }
+        .mod-box-bd {
+            .sharebox {
+                a {
+                    display: block;
+                    height: 2.13333rem;
+                    line-height: 2.13333rem;
+                    text-align: center;
+                    color: #666;
+                    font-size: 0.68267rem;
+
+                    i {
+                        padding-right: 0.42667rem;
+                        font-size: 0.85333rem;
+                    }
+                    &:nth-child(n+2) {
+                        border-top: 1px solid #e5e5e5;
+                    }
+
+                    &.bds_qzone i {
+                        color: #f39c12;
+                    }
+                    &.bds_sqq i {
+                        color: #3498db;
+                    }
+                    &.bds_tsina i {
+                        color: #e74c3c;
+                    }
+                }
+            }
+        }
+        .modal-box-btn-close{
+            position: absolute;
+            top: rem(-20);
+            right: rem(-20);
+            width: rem(52);
+            height: rem(52);
+            color: #333;
+            text-align: center;
+            text-decoration: none;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 1px 3px rgba(0,0,0,.1);
+
+            i{
+                display: block;
+                width: rem(52);
+                height: rem(52);
+                font-size: rem(28);
+                line-height: rem(52);
+            }
+        }
+    }
+}
+// skin
+._share_box {
+    width: rem(540);
+    border-radius: rem(16);
+    overflow: hidden;
+}

@@ -1,0 +1,44 @@
+<script id="cart/list/warehouse/items/info/info" type="text/html">
+<td colspan="2">
+	<%include('cart/list/warehouse/items/info/delivery')%>
+	<div class="detail">
+		<ul class="box">
+			<li class="tit">
+				<div class="info">
+					<%include('cart/list/warehouse/items/info/img')%>
+					<div class="describe">
+						<%include('cart/list/warehouse/items/info/title')%>
+						<%include('cart/list/warehouse/items/info/full-cut')%>
+						<%include('cart/list/warehouse/items/info/specification')%>
+						<div class="des-bd">
+							<div class="price">
+								<div class="price-inner">
+									<%include('cart/list/warehouse/items/info/price')%>
+									<% if(_flag=='products'){ %>
+									<%include('cart/list/warehouse/items/info/tariff')%>
+									<% } %>
+								</div>
+							</div>
+							<div class="f-r">
+								<% if(_flag=='products'){ %>
+									<%include('cart/list/warehouse/items/info/change-num')%>
+								<% } %>
+							</div>
+						</div>
+						<%include('cart/list/warehouse/items/info/quantity')%>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</td>
+</script>
+<!--#include file="delivery.html"-->
+<!--#include file="img.html"-->
+<!--#include file="title.html"-->
+<!--#include file="full-cut.html"-->
+<!--#include file="specification.html"-->
+<!--#include file="price.html"-->
+<!--#include file="tariff.html"-->
+<!--#include file="change-num.html"-->
+<!--#include file="quantity.html"-->

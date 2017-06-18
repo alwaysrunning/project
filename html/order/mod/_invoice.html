@@ -1,0 +1,41 @@
+<script id="jInvoiceTmpl" type="text/html">
+    <%  
+        var flag = false;//判断是否为空;
+        var txtAr = ['不要发票','个人发票','公司发票'];//
+        var addrSelf = null; //判断是否有门店自提点,如果有,不显示发票信息
+        if(groups.length && groups[0].deliveries.length){
+            addrSelf = groups[0].deliveries[0].type;
+        }
+        var url = '';
+        if (tax) {
+            for (k in tax) {
+                flag = true;
+                break;
+            }
+        }
+    %>
+    <% if (taxTag == 1 && addrSelf != 2 && buyType != "direct") { %>
+    <div class="mod-invoice" data-query="">
+        <div class="inner">
+            <div class="hd jHdZone  "><i class="icon iconglobal">&#xe613;</i><span
+                    class="txt-span">发票信息</span><input type="checkbox"
+                class="checkbox jCheckbox"/></div>
+            <div class="bd" style="display: none;">
+                <div id="jTaxType" class="item">
+                    <span class="text">发票内容</span>
+                    <!--<span class="btn">
+                    <% if (flag && tax['taxContent'] !== '') {%>
+                        <%= tax['taxContent']%>
+                    <%} else {%>
+                        请选择
+                    <%}%><i class="icon iconfont">&#xe60e;</i></span>-->
+                    <select id="taxContent" name="taxContent" class="ui-select "></select>
+                </div>
+                <div class="item">
+                    <input id="taxTitle" type="text" value="" name="taxTitle" placeholder="请填写发票抬头" class="" />
+                </div>
+            </div>
+        </div>    
+    </div>
+    <% } %>
+</script>

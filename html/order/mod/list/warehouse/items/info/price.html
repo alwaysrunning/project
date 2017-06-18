@@ -1,0 +1,18 @@
+<script id="order/list/warehouse/items/info/price" type="text/html">
+	<%
+		var mktprice = pro.mktprice,
+			originPrice = '',
+			pattern = /[1-9]/g;
+		// mktprice is not '' or '0.00'    
+		if ( mktprice && mktprice.length != 0 && pattern.test(mktprice) ) {
+			originPrice = mktprice;
+		}
+		var giftTag = pro['giftTag'];
+	%>
+	<% if(_flag=='products'||giftTag=='赠'){ %>
+		<em class="txt-red">￥<span class="jPriceSpan"><%=pro['bargainPrice']%></span></em>
+	<% }else{ %>
+		<em class="txt-red">￥<span class="jPriceSpan"><%=pro['subtotal']%></span></em>
+	<% } %>
+	<!-- <% if(originPrice.length!=0){ %><em class="del-price">￥<%=originPrice%></em><%}%> -->
+</script>

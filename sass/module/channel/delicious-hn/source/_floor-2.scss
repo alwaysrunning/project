@@ -1,0 +1,58 @@
+.floor-2 {
+    background-color: #fff;
+    margin-top: rem(20);
+    .hd { color: #333; }
+    .bd {
+        height: rem(401);
+        padding-bottom: rem(10);
+        .i {
+            background-color: #fff;
+            border-style: solid;
+            border-color: #f2f2f2;
+            display: block;
+            .gd-bn{
+                width: 100%;
+                height: 100%;
+            }
+            .gd-img{
+                position: absolute;
+                width: rem(110);
+                height: rem(110);
+                right: rem(10);
+                bottom: rem(10);
+            }
+            .gd-name{
+                position: absolute;
+                width: rem(150);
+                line-height: rem(24);
+                /*height: rem(24);*/
+                left: rem(10);
+                top: rem(15);
+                font-size: rem(20);
+                color: #333;
+                overflow: hidden;
+            }
+            .gd-price{
+                position: absolute;
+                width: rem(150);
+                /*height: rem(24);*/
+                line-height: rem(24);
+                left: rem(10);
+                top: rem(46);
+                font-size: rem(20);
+                color: #ff3333;
+            }
+        }
+        .limit-time {
+            top: rem(98);
+            left: rem(28);
+        }
+        $images:(rem(421), rem(200), 0px, 0px),
+                (rem(210), rem(200), rem(422), 0),
+                (rem(210), rem(200), 0, rem(201)),
+                (rem(210), rem(200), rem(211), rem(201)),
+                (rem(210), rem(200), rem(422), rem(201));
+        $borders: (0 1px 1px 0), (0 0 1px 0), (0 1px 0 0), (0 1px 0 0), (0);
+        @include img-abs($images, 5, '.i-', $borders);
+    }
+}

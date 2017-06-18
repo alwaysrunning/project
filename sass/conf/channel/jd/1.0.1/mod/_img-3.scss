@@ -1,0 +1,84 @@
+.mod-img-3 {
+  .mod-bd {
+    padding-top: rem(10);
+    padding-bottom: rem(10);
+    height: auto;
+    overflow: hidden;
+    background-color: #fff;
+
+    &.revert {
+      .img-1 {
+        float: right;
+        margin-right: rem(10);
+        margin-left: 0;
+
+      }
+      .img-3 {
+        float: left;
+        margin-left: rem(10);
+        margin-right: 0;
+      }
+    }
+  }
+
+  .img-1 {
+    float: left;
+    margin-left: rem(10);
+
+    a {
+      display: block;
+      width: rem(300);
+      height: rem(350);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .img-2 {
+    float: right;
+    margin-right: rem(10);
+    width: rem(420);
+    height: rem(350);
+
+    a {
+      display: block;
+      width: rem(420);
+      height: rem(170);
+
+      &:last-child {
+        margin-top: rem(10);
+      }
+    }
+
+    img {
+      width: 100%;
+      height: rem(170);
+
+    }
+  }
+
+  .list {
+    margin-bottom: rem(10);
+    overflow: hidden;
+    float: left;
+
+    a  {
+      float: left;
+      margin-right: rem(5);
+      width: rem(240);
+      height: rem(350);
+
+      &:first-child {
+        margin-left: rem(10);
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+  }
+}

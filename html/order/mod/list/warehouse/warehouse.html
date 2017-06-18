@@ -1,0 +1,13 @@
+<script id="order/list/warehouse/warehouse" type="text/html">
+<% if(warehouse && warehouse.length!=0){ 
+	for(var j=0; j< warehouse.length; j++){	
+		var wh = warehouse[j];
+%>
+	<% include('order/list/warehouse/title', {warehouse: wh, i:j}) %>
+	<% include('order/list/warehouse/items/items', {packageList : wh}) %>
+	<% include('order/list/warehouse/total', {warehouse: wh}) %>
+<% }} %>
+</script>
+<!--#include file="title.html"-->
+<!--#include file="items/items.html"-->
+<!--#include file="total.html"-->

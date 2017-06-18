@@ -1,0 +1,35 @@
+.mod-nav {
+    height: rem(70);
+    line-height: rem(70);
+    padding-bottom: rem(4);
+    padding-bottom: 4px;
+    text-align: center;
+    border-bottom: 1px solid #e4e4e4;
+
+    a {
+        width: auto;
+        height: 100%;
+        padding-left: 5%;
+        padding-right: 5%;
+        line-height: rem(60);
+        text-align: center;
+        text-decoration: none;
+        font-size: rem(28);
+        color: #333;
+        display: inline-block;
+        border-bottom: 4px solid rgba(0, 0, 0, 0);
+
+        span {
+            font-size: rem(28);
+            float: left;
+            line-height: rem(70);
+        }
+        &.active{
+            span {
+                color: #f03468;
+            }
+            border-bottom: 4px solid #f03468;
+        }
+    }
+}
+

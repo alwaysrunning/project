@@ -1,0 +1,26 @@
+<script id="cart/list/warehouse/items/failure-items" type="text/html">
+<%
+	if (items&& items.length!=0) {
+%>
+<div class="list">
+	<table class="box">
+	<%
+		for (var j=0;j<items.length;j++){
+			var pro = items[j];
+			var _data = {_flagHtml : '失效', pro : pro, _flag : 'unable-items'};
+	%>
+	<tbody class="warehouse-items tb-gifts jItem tb-gray" data-id="<%=pro.productId%>">
+		<tr class="jTableTr disabled-list">
+			<%include('cart/list/warehouse/items/chk', _data )%>
+			<%include('cart/list/warehouse/items/info/info', _data)%>
+			<%include('cart/list/warehouse/items/tariff', _data)%>
+		</tr>
+		<%include('cart/list/warehouse/items/limit-buy', _data)%>
+	</tbody>
+	<% } %>
+	<tr><td colspan="5" class="oper-td"><a class="btn-clear " action-type="emptyFailPro">清除失效商品</a></td></tr>
+	</table>
+</div>
+<% } %>
+</script>
+<!--#include file="limit-buy.html"-->

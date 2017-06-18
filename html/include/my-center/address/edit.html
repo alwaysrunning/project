@@ -1,0 +1,46 @@
+<form id="addressForm">
+    <section class="mod-address-edit">
+        <div class="address">
+            <input id="zone" type="hidden" name="zone" value="" >
+            <div class="form-item clearfix">
+                <label><span class="ui-form-required">*</span>收货地区</label>
+                <div id="jAddrPop" class="adr-sel">
+                    <!-- <span data-linkage-tab="湖南_株洲市_芦淞区_建宁街道:43_430200000000_430203000000_430203030000"  class="adr-msg-hidden">湖南,株洲市,芦淞区,建宁街道</span> -->
+                    <input id="jRegion" data-linkage-tab="" class="adr-msg" type="text" placeholder="请选择" value="" />
+                    <i class="icon iconfont">&#xe60e;</i>
+                </div>
+            </div>
+            <div class="form-item clearfix">
+                <label><span class="ui-form-required">*</span>详细地址</label>
+                <input id="xiangxiaddress" type="text" name="xiangxiaddress" placeholder="请输入详细地址" />
+            </div>
+            <!-- <div class="zitidian-div clearfix">
+                <div class="zitidian-item clearfix">
+                    <input id="zitidianCheckbox" type="checkbox" name="zitidian" node-type="daishoudian" checked>
+                    <label for="zitidianCheckbox">包裹代收 若勾选,包裹将会直接送至代收点(会短信通知)</label>
+                </div>
+                <div class="form-item clearfix">
+                    <label>自提点：</label>
+                    <select id="zitidianSelect" name="zitidian" disabled="disabled">
+                        <option value="">请选择</option>
+                    </select>
+                </div>
+            </div> -->
+            <div class="form-item clearfix">
+                <label><span class="ui-form-required">*</span>联系电话</label>
+                <input id="shoujihao" type="text" name="shoujihao" maxlength="11" placeholder="请输入收货人电话" />
+            </div>
+            <div class="form-item clearfix">
+                <label><span class="ui-form-required">*</span>收 货 人</label>
+                <input id="shouhuoren" type="text" name="shouhuoren" placeholder="请输入收货人电话" />
+            </div>
+            <div class="form-item form-item-default clearfix">
+                <label>设置默认地址</label>(注：每次下单时会使用该地址)<input name="mourendizhi" class="checkbox jCheck" type="checkbox" />
+            </div>
+        </div>
+    </section>
+    <!--#include file="/html/include/my-center/id/list.html"-->
+    <section class="button">
+        <a id="submitBtn" class="ui-button" node-type="submitBtn">保存并使用</a>
+    </section>
+</form>

@@ -1,0 +1,7 @@
+<script id="order/list/warehouse/items/info/tariff" type="text/html">
+	<% if(pro['totalTaxPrice'] && pro['totalTaxPrice'].length!=0){ 
+		var style = pro.isMarkingOut?' info-tariff-del':'';
+		%>
+		<span class="info-tariff <%=style%>">税费:￥<%=pro['totalTaxPrice']%></span>
+	<% } %>
+</script>

@@ -1,0 +1,234 @@
+.mod-ms {
+    .mod-title {
+        padding: 0 !important;
+        margin: 0 !important;
+        background-image: inline-image('index/bg-ms-title.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        height: rem(80);
+        width: 100%;
+    }
+    .mod-bd {
+        .mod-item-ms {
+            background-color: #fff;
+            height: rem(270);
+            position: relative;
+            display: block;
+
+            &.item-time-out,
+            &.item-sold-out {
+                .gd-count-down-progress {
+                    display: none;
+                }
+            }
+            &.item-sold-out {
+                .gd-tag {
+                    display: block;
+                }
+                .gd-cmd i:before {
+                    color: #ccc;
+                }
+            }
+
+            &:last-child {
+                .gd-info {
+                    border-bottom: none;
+                }
+            }
+
+            a {
+                display: block;
+            }
+            .gd-img {
+                float: left;
+                margin-left: rem(20);
+                padding-top: rem(20);
+                height: rem(225);
+                width: rem(225);
+            }
+            .gd-tag {
+                display: none;
+                position: absolute;
+                left: rem(20);
+                width: rem(225);
+                height: rem(225);
+                background-image: inline-image('index/tag-sold-out.png');
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-size: 75%;
+            }
+            .gd-info {
+                height: rem(270);
+                padding-right: rem(20);
+                // padding-bottom: rem(15);
+                margin-left: rem(270);
+                border-bottom: 1px solid #e5e5e5;
+                box-sizing: border-box;
+
+                .gd-title {
+                    margin-right: rem(20);
+                    font-size: rem(28);
+                    max-height: rem(108);
+                    min-height: rem(72);
+                    line-height: rem(36);
+                    color: #333333;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                }
+                .gd-count-down {
+                    position: relative;
+                    height: rem(80);
+                    line-height: rem(80);
+                    font-size: rem(26);
+                    color: #fff;
+                    border-radius: rem(22);
+                    overflow: hidden;
+
+                    .gd-count-down-txt {
+                        float: left;
+                    }
+                    span {
+                        min-width: rem(100);
+                        position: absolute;
+                        right: 0;
+                        color: $primary_color;
+                        opacity: 0;
+
+                        em,
+                        b {
+                            font-size: rem(26);
+                            font-weight: normal;
+                            font-style: normal;
+                        }
+                        &:before {
+                            width: rem(40);
+                            left: rem(-50);
+                            position: absolute;
+                            font-size: rem(28);
+                            text-align: center;
+                            font-family: "iconglobal";
+                            content: "\e65b";
+                            text-align: right;
+                        }
+                    }
+                    &[countdown-state="start"] {
+                        color: #666;
+
+                        span {
+                            opacity: 1;
+                        }
+                    }
+                    &[countdown-state="preload"] {
+                        opacity: 1;
+                        color: #faa9bf;
+
+                        span {
+                            opacity: 1;
+
+                            &:before {
+                                color: $primary_color;
+                            }
+                        }
+                        em,
+                        b {
+                            color: #faa9bf;
+                        }
+                    }
+                    &[countdown-state="end"] {
+                        opacity: 1;
+                        color: #e5e5e5;
+
+                        span {
+                            opacity: 1;
+
+                            &:before {
+                                color: #e5e5e5;
+                            }
+                        }
+                        em,
+                        b {
+                            color: #e5e5e5;
+                        }
+                    }
+                }
+                .gd-price {
+                    color: #000;
+                    margin-top: rem(20);
+                    height: rem(50);
+
+                    .gd-price-now {
+                        float: left;
+                        color: #f03468;
+                        font-size: rem(38);
+
+                        em {
+                            font-size: rem(26);
+                            font-style: normal;
+                        }
+                    }
+                    .gd-price-ori {
+                        float: left;
+                        margin-left: rem(40);
+                        color: #c0c0c0;
+                        font-size: rem(24);
+                        line-height: rem(54);
+                        text-decoration: line-through;
+
+                        em {
+                            font-style: normal;
+                        }
+                    }
+                }
+            }
+            .gd-cmd {
+                position: absolute;
+                right: 0rem;
+                bottom: rem(0);
+                width: rem(100);
+                height: rem(78);
+                line-height: rem(78);
+                text-align: center;
+                z-index: 5;
+                padding-left: rem(20);
+                -webkit-transform: translateZ(0);
+
+                &.gd-cmd-buynow .iconglobal:before,
+                &.jBuyNow .iconglobal:before,
+                &.flashSale .iconglobal:before {
+                    font-family: "iconglobal";
+                    content: "\e612";
+                }
+                &.btn-disable .iconglobal:before {
+                    color: #ccc;
+                }
+                i {
+                    &:before {
+                        font-size: rem(48);
+                        color: #f03468;
+                        font-family: "iconglobal";
+                        content: "\e603";
+                    }
+                }
+            }
+        }
+    }
+    .mod-ft {
+        height: rem(90);
+        border-top: 1px solid #e5e5e5;
+        border-bottom: 1px solid #e5e5e5;
+        background-color: #fff;
+
+        a {
+            display: block;
+            height: rem(90);
+            background-image: inline-image('index/bg-ms-all.png');
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: rem(200) rem(30);
+        }
+    }
+}

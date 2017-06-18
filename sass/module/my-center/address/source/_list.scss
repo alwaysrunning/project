@@ -1,0 +1,128 @@
+.address_hd {
+    height: rem(70);
+    font-size: rem(24);
+    background: #f0efed;
+    line-height: rem(70);
+    padding-left: rem(20);
+    color: #999999;
+    label {
+        color: #f33066;
+    }
+}
+.mod-address-list{
+    .address-item{
+        color:#333;
+        margin: 0 0 rem(20) 0;
+        background: #fff;
+        border-top: solid #e5e5e5 1px;
+        border-bottom: solid #e5e5e5 1px;
+
+        .bd{
+            padding: rem(30);
+            font-size: rem(24);
+            color: #666;
+            .address-text{
+                position: relative;
+                min-height: rem(40);
+                clear: both;
+                font-size: rem(30);
+                color: #666666;
+                margin-bottom: rem(20);
+                span {
+                    display: table-cell;
+                    line-height: rem(40);
+                }
+
+                .default-text{
+                    display: none;
+                    position: absolute;
+                    right: 0;
+                    top:40%;
+                    color:#FF4352;
+                }
+                .iconfont{
+                    font-size: rem(36);
+                }
+            }
+            .id-default {
+                margin-top: rem(10);
+                color: #f34568;
+                font-size: rem(26);
+                display: table-cell;
+                .iconglobal {
+                    margin-right: rem(8);
+                    font-size: rem(28);
+                }
+            }
+            .man{
+                padding: 0 0 rem(24) 0;
+                color: #333;
+                height: rem(30);
+                display: block;
+                span {
+                    font-size: rem(32);
+                    float: left;
+                    margin-right: rem(40);
+                }
+            }
+            
+        }
+        .bd-hover {
+            &:active {
+                background: #eee;
+            }
+        }
+        .ft{
+            height: rem(100);
+            line-height: rem(90);
+            border-top:1px solid #e5e5e5;
+            .buttons{
+                text-align:right;
+                a {
+                    font-size: rem(28);
+                    color: #333;
+                    margin-right: rem(30);
+                    i {
+                        font-size: rem(28);
+                        margin-right: rem(2);
+                    }
+                }
+            }
+        }
+    }
+    .default{
+        .bet-m {
+            &:before {
+                font-family: "iconglobal";
+                content: "\e617";
+                font-size: rem(28);
+                color: #f03468;
+                margin-right: rem(2);
+            }
+            i {
+                display: none;
+                color: #f03468;
+
+            }
+        }
+    }
+}
+.address_btn_bot {
+    width: 100%;
+    height: rem(90);
+    background: #f0efed;
+    text-align: center;
+    font-size: rem(34);
+    a {
+        display: block;
+        color: #f03468;
+        width: 93%;
+        height: rem(86);
+        background: #fff;
+        line-height: rem(86);
+        margin: 0 auto;
+        margin-top: rem(18);
+        border-radius: 2px;
+        border:solid #f03468 1px;
+    }
+}

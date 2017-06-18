@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "iconglobal";
+  src: font-url('global/iconfont.eot', false, true);
+  src: font-url('global/iconfont.eot#iefix', false, true) format('embedded-opentype'),
+      font-url('global/iconfont.woff', false, true) format('woff'),
+      font-url('global/iconfont.ttf', false, true) format('truetype'),
+      font-url('global/iconfont.svg', false, true) format('svg');
+}
+.iconglobal {
+  font-family: iconglobal;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}

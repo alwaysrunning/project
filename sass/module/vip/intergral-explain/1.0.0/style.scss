@@ -1,0 +1,43 @@
+/* common */
+@import "../../../../common-750";
+@import "../../../../common/slider/slider";
+@import "../../../../common/form/form";
+@import "../../../../common/button/button";
+@import "../../../../common/scroll-load/scroll-load";
+@import "../../../../common/go-top/go-top";
+
+
+
+html{
+    background: #fff;
+    padding: 0 0 rem(20);
+}
+
+.page-view-body{
+	padding: rem(30) rem(30);
+}
+.explain-box{
+	display: table;
+	.exp-item{
+		font-size: rem(26);
+		color: #f03468;
+		margin-bottom: rem(5);
+		font-style: normal;
+		i{
+			font-size: rem(40);
+			vertical-align: middle;
+			margin-right: rem(10);
+		}
+		span{
+			vertical-align: middle;	
+		}
+	}
+	p{
+		font-size: rem(24);
+		height:rem(24);
+		color: #333;
+		margin-bottom: rem(20);
+		font-weight: 200;
+		display:table;
+	}
+}

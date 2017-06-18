@@ -1,0 +1,48 @@
+<script id="cart/list/warehouse/items/info/change-num" type="text/html">
+	<% 
+	var styleDisabled = '';	
+	var disableStr = '';//数字增减样式;
+	var addBoxWrapStr = '';
+	var addBoxStr = '';
+	var disabled = '';
+		if(!pro.canSelected){
+			styleDisabled = ' list-disabled';
+			disableStr = 'jNumDisabled';
+			disabled = 'disabled = "disabled"';
+		}
+		if(pro.quantity && pro.quantity<=1){
+			addBoxStr = 'box-del';
+			addBoxWrapStr = 'jDel';
+		}
+		if (styleDisabled) {
+	%>
+		<div class="b-rt">
+			<div class="jDel jOther btn-del">
+				<a herf="javascript:;" class="icon iconglobal icon-del">&#xe635;</a>
+			</div>
+		</div>
+	<% } else {%>
+	  <!-- 数量增减 begin -->
+		<div class="opr-box jOther">
+			<div class="b-l">
+				<div class="add-box jQty <%=disableStr%>">
+					<div class="box-zone-l jQtyMin <%=addBoxWrapStr%>" data-q-flag=<%=(pro.quantity_disable?'1':'0')%>>
+						<div class="box-l <%=addBoxStr%> " data-q-flag=<%=(pro.quantity_disable?'1':'0')%>><i class="icon"></i>
+						</div>
+					</div>
+					<div class="box-zone-m">
+						<div class="box-m">
+							<input
+							type="tel" class="jQtyTxt " data-max="<%=pro.limit%>" value="<%=pro.quantity%>" <%=disabled%> />
+						</div>
+					</div>
+					<div class="box-zone-r jQtyAdd">
+						<div class="box-r  ">
+							<i class="icon iconglobal">&#xe647;</i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<%}%>
+</script>

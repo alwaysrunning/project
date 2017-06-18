@@ -1,0 +1,48 @@
+/* common */
+@import "../../common";
+@import "../../common/button/button";
+@import "../../common/dialog/dialog";
+
+/* modules */
+html,body{
+  background-color: rgb(132,8,34);
+}
+
+.coupon-content{
+  margin: 0 auto;
+  .img-d{
+    width: 100%;
+    position: relative;
+    img{
+      display: block;
+      width: 100%;
+      border: 0px solid transparent;
+
+    }
+    .jActCouponApply{
+      position: absolute;
+      text-decoration: none;
+      display: none;
+      top: 10px;
+      width: 42%;
+      height: 90%;
+      left: 29%;
+      border-radius: rem(20);
+      background-image: url(//s1.bbgstatic.com/gshop/images/coupon/pt.png);
+      background-repeat:no-repeat ;
+      background-size: 100% 100%;
+      &:active{
+        background-image: url(//s1.bbgstatic.com/gshop/images/coupon/pt2.png);
+      }
+      &.showBtn{
+        display: inline-block;
+      }
+    }
+  }
+}
+
+
+
+
+
+

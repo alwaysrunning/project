@@ -1,0 +1,16 @@
+<script id="cart/list/warehouse/items/info/tariff" type="text/html">
+	<% 
+	var isShowTariff = (pro.totalTaxPrice && pro.totalTaxPrice.length!=0);
+	if(isShowTariff){
+	%>
+	<div class="pri info-tariff  clearfix">
+		<div class="f-r jTariffBox jOther">
+			<span>税费</span>
+			<span class="<%if(pro.isMarkingOut){%> tariff-del<% } %>">￥<%=pro.totalTaxPrice%></span>
+			<% if(pro.tax_info && pro.tax_info.length!=0){ %>
+				<i class="icon iconfont ico-arrow-box jArrowBox">&#xe60c;</i>
+			<% } %>
+		</div>
+	</div>
+<% } %>
+</script>

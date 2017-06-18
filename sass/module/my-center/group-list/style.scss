@@ -1,0 +1,22 @@
+/* common */
+@import "../../../common-750";
+@import "../../../common/form/form";
+@import "../../../common/button/button";
+@import "../../../common/dialog/dialog";
+@import "../../../common/scroll-load/scroll-load";
+@import "../../../common/nav/_back2top";
+@import "../../../no-data";
+
+/* modules */
+@import "../common/base";
+@import "../common/pros";
+@import "../common/button";
+@import "./source/group-list";
+
+html{
+  background: #f0efed;
+  padding: 0 0 rem(20);
+  .loading, .loaded-all{
+    line-height: 1.28rem;
+  }
+}

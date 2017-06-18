@@ -1,0 +1,44 @@
+.ui-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    height: rem(95);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    border-bottom: 1px solid #e1dfe0;
+    .ui-title {
+        color: #333;
+        // font-size: em(17, $body-size);
+        font-size: rem(34);
+        height: rem(95);
+        line-height: rem(95);
+    }
+    .ui-handle {
+        color: #333;
+        // position: absolute;
+        // right: rem(20);
+        line-height: rem(88);
+        // font-size: em(14, $body-size);
+        font-size: rem(28);
+		@include tap-highlight;
+    }
+    .top-bar {
+        position: absolute;
+        top: 50%;
+        right: rem(20);
+        @include transform( translateY(-50%) );
+        .icon {
+            position: static;
+            font-size: rem(52);
+            margin-left: rem(35);
+			@include tap-highlight;
+            color: $primary_color;
+        }
+    }
+    .ui-back {
+        color: #333;
+		@include tap-highlight;
+    }
+}

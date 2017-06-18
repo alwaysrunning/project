@@ -1,0 +1,41 @@
+.mod-sub {
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    border-top: 1px solid #e5e5e5;
+    .inner {
+        overflow: hidden;
+        position: relative;
+        .b-l {
+            float: left;
+            position: absolute;
+            left: rem(22);
+            top: 50%;
+            @include transform( translateY(-50%) );
+            font-size: rem(30);
+            .txt-span {
+                color: #f03468;
+            }
+            .money {
+				font-family:'microsoft yahei';
+                color: #f03468;
+            }
+        }
+        .b-r {
+            float: right;
+			.ui-button {
+				// font: 400 .75rem/1.6rem 'microsoft yahei';
+				font-size: rem(30);
+				background-color: #f03468;
+				width: rem(220);
+				line-height: rem(100);
+				border: none;
+				height: rem(100);
+				@include border-radius(0);
+				@include active-btn;  
+			}
+        }
+    }
+}

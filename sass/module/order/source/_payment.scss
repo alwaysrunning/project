@@ -1,0 +1,48 @@
+﻿//支付方式
+.mod-payment {
+    border: 1px solid #cccccc;
+    background: #fff;
+    overflow: hidden;
+    .inner {
+        margin: rem(20);
+        overflow: hidden;
+        position: relative;
+    }
+    .hd {
+        .icon {
+            color: #ef6824;
+            font-size: rem(34);
+            margin-right: rem(10);
+        }
+        .txt-span {
+            font-size: rem(34);
+            color: #252525;
+        }
+    }
+    .bd {
+        margin-top: rem(20); 
+        position: relative;
+        .item {
+            color: #999999;
+            font-size: rem(30);
+            .name {
+                vertical-align: middle;
+            }
+            .phone {
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: rem(30);
+            }
+        }
+        .addr {
+            width: 90%;
+        }
+    }
+    .arrow {
+        position: absolute;
+        right: 0px;
+        top: rem(36);
+        font-size: rem(36);
+        color: #999;
+    }
+}

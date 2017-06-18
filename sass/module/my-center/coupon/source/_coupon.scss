@@ -1,0 +1,287 @@
+// variable
+/* 不同颜色 */
+$coupon-default:('.coupon-item', '', '', '', #f03468, #FDF0F5);
+$coupon-active:('.active', '', #fff, #fc8aaa, #f03468, #FDF0F5);
+$coupon-expired:('.expired', #e4e4e4, #ccc, '', #ccc, #f8f8f8);
+
+@mixin couponItem($items) {
+    $class: nth($items, 1); 
+    $border-color: nth($items, 2);
+    $money-color: nth($items, 3);
+    $money-bg-color: nth($items, 4);
+    $info-color: nth($items, 5);
+    $info-bg-color: nth($items, 6);
+    #{$class} {
+        position: relative;
+        margin-bottom: rem(20);
+        background-color: #fff;
+        color: $info-color;
+        .cp-item-tp {
+            position:relative;
+            overflow: hidden;
+            height: rem(116);
+            padding: 0px;
+            border: 1px solid #{$border-color};
+            border-radius: rem(4);
+            background-position: left bottom;
+            background-repeat: repeat-x;
+            background-size: rem(20);
+            .info-ico {
+                position: absolute;
+                right: 0px;
+                bottom: rem(10);
+                font-size: rem(40);
+                width: rem(110);
+                height: rem(100);
+                line-height: rem(100);
+                overflow: hidden;
+                text-align: center;
+                &:active {
+                    background-color: #dedede;
+                }
+                .iconglobal {
+                    font-size: rem(30);
+                }
+            }
+            .cp-code {
+                position: relative;
+                display: table-cell;
+                float: left;
+                width: rem(200);
+                height: rem(116);
+                line-height: rem(114);
+                font-family: Helvetica;
+                font-size: rem(24);
+                text-align: center;
+                vertical-align: bottom;
+                background:#{$money-bg-color};
+                color:#{$money-color};
+                .half-circle {
+                    margin-right: -1px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 8px;
+                    background-image: image-url("coupon/half-circle.png");
+                    @if $class=='.expired'{
+                    background-image: image-url("coupon/half-circle-gray.png");
+                }
+                    background-size: 7px;
+                    background-position: right;
+                    background-repeat: repeat-y;
+                }
+                em {
+                    font-size: rem(32);
+                    font-style: normal;
+                    &:last-child {
+                        font-size: rem(24);
+                    }
+                }
+                span {
+                    font-size: rem(80);
+                    font-weight: bold;
+                }
+            }
+            .cp-metas {
+                // float: left;
+                margin: 0 rem(110) 0 rem(200);
+                padding: rem(6) rem(34);
+                .cp-source, .cp-name {
+                    height: rem(50);
+                    margin: 0;
+                    padding: 0;
+                    overflow: hidden;
+                    font-size: rem(24);
+                    line-height: rem(50);
+                }
+                .cp-name {
+                    /* color: $info-color; */
+                    position: relative;
+                    opacity:0.5;
+                }
+                .iconglobal {
+                    font-size: rem(30);
+                    margin-right: 0.25em;
+                }
+            }
+        }
+        .cp-item-bt {
+            padding: rem(14) rem(35);
+            color: $info-color;
+            font-size: rem(24);
+            line-height: rem(40);
+            background-color: $info-bg-color;
+            border-radius: 0px 0px rem(4) rem(4);
+            display: none;
+        }
+       // &.disabled {
+       //     .cp-item-tp {
+       //         .info-ico {
+       //             &:active {
+       //                 background-color: transparent;
+       //             }
+       //         }
+       //     }
+       // }
+    }
+}
+
+body {
+    background: #fff;
+}
+.mod-coupon {
+    .hd {
+        height: rem(77);
+        background: #f8f8f8;
+        a {
+            display: inline-block;
+            width: 33%;
+            height: 100%;
+            line-height: rem(77);
+            float: left;
+            text-align: center;
+            font-size: rem(26);
+            color: #333;
+            text-decoration: none;
+            span{
+                display: inline-block;
+                -webkit-box-sizing:border-box;
+                height: 100%;
+                padding: 0 rem(5);
+            }
+        }
+        a.active{
+            span{
+                border-bottom: rem(3) solid #f03468;
+                color: #f03468;
+            }
+        }
+    }
+
+    .bd {
+        padding: rem(30) 0 rem(20) 0;
+        .coupon-list {
+            margin: 0 rem(20);
+            & ~ div {
+                @extend .coupon-list;
+            }
+        }
+        @include couponItem($coupon-default);
+        @include couponItem($coupon-active);
+        @include couponItem($coupon-expired);
+        .coupon-item-empty {
+            height: rem(400);
+            background-color: #fff;
+            background-image: image-url('/images/coupon/no-coupon.png');
+            background-size: rem(361) rem(454);
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+        }
+        // .coupon-item {
+        //     width: 93%;
+        //     margin: 0 auto;
+        //     border: solid #e5e5e5 1px;
+        //     margin-bottom: rem(20);
+        //     border-radius: rem(4);
+        //     .cp-item-tp {
+        //         background-color: #e4e4e4;
+        //         border-top-left-radius: rem(4);
+        //         border-top-right-radius: rem(4);
+        //         position: relative;
+        //         label {
+        //             position: absolute;
+        //             right: rem(40);
+        //             top: rem(30);
+        //             color: #fff;
+        //             font-size: rem(26);
+        //             span {
+        //                 font-size: rem(80);
+        //             }
+        //         }
+        //     }
+        //     .cp-name, .cp-code, .cp-source, .cp-date {
+        //         overflow: hidden;
+        //         white-space: nowrap;
+        //         text-overflow: ellipsis;
+        //     }
+        //     .cp-name {
+        //         font-size: rem(28);
+        //         color: #fff;
+        //         line-height: 1rem;
+        //         text-indent: rem(20);
+        //         padding: rem(35) 0 rem(10) 0;
+        //     }
+        //     .cp-code {
+        //         font-size: rem(30);
+        //         text-indent: rem(20);
+        //         color: #fff;
+        //         line-height: 1.6em;
+        //         width: 100%;
+        //         padding-bottom: rem(30);
+        //     }
+        //     .cp-gray {
+                
+        //     }
+        //     .cp-item-bt {
+        //         position: relative;
+        //         .cp-source {
+        //            background: url(//s1.bbgstatic.com/gshop/images/my-center/compor.png);
+        //            height: 6px;
+        //            position: absolute;
+        //            top: -6px;
+        //            width: 100%;
+        //         }
+        //     }
+        //     .cp-date {
+        //         font-size: rem(24);
+        //         color: #333;
+        //         background: #fff;
+        //         line-height: 0.8rem;
+        //         width: 100%;
+        //         text-indent: rem(20);
+        //         border-color: #ddd;
+        //         padding-top: 0.5rem;
+        //         padding-bottom: 0.5rem;
+        //     }
+        // }
+        // .default-item-120 {
+        //     border: solid #ffacac 1px;
+        //     .cp-item-tp {
+        //         background: #ff9090;
+        //     }
+        // }
+        // .default-item-50 {
+        //     border: solid #ffdb97 1px;
+        //     .cp-item-tp {
+        //         background: #fdcf75;
+        //     }
+        // }
+        // .default-item-5 {
+        //     border: solid #c6efbd 1px;
+        //     .cp-item-tp {
+        //         background: #a7db9c;
+        //     }
+        // }
+        // .default-item-ygq {
+        //     position: relative;
+        //     .ygq {
+        //         position: absolute;
+        //         background: url(//s1.bbgstatic.com/gshop/images/my-center/ygq.png) no-repeat;
+        //         width: 123px;
+        //         height: rem(86);
+        //         right: 0;
+        //         bottom: 0px;
+        //     }
+        // }
+    }
+}
+
+// 重载base模块样式定义
+.loading {
+    background-color: transparent;
+}
+
+.stream-error {
+    @extend .loading;
+}

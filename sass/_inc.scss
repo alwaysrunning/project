@@ -1,0 +1,18 @@
+/* global env vars */
+
+/* ui components customize consts */
+$button-fg: #fff;
+$button-bg: #ed5565;
+$button-border-color: #ed5565;
+$button-hover-bg: #d73848;
+$button-hover-border-color: #d73848;
+$primary_color: #f03468;
+
+/* common includes */
+@import 'compass/css3';
+@import 'compass/css3/transform';
+@import 'compass/css3/transition';
+@import 'compass/css3/box-sizing';
+@import 'compass/utilities';
+$supported-browsers: browsers();
+@import 'compass/support';

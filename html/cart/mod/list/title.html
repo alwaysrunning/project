@@ -1,0 +1,44 @@
+<script id="cart/list/title" type="text/html">
+<table class="box">
+	<%
+		var unusedPr = group.unusedPromotions;//未享受优惠
+		var enjoiedPr = group.promotions;//已享受优惠
+		var isHasPromotion = (enjoiedPr && enjoiedPr.length > 0)||(unusedPr && unusedPr.length > 0);
+		var borderClass = '';
+		if(enjoiedPr && enjoiedPr.length!=0){
+			borderClass = 'border-0';
+		}
+		var shopTag;
+		if (group.shopTag && group.shopTag.length) {
+			shopTag = group.shopTag;
+		}
+		var maxWidth = '13.5rem';
+	%>
+	<!-- 店铺标题 -->
+	<tr class="title-box list-title">
+		<th class="chk jChkCatBox ">
+			<input type="checkbox" class="checkbox jChkCat" />
+		</th>
+		<th colspan="2">
+		<p class="shop-p">
+			<!-- 店铺图标 -->
+			<% if(shopTag){ %>
+				<i class="shop-tag icon iconglobal">&#xe643;</i>
+			<% } %>
+			<a href="<%=group.twoDomain%>"  class="h1 txt-els" style="max-width:<%=maxWidth%>;"><% if(group.shopType==2){ %>步步高超市 — <% } %><%=group.shopName%></a>
+		</p>
+		</th>
+	</tr>
+		<!--<th class="shop-icon"> <% if(group.shopType==2){ %>门店发货<% }else{ %>全球购<% } %> </th>-->
+		<!-- 提示信息 begin -->
+		<% if(group['tipStatus'] && (group['tipStatus']==1 || group['tipStatus']==2)){ %>
+		<!-- 提示信息 设计图未标注 -->
+		<!--<tr>
+			<th colspan="2" class="market-tips">
+				<div><b class="tit-b">温馨提示：</b><%=group['switchTips']%></div>
+			</th>
+		</tr>-->
+		<% } %>
+		<!-- 提示信息 end -->
+</table>
+</script>

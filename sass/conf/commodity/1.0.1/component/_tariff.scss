@@ -1,0 +1,101 @@
+.mod-freight {
+  height: auto;
+  line-height: rem(36);
+  padding-top: rem(18);
+  padding-bottom: rem(18);
+  padding-left: rem(20);
+  margin-bottom: rem(10);
+  margin-top: rem(2);
+  overflow: hidden;
+  background-color: #fff;
+  font-size: rem(26);
+  color: #666666;
+}
+.mod-tariff {
+  background-color: #fff;
+  margin-top: rem(20);
+  margin-bottom: rem(20);
+
+  .mod-hd {
+    width: 100%;
+    height: rem(72);
+    background-image: inline-image('commodity/bg-flash-sales-title.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    text-align: center;
+    line-height: rem(72);
+    color: #666666;
+
+    &>img {
+      height: rem(28);
+      width: rem(28);
+      display: inline-block;
+      vertical-align: text-bottom;
+    }
+  }
+  .line {
+    height: auto;
+    line-height: rem(72);
+    text-align: center;
+    overflow: hidden;
+    color: #666;
+
+    .location {
+      display: inline-block;
+      color: #666666;
+      font-size: rem(26);
+
+      padding-top: rem(18);
+      padding-bottom: rem(18);
+      line-height: rem(36);
+
+      &:empty {
+        display: none;
+      }
+    }
+    .txt {
+      display: block;
+      padding-top: rem(18);
+      padding-bottom: rem(18);
+      color: #666666;
+      font-size: rem(26);
+      line-height: rem(36);
+      background-color: #fdebf0;
+      color: #ed386a;
+    }
+
+    .rate {
+      display: inline-block;
+      position: relative;
+      color: #666666;
+      font-size: rem(26);
+      padding-right: rem(42);
+
+      &:after {
+        position: absolute;
+        right: 0;
+        width: rem(42);
+        height: rem(42);
+        line-height: rem(42);
+        top: rem(16);
+        font-family: 'iconglobal';
+        content: '\e641';
+
+        @include transition-duration(.5s);
+
+        -moz-transform-origin: center rem(20);
+        -ms-transform-origin: center rem(20);
+        -webkit-transform-origin: center rem(20);
+        transform-origin: center rem(20);
+
+
+      }
+    }
+    &.animate-show {
+      .rate:after {
+        @include transform(rotate(180deg));
+      }
+    }
+  }
+}

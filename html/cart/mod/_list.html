@@ -1,0 +1,26 @@
+<script id="jListTmpl" type="text/html">
+<%
+	if (groups && groups.length > 0) {
+%>
+	<%
+		for (var j = 0; j < groups.length; j++) {
+			var group = groups[j];
+		if(group.warehouse_groups && group.warehouse_groups.length!=0){
+	%>
+	<div class="list">
+		<%include('cart/list/title', {group : group})%>
+		<%include('cart/list/warehouse/warehouse', {group : group})%>
+		<%include('cart/list/full-cut',{ group : group })%>
+		<%include('cart/list/total',{ group : group })%>
+	</div>
+	<% }}%>
+<% }%>
+<% include('cart/list/warehouse/items/failure-items', {items: invalidProducts}) %>
+<% include('cart/list/empty', {groups : groups, invalidProducts : invalidProducts, memberId : memberId}) %>
+</script>
+<!--#include file="list/title.html"-->
+<!--#include file="list/warehouse/warehouse.html"-->
+<!--#include file="list/full-cut.html"-->
+<!--#include file="list/total.html"-->
+<!--#include file="list/warehouse/items/failure-items.html"-->
+<!--#include file="list/empty.html"-->

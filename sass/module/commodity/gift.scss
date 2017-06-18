@@ -1,0 +1,76 @@
+/* common */
+@charset "utf-8";
+@import "../../common-750";
+
+body {
+    background-color: #f0efed;
+}
+.gift {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: rem(20);
+    font-size: rem(24);
+    background: #fff;
+    border: solid #dfdfdf 1px;
+    border-bottom: 0;
+    .hd {
+        background-color: #f8f8f8;
+        border-bottom: solid #dfdfdf 1px;
+        color: #666;
+        text-align: center;
+        font-size: rem(30);
+        height: rem(76);
+        line-height: rem(76);
+        color: #f03468;
+    }
+    .bd {
+        padding: rem(30) rem(20);
+        font-size: rem(30);
+        height: rem(220);
+        position: relative;
+        border-bottom: solid #dfdfdf 1px;
+
+        .left {
+            float: left;
+            width: rem(220);
+            margin-right: rem(30);
+
+            img {
+                width: rem(220);
+                height: rem(220);
+            }
+        }
+        .right {
+            margin-left: rem(30);
+            width: rem(440);
+            height: rem(200);
+            overflow: hidden;
+            position: relative;
+
+            .top {
+                color: #333333;
+                font-size: rem(24);
+                line-height: rem(40);
+
+                a {
+                    color: #666;
+                }
+            }
+            .bottom {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                color: #999;
+                font-size: rem(22);
+                padding-top: rem(8);
+                overflow: hidden;
+                label {
+                    font-size: rem(28);
+                    color: #999;
+                    float: right;
+                }
+            }
+        }
+    }
+}

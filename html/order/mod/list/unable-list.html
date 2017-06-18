@@ -1,0 +1,20 @@
+<script id="order/list/unable-list" type="text/html">
+<% if((unableItems && unableItems.length!=0)||(unableGifts && unableGifts.length!=0)||(unableGroups && unableGroups.length!=0)||(unablePreSale&& unablePreSale.length!=0)){ %>
+    <div class="mod-list-no-del">
+        <div class="bd">
+            <div class="title"><i class="icon iconglobal">&#xe633;</i>以下商品无货或不在配送范围之内,将不会进行结算</div>
+            <div class="inner no-gds">
+                <table class="box">
+                    <tbody class="product-list warehouse-items">
+					<% include('order/list/warehouse/items/unable-items', {unableItems: unableItems, nextArray: unableGifts}) %>
+					<% include('order/list/warehouse/items/unable-items', {unableItems: unableGifts, _flag: 'gifts', nextArray: unableGroups}) %>
+					<% include('order/list/warehouse/items/unable-items', {unableItems: unableGroups, _flagHtml: '团', _flag: 'groups', nextArray: unablePreSale}) %>
+					<% include('order/list/warehouse/items/unable-items', {unableItems: unablePreSale, _flagHtml : '预', _flag: 'pre'}) %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+<% } %>
+</script>
+<!--#include file="warehouse/items/unable-items.html"-->

@@ -1,0 +1,107 @@
+﻿// 依赖
+@import 'common';
+
+//发票信息
+.mod-invoice {
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    overflow: hidden;
+    margin-top: rem(20);
+    .checkbox {
+        @extend %checkbox;
+        float: right;
+    }
+    .inner {
+        margin: rem(20);
+        overflow: hidden;
+        position: relative;
+    }
+    .hd {
+        position: relative;
+        padding: rem(5) 0 rem(5) rem(38);
+		@include tap-highlight;
+        .icon {
+            @extend %mod-addr-block;
+            position: absolute;
+            left: 0;
+            color: #333;
+            font-size: rem(28);
+            margin-right: rem(10);
+        }
+        .txt-span {
+            font-size: rem(30);
+            vertical-align: middle;
+            color: #252525;
+        }
+    }
+    .bd {
+        margin-top: rem(15);
+        .item {
+            color: #333;
+            position: relative;
+            border-bottom: 1px solid #e5e5e5;
+            padding: rem(20) rem(20) rem(20) rem(38);
+            // @include font-size-em(24);
+            font-size: rem(28);
+            line-height: rem(24);
+            input {
+                width: 100%;
+                border: none;
+				@include tap-highlight;
+            }
+            .text {
+                // vertical-align: middle;
+            }
+            .btn {
+                float: right;
+                color: #999;
+            }
+            .ui-select {
+                @extend .btn;
+                @extend %mod-addr-block;
+                right: rem(10);
+                border: none;
+                background-color: #fff;
+                &:active {
+                    border: none;
+                }
+                &:focus {
+                    border: none;
+                    outline: none;
+                }
+				@include tap-highlight;
+            }
+            .icon {
+                font-size: rem(24);
+                margin-left: rem(15);
+                margin-right: rem(10);
+            }
+        }
+    }
+    // .bd { 
+    //     margin-top: rem(10); 
+    //     position: relative;
+    //     .item {
+    //         color: #999999;
+    //         font-size: rem(28);
+    //         .text {
+    //             vertical-align: middle;
+    //         }
+    //         .title,.cont {
+    //             display: inline-block;
+    //             vertical-align: middle;
+    //             margin-left: rem(30);
+    //         }
+    //         .cont {
+    //             max-width: rem(100);
+    //         }
+    //     }
+    // }
+    // .arrow {
+    //     position: absolute;
+    //     right: 0px;
+    //     top: rem(36);
+    //     font-size: rem(36);
+    //     color: #999;
+    // }
+}

@@ -1,0 +1,23 @@
+<script id="order/list/warehouse/items/items" type="text/html">
+<% 
+	if(packageList && packageList!=null){
+%>
+	<table class="box warehouse-items product-list">
+	<% var productList = packageList['items'];
+	var _giftsList = packageList['gifts'];
+		_giftsList = _giftsList?_giftsList:[];
+		//productList = productList.concat(giftsList);
+		productList = productList.concat(_giftsList);
+	 if(productList && productList.length!=0){
+		for (var k = 0; k<productList.length; k++) {
+			var pro = productList[k];
+ %>
+ <tr class="product-list jProductlistTable jTableTr <%if(k==productList.length-1){%>end<% } %>" data-id="<%=pro.productId%>">
+			<%include('order/list/warehouse/items/info/info', {pro : pro, _flag : 'products'})%>
+		</tr>
+		<% } %>
+		<% } %>
+	</table>
+<%} %>
+</script>
+<!--#include file="info/info.html"-->

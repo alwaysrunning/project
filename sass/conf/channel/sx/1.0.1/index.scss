@@ -1,0 +1,32 @@
+@import 'common-750';
+@import 'common/search/search';
+@import 'common/linkage-tab/linkage-tab';
+@import 'common/dialog/dialog';
+@import 'common/nav/back2top';
+@import 'common/nav/nav';
+@import 'common/header/global';
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: #f0efed;
+}
+
+.page-view-body {
+  max-width: 16rem;
+  min-height: 23rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+@import '../../../index/1.0.1/mod/nav';
+
+@import './mod/slider';
+@import './mod/floor';
+@import './mod/img-3';
+@import './mod/banner';
+@import './mod/miaosha';

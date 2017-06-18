@@ -1,0 +1,165 @@
+<!-- slider  start slid-->
+<div class="mod-slider">
+  <div id="slides" class="ui-slider">
+    {loop $pageinfo['slid'] $key $image}
+    {if $key==0}
+    <a href="{$image['adUrl']}" data-bpm="7.{$pageinfo['mark']}_slid.1.{$key+1}.0.0">
+      <img src="{$image['adImg']}"  class="jSliderImg">
+    </a>
+    {else}
+    <a href="{$image['adUrl']}" data-bpm="7.{$widget_id}.1.{$key+1}.0.0">
+      <img src="//s3.bbgstatic.com/pub/img/blank.gif" data-url="{$image['adImg']}" alt="" class="jSliderImg img-error">
+    </a>
+    {/if}
+    {/loop}
+  </div>
+</div>
+<!-- slider  end-->
+
+
+<!-- 通知 start -->
+<!--
+<div class="mod-notice">
+  <i class="mod-icon iconglobal"></i>
+  <div class="mod-cnt jTopNotice"></div>
+</div>
+-->
+<!-- 通知 end -->
+
+
+<!-- 介绍start -->
+<div class="mod-desc">
+  {loop $pageinfo['jumpBtn'] $key $item}
+  <div class="mod-cnt mod-cnt-{$key+1}">
+    <a href="{$item['url']}" data-bpm="7.{$pageinfo['mark']}_jumpBtn.1.{$key+1}.0.0">
+      <div class="mod-icon">
+        <img src="{$item['img']}" />
+      </div>
+      <div class="mod-txt">{$item['name']}</div>
+    </a>
+  </div>
+  {/loop}
+</div>
+<!-- 介绍end -->
+
+
+
+<!-- 手机秒杀 start -->
+{if $pageinfo['seckillBtn']['currentEndTime'] != ''}
+<div class="mod-floor">
+  <div class="mod-bd">
+
+    <a href="{$pageinfo['seckillBtn']['secKillUrl']}" data-bpm="7.{$pageinfo['mark']}_seckillBtn.1.{$key+1}.0.0" class="mod-port-ms" style="background-image: url({$pageinfo['seckillBtn']['secKillImg']})" node-type="ms-port">
+      <div class="ms-info ms-info-now">
+        <div class="txt">本场秒杀倒计时</div>
+        <div class="date jCountTime" data-animate="date-animate" data-endtime="{$pageinfo['seckillBtn']['currentEndTime']}000"></div>
+        {if $pageinfo['seckillBtn']['nextStartTime'] != ''}
+        <div class="next"  data-time="{$pageinfo['seckillBtn']['nextStartTime']}000" data-type="next"></div>
+        {/if}
+      </div>
+    </a>
+  </div>
+</div>
+{else}
+{if $pageinfo['seckillBtn']['nextStartTime'] != ''}
+<div class="mod-floor">
+  <div class="mod-bd">
+    <a href="{$pageinfo['seckillBtn']['secKillUrl']}" data-bpm="7.{$pageinfo['mark']}_seckillBtn.1.{$key+1}.0.0" class="mod-port-ms" style="background-image: url({$pageinfo['seckillBtn']['secKillImg']})" node-type="ms-port">
+      <div class="ms-info">
+        <div class="txt">下场开始时间</div>
+        <div class="date" data-time="{$pageinfo['seckillBtn']['nextStartTime']}000" data-type="next"></div>
+      </div>
+    </a>
+  </div>
+</div>
+{/if}
+{/if}
+<!-- 手机秒杀 end  -->
+
+<!-- 团 start -->
+{if $tuan_ad_pic && $tuan_ad_pic_link}
+<a href="{$tuan_ad_pic_link}" style="width: 100%; height: auto;margin-top: .2rem;display: block;">
+ <img style="width: 100%; height: auto" src="//s3.bbgstatic.com/pub/img/blank.gif" class="jImg gd-img" data-url="{$tuan_ad_pic}">
+</a>
+{/if}
+<!-- 团 end -->
+
+
+
+<!-- mainAd start -->
+{if $pageinfo['mainAd']}
+<div class="mod-floor mod-common">
+  <div class="mod-bd">
+    {loop $pageinfo['mainAd'] $key $image}
+    <div class="mod-img-item">
+      <a href="{$image['adUrl']}" data-bpm="7.{$pageinfo['mark']}_mainAd.1.{$key+1}.0.0">
+        <img src="//s3.bbgstatic.com/pub/img/blank.gif" class="jImg gd-img" data-url="{$image['adImg']}">
+      </a>
+    </div>
+    {/loop}
+  </div>
+</div>
+{/if}
+<!-- mainAd end  -->
+
+
+<!-- 海外top start -->
+{if $pageinfo['mainProduct']}
+<div class="mod-floor mod-common" data-floor="top">
+  <div class="mod-title">海外top榜</div>
+  <div class="mod-bd" >
+    {loop $pageinfo['mainProduct'] $key $product}
+    <div class="mod-item jProductItem" data-id="{$product['productId']}">
+      <a href="//m.yunhou.com/item/{$product['productId']}.html">
+        <img src="//s3.bbgstatic.com/pub/img/blank.gif" data-url="{$product['img']}" class="jImg gd-img img-error" />
+        <div class="gd-tag"></div>
+        <div class="gd-labels"></div>
+
+        <div class="gd-info">
+          <div class="gd-name">
+            <div class="title">{$product['productName']}</div>
+          </div>
+
+          <div class="gd-price">
+            <div class="gd-price-now"><em>￥</em>{$product['saleprice']}</div>
+            <div class="gd-price-ori"><em>￥</em>{$product['mktprice']}</div>
+          </div>
+        </div>
+      </a>
+      <div class="gd-cmd  {if $product['isbuynow'] == '1'}jBuyNow{else}jAdd2Cart{/if}">
+        <i class="iconglobal">{if $product['isbuynow'] == '1'}{else}{/if}</i>
+      </div>
+    </div>
+    {/loop}
+  </div>
+</div>
+{/if}
+<!-- 海外top end  -->
+
+<!-- 热门活动 start -->
+{if $pageinfo['generalAd']}
+<div class="mod-floor mod-common">
+  <div class="mod-title">热门活动</div>
+  <div class="mod-bd">
+    {loop $pageinfo['generalAd'] $key $image}
+    <div class="mod-img-item">
+      <a href="{$image['adUrl']}" data-bpm="7.{$pageinfo['mark']}_generalAd.1.{$key+1}.0.0">
+        <img src="//s3.bbgstatic.com/pub/img/blank.gif" class="jImg gd-img" data-url="{$image['adImg']}">
+      </a>
+    </div>
+    {/loop}
+  </div>
+</div>
+{/if}
+<!-- 热门活动 end -->
+
+
+
+<!-- 优选单品 start -->
+<div class="mod-floor mod-common" data-active-id="{$widget_id}">
+  <div class="mod-title">优选单品</div>
+  <div class="mod-bd" >
+    <div class="jPage" data-page="1"><div class="loading">正在加载，请稍后...</div></div>
+  </div>
+</div>
+<!-- 优选单品 end -->

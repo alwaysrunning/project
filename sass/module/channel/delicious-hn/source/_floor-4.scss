@@ -1,0 +1,26 @@
+.floor-4 {
+    background-color: #fff;
+    margin-top: rem(20);
+    .hd { color: #333; }
+    .bd {
+        height: rem(382);
+        padding-bottom: rem(10);
+        .i {
+            background-color: #fff;
+            border-style: solid;
+            border-color: #fff;
+            display: block;
+        }
+        .limit-time {
+            top: rem(98);
+            left: rem(28);
+        }
+        $images: (rem(210), rem(382), 0px, 0px),
+                 (rem(210), rem(190), rem(211), 0),
+                 (rem(210), rem(190), rem(422), 0),
+                 (rem(210), rem(190), rem(211), rem(192)),
+                 (rem(210), rem(190), rem(422), rem(192));
+        $borders: (0 1px 0 0), (0 1px 2px 0), (0 0 2px 0), (0 1px 0 0), (0 1px 0 0);
+        @include img-abs($images, 5, '.i-', $borders);
+    }
+}

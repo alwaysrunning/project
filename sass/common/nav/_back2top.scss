@@ -1,0 +1,22 @@
+﻿.back2top {
+    position: fixed;
+    height: rem(90);
+    width: rem(90);
+    border-radius: 50%;
+    border: 1px solid #cccccc;
+    text-align: center;
+    bottom: rem(120);
+    right: .8rem;
+    display: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 10;
+    cursor: pointer;
+    @include transform(scale(0, 0));
+
+    i {
+        display: block;
+        line-height: rem(90);
+        font-size: rem(48);
+        color: #999999;
+    }
+}

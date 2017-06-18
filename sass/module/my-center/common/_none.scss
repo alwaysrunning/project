@@ -1,0 +1,19 @@
+.my-center-none{
+    width: rem(600);
+    margin:rem(100) auto 0;
+    color:#CDCDCD;
+    .bd{
+        text-align: center;
+        i.iconfont,
+        i.iconglobal {
+            color:#CDCDCD;
+            font-size: rem(180);
+            line-height:rem(200);
+        }
+    }
+    .ft{
+        color:#CDCDCD;
+        font-size: rem(24);
+        text-align: center;
+    }
+}

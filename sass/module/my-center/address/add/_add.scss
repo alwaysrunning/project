@@ -1,0 +1,214 @@
+%mod-address-form {
+    // display: inline-block;
+    width:rem(416);
+    line-height:rem(64);
+    // height:rem(66);
+    padding-left:rem(4);
+    border: 1px solid #c1c1c1;
+    border-color:#c1c1c1;
+    border-radius:rem(4);
+}
+.mod-address-edit {
+    .ui-form-required {
+        color: #f03468;
+    }
+    .address {
+        background: #fff;
+        border: solid #e5e5e5;
+        border-width: 1px 0;
+        color: #333;
+        border-radius: rem(4);
+        margin: rem(20) 0;
+        :first-child {
+            &.form-item {
+                border-top:0;
+            }
+        }
+        .form-item {
+            margin: 0 rem(38);
+            padding-left: rem(170);
+            font-size: rem(28);
+            border-bottom: 1px solid #e5e5e5;
+            line-height: rem(88);
+            // display: block;
+            clear:both;
+            position: relative;
+            height: rem(88);
+            &.no-border {
+                border:0;
+            }
+            label {
+                position: absolute;
+                left: 0;
+                // display: inline-block;
+                line-height: rem(88);
+                width: rem(140);
+                text-align: justify;
+                // &:after {
+                //     content: ".";
+                //     display: inline-block;
+                //     width:rem(130);
+                //     overflow: hidden;
+                //     height: 0;
+                // }
+            }
+            input {
+                @extend %mod-address-form;
+                border: none;
+            }
+            select {
+                @extend %mod-address-form;
+            }
+            button{
+                @extend %mod-address-form;
+                background:#fff;
+                border:1px solid #eee;
+                height:auto;
+                text-align: left;
+            }
+            .adr-sel {
+                position: relative;
+                // display: inline-block;
+                // background-color: #fff;
+                // // border: 1px solid #c1c1c1;
+                // border-radius:rem(4);
+                line-height:rem(88);
+                font-size: rem(24);
+                height:rem(66);
+                // width:rem(416);
+                // top:rem(16);
+                // left: rem(148);
+                .adr-msg {
+                    // height: rem(56);
+                    // overflow: hidden;
+                    // padding: 0 rem(60) 0 rem(10);
+                    // position: relative;
+                    // z-index: 2;
+                    // display: inline-block;
+                    // width: rem(340);
+                    // white-space:nowrap;
+                    // overflow:hidden;
+                    &-hidden {
+                        display: none;
+                    }
+                    text-overflow:ellipsis;
+                }
+                .icon {
+                    // border-left: 1px solid #c1c1c1;
+                    color: #999;
+                    font-size: rem(28);
+                    height: rem(66);
+                    line-height: rem(66);
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    z-index: 1;
+                }
+            }
+            &-default {
+                line-height: rem(82);
+                padding-left: 0;
+                color: #999;
+                border-bottom: none;
+                label {
+                    position: static;
+                    color: #333;
+                    width: auto;
+                    margin-right: rem(10);
+                }
+                .checkbox {
+                    float: right;
+                    -webkit-appearance: none;
+                    color: #999;
+                    width: rem(45);
+                    height: rem(82);
+                    line-height: rem(82);
+                    border: none;
+                    background: none;
+                    &:after {
+                        font-size: rem(40);
+                        font-family: "iconglobal";
+                        content: "\e616";
+                    }
+                    &:checked {
+                        color: #f03468;
+                        &:after {
+                            content: "\e617";
+                        }
+                    }
+                }
+            }
+            
+        }
+    }    
+} 
+.button {
+    margin: rem(50) rem(20) rem(20) rem(20);
+    .ui-button {
+        border: none;
+        font-size: rem(34);
+        height: rem(90);
+        line-height: rem(90);
+        background: #f03468;
+        &:active {
+            background: darken(#f03468, 5);
+        }
+        &-disabled {
+            color: #999;
+            background: #e4e4e4;
+        }
+    }    
+}
+.zitidian-div{
+            display: none;
+            background:#ECECEC;
+            .zitidian-item{
+                display: block;
+                margin: 0 rem(20);
+                font-size: rem(20);
+                line-height: rem(88);
+                overflow: hidden;
+                clear:both;
+                input{
+                    display: inline;
+                    font-size: rem(22);
+                }
+                input[type=checkbox] {
+                    // display: none;
+                    position: absolute;
+                    top: -100000px;
+                    transform: scale(0);
+                    -webkit-transform: scale(0);    
+                }
+                label{
+                    display: inline;
+                    color: #999;
+                    font-size: rem(22);
+                    span{
+                        color: #333;
+                    }
+                    &:before{
+                        padding-right: rem(5);
+                        content: "\e616";
+                        font-family: iconglobal;
+                        font-size: rem(22);
+                        font-style: normal;
+                        -webkit-font-smoothing: antialiased;
+                        -webkit-text-stroke-width: 0.2px;
+                    }
+                }
+                input:checked + label{
+                    &:before{
+                        content: "\e617";
+                        color: $primary_color;
+                    }
+                    span{
+                        color: $primary_color;
+                    }
+                }
+            }
+
+            .form-item{                 
+                border-top:0;             
+                }         
+            }

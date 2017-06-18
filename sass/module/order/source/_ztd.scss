@@ -1,0 +1,56 @@
+.mod-ztd{
+    background: #fff;
+    border-top: 1px solid #e5e5e5;
+    padding-left: rem(58);
+    margin-top: -(rem(22));
+    .ztd-addr{
+        border-bottom: 1px solid #e5e5e5;
+    }
+    .ztd-addr, .ztd-time{
+        height: rem(99);
+        line-height: rem(99);
+    }
+    .lbl{
+        color: #333;
+        font-size: rem(28);
+        em{
+            font-style: normal;
+            color: #f03468;
+        }
+    }
+    .sel-addr, .sel-time{
+        width: rem(490);
+        text-align: right;
+        padding:0 rem(20);
+        font-size: rem(28);
+        color: #999999;
+        height: rem(60);
+        line-height: rem(60);
+        margin-top: rem(19);
+    }
+    select{
+        width: rem(430);
+        border: none;
+        background: transparent;
+        appearance:none;
+        -moz-appearance:none;
+        -webkit-appearance:none;
+        direction: rtl;
+        font-size: rem(28);
+        margin-right: rem(10);
+        option{
+            direction: rtl;
+            font-size: rem(28);
+            display: table;
+        }
+    }
+    .icon-arrow-down{
+        &:after{
+            color:#999;
+            font-size: rem(28);
+            font-family: "iconglobal";
+            content: "\e641";
+            vertical-align: middle;
+        } 
+    }
+}

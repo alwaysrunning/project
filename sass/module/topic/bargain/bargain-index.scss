@@ -1,0 +1,192 @@
+/* common */
+@import "../../../common";
+@import "../../../../fonts/iconfont.css";
+@import "../../../common/dialog/dialog";
+
+html {
+  background: url("//s1.bbgstatic.com/gshop/images/topic/bargain/bd-bg.jpg") repeat;
+}
+
+.page-view {
+  .mod-bargain {
+    margin-bottom: rem(40);
+    .banner {
+      width: 100%;
+      background-repeat: no-repeat;
+      position: relative;
+      .img-box {
+        display: block;
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          border: 0px;
+        }
+      }
+      .active-rule {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        width: rem(200);
+        height: rem(150);
+      }
+      .time {
+        position: absolute;
+        bottom: rem(10);
+        width: 100%;
+        color: white;
+        font-size: rem(20);
+        text-align: center;
+        .tit {
+          line-height: rem(20);
+        }
+        .ctn {
+          line-height: rem(20);
+          opacity: 0.6;
+          filter: alpha(opacity=60);
+        }
+      }
+    }
+
+    .bd {
+      overflow: hidden;
+      .bd-mark{
+        padding: rem(25);
+        position: relative;
+        display: inline-block;
+        span{
+          background-color: rgb(121,66,121);
+          display: inline-block;
+          padding: rem(10) rem(20);
+          color: #ccc;
+          font-size: rem(25);
+        }
+        .mark-up,.mark-down{
+          display: inline-block;
+          position: absolute;
+          border:rem(15) solid rgb(121,66,121);
+          right: rem(0);
+        }
+        .mark-up{
+          border-right-color: transparent;
+          border-bottom-color: transparent;
+          top: rem(25);
+
+        }
+        .mark-down{
+          border-top-color: transparent;
+          border-right-color: transparent;
+          top: rem(55);
+        }
+      }
+      .ac-goods{
+        margin: auto;
+        width: rem(640);
+        .goods-item{
+          display: inline-block;
+          float: left;
+          width: rem(280);
+          background-color: #fff;
+          border: rem(2) solid rgb(180,101,180);
+          border-radius: rem(5);
+          margin-left:rem(27) ;
+          position: relative;
+          margin-bottom: rem(27);
+          .goods-link{
+            display: block;
+            .goods-img{
+              display: block;
+              width: rem(240);
+              height: rem(240);
+              margin: rem(20);
+            }
+            .goods-pri{
+              position: absolute;
+              display: inline-block;
+              height: rem(42);
+              right: rem(30);
+              top: rem(200);
+              background: rgb(255,144,0);
+              font-size: rem(20);
+              padding: rem(3);
+              border-radius:rem(5) ;
+              font-weight: 600;
+              color: #fff;
+              .pri-dot{
+                border-radius: rem(5);
+                border: 1px dashed #fff;
+                padding: rem(0) rem(12);
+              }
+              .ack{
+                position: absolute;
+                border:rem(12) solid rgb(255,144,0);
+                top: rem(13);
+                left: rem(-22);
+                border-top-width: 0px;
+                border-top-color: transparent;
+                border-left-color: transparent;
+                border-bottom-color: transparent;
+              }
+            }
+            .goods-name{
+              display: block;
+              padding: rem(0) rem(20);
+              font-size: rem(24);
+              height: rem(80);
+              line-height: rem(40);
+              color:  rgb(121,66,121);
+              text-align: center;
+              overflow: hidden;
+              word-break: break-all;
+              text-overflow: ellipsis;
+            }
+          }
+
+          &.disabled{
+            opacity: 0.4;
+          }
+        }
+      }
+    }
+    .poster-content{
+      margin: auto;
+      width: rem(640);
+      .poster-item{
+        float: left;
+        margin-left: rem(27);
+        display: inline-block;
+        height: rem(200);
+        background-color: rgb(121,66,121);
+        margin-bottom: rem(15);
+        a{
+          display: block;
+          width: 100%;
+          height: 100%;
+          img{
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      .poster-one{
+        margin-bottom: rem(30);
+        .poster-item{
+          width: rem(284);
+        }
+      }
+      .poster-two{
+        margin-bottom: rem(30);
+        .poster-item{
+          width: rem(595);
+          height: rem(240);
+        }
+
+      }
+
+    }
+  }
+
+}
+

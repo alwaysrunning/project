@@ -1,0 +1,11 @@
+<script id="order/list/warehouse/total" type="text/html">
+	<%  
+	var hasTax =(warehouse.totalTaxPrice && warehouse.totalTaxPrice.length!=0) ;
+	%>
+	<div class="warehouse-total">
+		<% if(hasTax){ %>
+		<span class="total-items <%if(warehouse.isMarkingOut){%> total-items-del<%}%>">税费:<em>￥<%=warehouse.totalTaxPrice%></em></span>
+		<% } %>
+	<span class="total-items">本仓合计<%if(hasTax){%>(含税)<%}%>:<em>￥<%=warehouse.totalAmount%></em></span>
+	</div>
+</script>

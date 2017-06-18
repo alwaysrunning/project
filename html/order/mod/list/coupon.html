@@ -1,0 +1,31 @@
+<script id="jCouponTmpl" type="text/html">
+<%
+    var couList = shopList['coupons_list'];
+	var useCoupon = shopList['useCoupon'];//使用优惠券
+	var qStr = '';//查询字符串;
+	if(useCoupon && useCoupon.type){
+		qStr = '&type='+useCoupon.type;
+	}
+	if(useCoupon && useCoupon.code){
+		qStr += '&code='+useCoupon.code;
+	}
+%>
+<tr>
+    <td colspan="2" class="mod-coupon">
+        <div class=" jWrapBox" onclick="javascript:location.href='use-coupon.html?source=<%=_source%>&shopId=<%=shopList['shopId']%>&deliveryType=<%=deliveryType%><%=qStr%>'">
+            <div class="bd">
+                <div class="inner-box jClickInner">
+                <div class="i-l txt-els "><i class="icon iconglobal">&#xe63d;</i><em class="delType">优惠券</em>
+                <% if(couList && couList.length!=0){ %>
+                <span class="delTxt"><i class="txt-red"><%=couList.length%></i> 张可用</span>
+                <% } %>
+                </div>
+                    <div class="i-r icon iconfont arrow">&#xe60e;</div>
+                    <div class="i-r"><% if(useCoupon && useCoupon.code){ %>已用1张，抵扣<%=useCoupon.discount%>元<% }else{ %>未使用<% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </td>
+</tr>
+</script>

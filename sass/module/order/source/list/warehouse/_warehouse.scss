@@ -1,0 +1,8 @@
+@import '_title';//标题
+@import 'items/_items';//列表
+@import '_total';//总计
+%warehouse {
+    @extend %title;
+    @extend %items;
+    @extend %total;
+}

@@ -1,0 +1,29 @@
+<script id="jPaymentTmpl" type="text/html">
+    <% 
+        var flag = false;//判断是否为空;
+        if(pay_type){
+            for(k in pay_type){
+                flag = true;
+                break;
+            }
+        } 
+    if(flag){ %>
+    <div class="mod-payment jWrapBox">
+        <div class="inner">
+            <div class="hd"><i class="icon iconfont">&#xe612;</i><span class="txt-span">支付方式</span></div>
+            <div class="bd">
+                <% for(var i=0;i<pay_type.length;i++){ 
+                    if(pay_type[i].default){
+                %>
+                <div class="item">
+                    <input type="hidden" id="jPayType" value="<%=pay_type[i]['id']%>"/>
+                    <span class="name txt-els"><%=pay_type[i]['name']%></span>
+                    <span class="phone"></span>
+                </div>
+                <% }} %>                
+            </div>
+            <!-- <i class="icon iconfont arrow">&#xe60e;</i> -->
+        </div>
+    </div>
+    <% } %>
+</script>

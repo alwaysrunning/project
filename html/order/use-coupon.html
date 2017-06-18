@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>下单结算</title>
+    <!--#include file="/html/include/common/intro.html"-->
+    <link rel="stylesheet" href="//s1.bbgstatic.com/gshop/css/module/order/use-coupon.css?v=3.0.22" type="text/css" charset="utf-8"></head>
+<body>
+    <div class="page-view">
+        <head><!--#include file="/html/order/mod/_head-use-coupon.html"--></head>
+        <div class="page-view-body mod-use-coupon" id="jUseCoupon" >
+            <header class="hd">
+                <div class="coupon-form">
+                    <div class="input-coupon-txt-wrap">
+                        <input type="text" class="input-coupon-txt" placeholder="请输入优惠券码" id="jCouponInput"/>
+                        <button class="btn-clear-coupon iconglobal" id="jClrBtn">&#xe61b;</button>
+                    </div>
+                    <button class="btn-submit-coupon" id="jSubBtn">提交</button>
+                </div>
+                <div class="coupon-form-desc">通过站外方式获取的优惠券，请直接输入优惠券号码</div>
+            </header>
+            <div class="bd">
+                <div class="cnt">
+                    <div class="coupon-list-header">
+                        <a href="#" id="jShowAvailableCoupons" class="active"><span>可用优惠券 <em id="jAvailableCouponCount">(0)</em></span></a>
+                        <a href="#" id="jShowInvalidCoupons"><span>不可用优惠券 <em id="jInvalidCouponCount">(0)</em></span></a>
+                    </div>
+                    <div class="coupon-list available-coupon-list" id="jAvailableCouponList">
+                        <!--可用的优惠券loop-->
+                        <section id="jAvailableCouponItems" class="jCouponList">
+                        </section>
+                        <!--/可用的优惠券loop-->
+                        <button class="btn-cancel-coupon" id="jBtnCancelCoupon">不使用任何优惠券</button>
+                    </div>
+                    <div class="coupon-list invalid-coupon-list" id="jInvalidCouponList">
+                        <section id="jInvalidCouponItems" class="jCouponList">
+                        </section>
+                        <h5 class="coupon-list-title"><span>已失效的优惠券</span></h5>
+                        <!--失效的优惠券loop-->
+                        <section id="jExpiredCouponItems" class="jCouponList">
+                        </section>
+                        <!--/失效的优惠券loop-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- 优惠券列表 begin -->
+	<script id="jCouponListTmpl" type="text/html">
+		<% for(var i=0;i<couponList.length;i++){
+			var coupon = couponList[i];
+		%>
+		<div class="coupon-item <%=coupon.class%> coupon-<%=coupon.code%> jItemBox" data-value="<%=coupon.code%>">
+			<div class="cp-item-tp">
+				<em class="info-ico jShowCouponInfo"><i class="iconglobal jCouponArrow">&#xe641;</i></em>
+				<% if(coupon.title){ %>
+					<div class="cp-code"><%==coupon.title%>
+						<i class="half-circle"></i>
+					</div>
+					<% } %>
+				<div class="cp-metas">
+					<div class="cp-source">
+						<% if(coupon.name){ %>
+							<i class="iconglobal">&#xe620;</i>
+							<%=coupon.name%>
+							<% } %>
+					</div>
+					<div class="cp-name">
+						<% if(coupon.effectStartTime){ %>
+							<i class="iconglobal">&#xe640;</i>
+								<%=coupon.effectStartTime%>~
+								<%=coupon.effectEndTime%>
+							<% } %>
+					</div>
+				</div>
+			</div>
+			<div class="cp-item-bt jItemCtn">
+				<%=coupon.info%>
+			</div>
+		</div>
+		<% } %>
+	</script>
+	<!-- 优惠券列表 end -->
+
+<!--#include file="/html/include/common/outro.html"-->
+<script>require(['conf/order/use-coupon']);</script>
+
+<!--#include file="/html/include/common/statistics.html"-->
+</body></html>

@@ -1,0 +1,214 @@
+<!--
+<?php
+var_dump($_COOKIE);
+var_dump($pageinfo);
+?>
+-->
+
+<!-- slider  start slid-->
+<div class="mod-slider">
+  <div id="slides" class="ui-slider">
+    {loop $pageinfo['slid'] $key $image}
+    {if $key==0}
+    <a href="{$image['adUrl']}" data-bpm="7.{$pageinfo['mark']}_slid.1.{$key+1}.0.0">
+      <img src="{$image['ad_img']}"  class="jSliderImg">
+    </a>
+    {else}
+    <a href="{$image['adUrl']}" data-bpm="7.{$widget_id}.1.{$key+1}.0.0">
+      <img src="//s3.bbgstatic.com/pub/img/blank.gif" data-url="{$image['ad_img']}" alt="" class="jSliderImg img-error">
+    </a>
+    {/if}
+    {/loop}
+  </div>
+</div>
+<!-- slider  end-->
+
+
+<!-- 秒杀 start -->
+{if $pageinfo['secKillProducts']}
+<div class="mod-floor mod-common mod-port-ms">
+  <div class="mod-hd"> </div>
+  <div class="mod-bd">
+    {loop $pageinfo['secKillProducts'] $key $product}
+        <div class="mod-item jProductItem" data-id="{$product['product_id']}">
+          <a href="//m.yunhou.com/item/{$product['product_id']}.html">
+            <img src="//s3.bbgstatic.com/pub/img/blank.gif" data-url="{$product['detailInfo']['imgSrc']}" class="jImg gd-img img-error" />
+            <div class="gd-tag"></div>
+            <div class="gd-labels"></div>
+            <div class="gd-info">
+              <div class="gd-name">
+                <div class="title">{$product['detailInfo']['productName']}</div>
+              </div>
+              <div class="gd-price">
+                <div class="gd-price-now"><em>￥</em>{$product['detailInfo']['saleprice']}</div>
+                <div class="gd-price-ori"><em>￥</em>{$product['detailInfo']['mktprice']}</div>
+              </div>
+
+              <div class="gd-countdown">
+                <div class="txt"></div>
+                <div class="date jCountTime" data-endtime="{$product['end_time']}000" data-starttime="{$product['start_time']}000"></div>
+              </div>
+            </div>
+          </a>
+          <div class="gd-cmd {if $product['detailInfo']['isbuynow'] == '1'}jBuyNow{else}jAdd2Cart{/if}">
+            <i class="iconglobal">{if $product['detailInfo']['isbuynow'] == '1'}{else}{/if}</i>
+          </div>
+        </div>
+    {/loop}
+  </div>
+</div>
+{/if}
+<!-- 秒杀 end  -->
+
+
+<!-- 精选TOP start-->
+{if $pageinfo['productOne']}
+<div class="mod-floor mod-common">
+  <div class="mod-hd">精选TOP</div>
+  <div class="mod-bd">
+    {loop $pageinfo['productOne'] $key $product}
+    <div class="mod-img-item jProductItem" data-id="{$product['product_id']}">
+      <a href="//m.yunhou.com/item/{$product['product_id']}.html">
+        <img src="//s3.bbgstatic.com/pub/img/blank.gif" data-url="{$product['img']}" class="jImg gd-img img-error" />
+      </a>
+      <div class="gd-cmd jAdd2Cart" data-id="{$product['productId']}">
+        <i class="iconglobal"></i>
+      </div>
+    </div>
+    {/loop}
+  </div>
+</div>
+{/if}
+<!-- 精选TOP end -->
+
+
+<!-- 美食秘籍 start -->
+{if $pageinfo['cookbookColumn']}
+{loop $pageinfo['cookbookColumn'] $key $cooks}
+<div class="mod-floor mod-img-3">
+  <div class="mod-hd">{$cooks['name']}</div>
+  <div class="mod-bd">
+    <div class="list">
+      {loop $cooks['columns'] $key $image}
+      <a href="{$image['adUrl']}">
+        <img src="//s3.bbgstatic.com/pub/img/blank.gif" data-url="{$image['img']}" class="jImg  img-error" />
+      </a>
+      {/loop}
+    </div>
+  </div>
+</div>
+{/loop}
+{/if}
+<!-- 美食秘籍 end  -->
+
+
+
+{if $pageinfo['combineColumn']}
+{loop $pageinfo['combineColumn'] $key $col}
+{if $col['layout'] == '1'}
+<div class="mod-floor mod-img-3">
+  <div class="mod-hd">{$col['name']}</div>
+
+  <div class="mod-bd">
+    <div class="img-1">
+      {if $col['columns'][0]}
+      <a href="{$col['columns'][0]['adUrl']}">
+        <img data-url="{$col['columns'][0]['img']}" src="//s3.bbgstatic.com/pub/img/blank.gif" class="jImg img-error">
+      </a>
+      {/if}
+    </div>
+    <div class="img-2">
+      {if $col['columns'][1]}
+      <a href="{$col['columns'][1]['adUrl']}">
+        <img data-url="{$col['columns'][1]['img']}" src="//s3.bbgstatic.com/pub/img/blank.gif" class="jImg img-error">
+      </a>
+      {/if}
+      {if $col['columns'][2]}
+      <a href="{$col['columns'][2]['adUrl']}">
+        <img data-url="{$col['columns'][2]['img']}" src="//s3.bbgstatic.com/pub/img/blank.gif" class="jImg img-error">
+      </a>
+      {/if}
+    </div>
+  </div>
+</div>
+{/if}
+
+{if $col['layout'] == '2'}
+<div class="mod-floor mod-img-3">
+  <div class="mod-hd">{$col['name']}</div>
+
+  <div class="mod-bd  revert">
+    <div class="img-1">
+      {if $col['columns'][2]}
+      <a href="{$col['columns'][2]['adUrl']}">
+        <img data-url="{$col['columns'][2]['img']}" src="//s3.bbgstatic.com/pub/img/blank.gif" class="jImg img-error">
+      </a>
+      {/if}
+    </div>
+    <div class="img-2">
+      {if $col['columns'][1]}
+      <a href="{$col['columns'][1]['adUrl']}">
+        <img data-url="{$col['columns'][1]['img']}" src="//s3.bbgstatic.com/pub/img/blank.gif" class="jImg img-error">
+      </a>
+      {/if}
+      {if $col['columns'][0]}
+      <a href="{$col['columns'][0]['adUrl']}">
+        <img data-url="{$col['columns'][0]['img']}" src="//s3.bbgstatic.com/pub/img/blank.gif" class="jImg img-error">
+      </a>
+      {/if}
+    </div>
+  </div>
+</div>
+{/if}
+
+{if $col['layout'] == '3'}
+<div class="mod-floor mod-banner">
+  <div class="mod-hd">{$col['name']}</div>
+  <div class="mod-bd">
+    <div class="banner-img-3">
+      {loop $col['columns'] $key $item}
+      <a href="{$col['columns'][2]['adUrl']}">
+        <img data-url="{$item['img']}" src="//s3.bbgstatic.com/pub/img/blank.gif" class="jImg img-error">
+      </a>
+      {/loop}
+    </div>
+  </div>
+</div>
+{/if}
+{/loop}
+{/if}
+
+
+<!-- 优选单品 start -->
+<div class="mod-floor mod-common" data-active-id="{$widget_id}">
+  <div class="mod-hd">优选单品</div>
+
+  <div class="mod-bd" >
+<!--
+    <div class="mod-item jProductItem" data-id="9698000007">
+      <a href="/item/9982000083.html">
+        <img src="//s3.bbgstatic.com/pub/img/blank.gif" data-url="//s1.bbgstatic.com/gshop/images/index/temp/750x320.png" class="jImg gd-img img-error" />
+        <div class="gd-tag"></div>
+        <div class="gd-labels"></div>
+        <div class="gd-info">
+          <div class="gd-name">
+            <div class="title">
+              【包邮】Za姬芮真皙 美白隔离防晒霜SPF26 PA++
+            </div>
+          </div>
+
+          <div class="gd-price">
+            <div class="gd-price-now"><em>￥</em>69.00</div>
+            <div class="gd-price-ori"><em>￥</em>69.00</div>
+          </div>
+        </div>
+      </a>
+      <div class="gd-cmd jAdd2Cart" data-id="9692000089">
+        <i class="iconglobal"></i>
+      </div>
+    </div>
+-->
+        <div class="jPage" data-page="1"><div class="loading">正在加载，请稍后...</div></div>
+  </div>
+</div>
+<!-- 优选单品 end  -->

@@ -1,0 +1,36 @@
+%total {
+    .cart-total {
+        text-align: right;
+        .chk {
+            width: rem(150)!important;
+            text-align: left!important;
+            padding-left: rem(10)!important;
+            .chk-txt {
+                padding-left: rem(10);
+            }
+        }
+        .info-th {
+            padding: 0px!important;
+            .tariff-wrap {
+                float: right;
+                .tariff-ctn {
+                    float: left;
+                    padding-bottom: rem(20);
+                    .p-items {
+                        text-align: right;
+                        padding-top: rem(20);
+                        display: block;
+                        padding-right: rem(20);
+                        margin: 0px;
+                    }
+                }
+                .tariff-btn {
+                    float: left;
+                    .ui-button {
+                        padding: rem(20);
+                    }
+                }
+            }
+        }
+    }
+}

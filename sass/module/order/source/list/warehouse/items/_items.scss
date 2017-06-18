@@ -1,0 +1,17 @@
+%items {
+    .warehouse-items {
+        .info-ft {
+            height: auto!important;
+        }
+        .tit {
+            .pri {
+                position: relative!important;
+                .p-item {
+                    margin-top: rem(10);
+                }
+            }
+        }
+		@extend %info;
+    }
+}
+@import 'info/_info';//信息

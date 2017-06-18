@@ -1,0 +1,53 @@
+<script id="jIdInfoTmpl" type="text/html">
+<%
+    if (idCheckType && idCheckType != 0 ) {
+            var varList = idCards;
+            var isSelected = (submitTag!=3);//实名认证是否有选中的;
+            var isStd = 'false';
+            var isFrontImg, isReverseImg;// frontImg and reverseImg
+            var idChecked;
+            var _idCheckType;
+            var url = '//m.yunhou.com/member/idcard_add?source=' + _source;
+            //判断是否选中
+            if (varList && varList.length!=0){
+                for(var a=0;a<varList.length;a++){
+                    if (varList[a]['selected']){
+                        isStd = 'true';
+                        isFrontImg = varList[a].frontImg ? true : false;
+                        isReverseImg = varList[a].reverseImg ? true : false;
+                        url = '//m.yunhou.com/member/idcard_list?source=' + _source;
+                        break;
+                    }
+                }
+            }
+            url = url + '&idCheckType=' + idCheckType;
+            if (!isFrontImg || !isReverseImg) {
+                var imgEmpty = 'true';
+            }
+            if (isStd === 'true' && idCheckType == 2 && imgEmpty === 'true') {
+                var isShowTips = true;
+            }
+        %>
+    <input id="idCheckType" type="hidden" name="" value="<%=idCheckType%>" />
+    <input id="idChecked" type="hidden" name="" value="<%=isStd%>" />
+    <input id="idCheckImage" type="hidden" name="" value="<%=imgEmpty%>" />
+    <% if ( (isStd !== 'true' && idCheckType != 0) || isShowTips ) { %>
+    <div class="mod-ID" onclick="javascript:location.href='<%=url%>'" id="jIdInfoBox">
+        <div class="inner">
+            <div class="hd"><i class="icon iconglobal">&#xe638;</i><span class="txt-span">身份证信息</span><span class="txt-tips">
+                <% if (idCheckType == 1) { %>
+                    您的订单中含有保税区商品，请补全身份证号，用于海关申报。
+                <% } else if (idCheckType == 2) {
+                    if (imgEmpty === 'true' && isStd === 'true') { %>
+                        您的订单中含有国际直邮商品，请补全身份证照片，用于海关申报。
+                    <%} else {%>
+                        您的订单中含有国际直邮商品，请补全身份证号与照片，用于海关申报。
+                    <% } %>
+                <% } %></span>
+            </div>
+            <i class="icon iconfont arrow">&#xe60e;</i>
+        </div>
+    </div>
+    <% } %>
+<% } %>
+</script>

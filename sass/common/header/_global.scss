@@ -1,0 +1,81 @@
+.global-header {
+    height: rem(94);
+    line-height: rem(94);
+    background-color: #fff;
+    border-bottom: 1px solid #e4e4e4;
+
+    .header-cata {
+        float: left;
+        margin-left: rem(20);
+        width: rem(80);
+        vertical-align: middle;
+        line-height: rem(90);
+        text-align: left;
+
+        &#cata-show i:before {
+            height: rem(52);
+            width: rem(52);
+            color: #222;
+            font-size: rem(52);
+            font-family: "iconglobal";
+            content: "\e62a";
+        }
+
+        &#cata-hide i:before {
+            content: "\e60a";
+        }
+        i {
+            color: #222;
+            font-size: rem(52);
+        }
+    }
+
+    .header-province {
+        float: left;
+        margin-left: rem(20);
+        height: rem(94);
+        line-height: rem(94);
+        font-size: rem(24);
+        color: #666666;
+        overflow: hidden;
+        min-width: rem(100);
+
+        &:after {
+            font-size: rem(28);
+            font-family: "iconfont";
+            content: "\e60c";
+            padding-left: rem(10);
+            padding-right: rem(10);
+        }
+    }
+
+    .header-logo {
+        position: absolute;
+        left: 20%;
+        right: 20%;
+        height: rem(90);
+        line-height: rem(90);
+        text-align: center;
+
+        img {
+            display: inline-block;
+            width: rem(144);
+            height: rem(48);
+            margin-top: rem(21);
+            overflow: hidden;
+        }
+    }
+    .header-search {
+        float: right;
+        margin-right: rem(20);
+        width: rem(80);
+        line-height: rem(90);
+        vertical-align: middle;
+        text-align: right;
+
+        i {
+            color: #222;
+            font-size: rem(52);
+        }
+    }
+}

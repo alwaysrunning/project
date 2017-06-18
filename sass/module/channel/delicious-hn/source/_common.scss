@@ -1,0 +1,40 @@
+@import "./inc";
+
+.floor {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: rem(20);
+    background-color: #fff;
+    .hd {
+        color: #333;
+        border-left: rem(4) solid #f74c4b;
+        height:rem(24);
+        line-height: rem(40);
+        padding: rem(20);
+        position: relative;
+        h3 {
+            font-size: rem(24);
+            line-height: rem(24);
+            font-weight: normal;
+        }
+        .more {
+            position: absolute;
+            color: #707070;
+            font-size: rem(50);
+            right: rem(20);
+            top: 12%;
+            line-height: rem(24);
+        }
+    }
+    .bd {
+        margin: 0 rem(4);
+        position: relative;
+        overflow: hidden;
+        .i {
+            position: absolute;
+            overflow: hidden;
+            @include box-sizing(border-box);
+            img { width: 100%; height: 100%; }
+        }
+    }
+}

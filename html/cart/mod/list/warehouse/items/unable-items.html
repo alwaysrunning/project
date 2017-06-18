@@ -1,0 +1,16 @@
+<script id="cart/list/warehouse/items/unable-items" type="text/html">
+<%
+	if (items&& items.length!=0) {
+	for (var j=0;j<items.length;j++){
+		var pro = items[j];
+		var _data = {_flagHtml : _flagHtml, pro : pro, _flag : _flag, i: j};
+%>
+<tbody class="warehouse-items tb-gifts jItem" data-id="<%=pro.productId%>">
+	<tr class="jTableTr <%=_trClass%>">
+		<%include('cart/list/warehouse/items/chk', _data )%>
+		<%include('cart/list/warehouse/items/info/info', _data)%>
+		<%include('cart/list/warehouse/items/tariff', _data)%>
+	</tr>
+</tbody>
+<% }} %>
+</script>

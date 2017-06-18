@@ -1,0 +1,93 @@
+.mod-comments{
+    .comment-item{
+        margin: rem(20) 0;
+        background:#fff;
+        font-size: rem(24);
+        border-radius: rem(8);
+        background:#fff;
+        color: #666;
+        .hd{
+            margin:0 rem(20);
+            line-height: rem(80);
+            .shop-name{
+                color:#f03468;
+            }
+            .date{
+                float:right;
+                color:#999;
+            }
+        }
+        .bd{
+            
+            .pro-item{
+                padding: rem(20) rem(20);
+                border:none;
+                .pro-img{
+                    display: block;
+                    width: rem(132);
+                    margin-right:rem(-140);
+                    height: rem(132);
+                    border-radius:0.1rem;
+                    border: 0px solid #ccc;
+                    float:left;
+                    padding:0;
+                    // img{
+                    //     width: 100%;
+                    //     height: 100%;
+                    //     border-radius:0.05rem;
+                    // }
+                }
+                .pro-details{
+                    float:right;
+                    width: 100%;
+                    height: rem(132);
+                    .detail-content{
+                        margin-left: rem(160);
+                        .info-1{
+                            color:#666;
+                            height: rem(100);
+                            overflow: hidden;
+                            font-size: rem(24);
+                            .pro-name{
+                                height: rem(90);
+                                word-wrap: break-word;
+                                word-break: normal;
+                                text-overflow:ellipsis;
+                            }
+                        }
+                        .info-2{
+                            font-size: rem(24);
+                            color:#666;
+                            .iconfont{
+                                font-size:rem(32);
+                            }
+                            .start-desc{
+                                color:#999;
+                                padding-left: rem(8);
+                                font-size: rem(24);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .ft{
+            border: 0px solid #ccc;
+            padding:0 rem(20);
+            background:#fff;
+            .comment-content{
+                padding: rem(20) 0;
+                overflow: hidden;
+                border-top:1px solid #ccc;
+                &:first-child{
+                    border-top:none;
+                }
+            }
+            .comment-reply{
+                border-top:1px solid #ccc;
+                padding: rem(20) 0;
+                color:#E50000;
+            }
+        }
+    }
+}

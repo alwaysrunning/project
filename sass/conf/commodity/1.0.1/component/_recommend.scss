@@ -1,0 +1,83 @@
+// 猜你喜欢
+.mod-recommended-items-wrap {
+  display: none;
+  border-top: rem(22) solid #f0efed;
+  background-color: #fff;
+
+  .mod-title{
+    display: block;
+    margin: 0;
+    height: rem(90);
+    padding: 0 rem(20);
+    color: #333;
+    font-size: rem(30);
+    font-weight: normal;
+    line-height: rem(90);
+    text-decoration: none;
+    text-align: center;
+  }
+  .recommended-items{
+    overflow: auto;
+    padding: 0 rem(10) rem(20) rem(10);
+  }
+  .recommended-items-inner{
+    white-space: nowrap;
+    font-size: 0;
+    line-height: 0;
+  }
+  .rmcd-slide-item{
+    background-color: #fff;
+  }
+  .recommended-item{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 33.333333%;
+    margin: 0;
+    overflow: hidden;
+    border-right: rem(10) solid #fff;
+    border-left: rem(10) solid #fff;
+    text-decoration: none;
+
+    img{
+      display: block;
+      width: 100%;
+      height: rem(223.333333);
+    }
+    .caption{
+      display: block;
+      height: rem(60);
+      margin: rem(5) 0;
+      overflow: hidden;
+      color: #666;
+      font-size: rem(24);
+      font-weight: normal;
+      line-height: rem(30);
+      word-wrap: break-word;
+      word-break: break-all;
+      white-space: normal;
+    }
+    .price-pri{
+      display: block;
+      margin-top: rem(10);
+      color: $primary_color;
+      font-size: rem(28);
+      line-height: rem(28);
+    }
+    .price-mkt{
+      display: block;
+      margin-top: rem(10);
+      color: #ccc;
+      font-size: rem(24);
+      line-height: rem(24);
+      em{
+        text-decoration: line-through;
+        font-style: normal;
+      }
+    }
+
+    &:last-child{
+      margin-right: rem(10);
+    }
+  }
+}
+

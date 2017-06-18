@@ -1,0 +1,35 @@
+.ui-header {
+    border-bottom-color: #ccc;
+    .ui-back{
+        position: absolute;
+        top: rem(0);
+        left: 0;
+        width: rem(80);
+        height: rem(94);
+        padding: 0;
+        color: #333;
+        line-height: rem(94);
+        text-align: center;
+    }
+    .ui-home{
+        position: absolute;
+        top: rem(0);
+        right: 0;
+        width: rem(80);
+        height: rem(94);
+        padding: 0;
+        color: #333;
+        font-size: rem(52);
+        line-height: rem(94);
+        text-align: center;
+    }
+    .btn-share-item{
+        position: absolute;
+        top: 0;
+        right: rem(120);
+        height: rem(94);
+        color: #333;
+        text-decoration: none;
+        line-height: rem(98);
+    }
+}

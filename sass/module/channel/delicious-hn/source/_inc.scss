@@ -1,0 +1,28 @@
+/* img absolute */
+@mixin img-abs($img, $imgLength: 0, $prefix: '.i-', $border: ()) {
+    @for $i from 0 to $imgLength {
+        $item : nth($img, $i + 1);
+        $border-width: "0";
+        @if length($border) > $i {
+            $border-width: nth($border, $i + 1);
+        }
+        #{$prefix}#{$i+1} {
+            width: nth($item, 1);
+            height: nth($item, 2);
+            left: nth($item, 3);
+            top: nth($item, 4);
+            @if length($border-width) > 0 {
+                border-width: $border-width;
+            }
+        }
+    }
+}
+
+@mixin img-border($img, $imgLength: 0, $prefix: '.i-', $imgInc: 0) {
+    @for $i from 0 to $imgLength {
+        $item: nth($img, $i + 1);
+        #{$prefix}#{$i + 1} {
+            border-width: $item;
+        }
+    }
+}

@@ -1,0 +1,139 @@
+/* common */
+@import "../../common";
+@import "../../common/slider/slider";
+@import "../../common/form/form";
+@import "../../common/button/button";
+@import "../../common/scroll-load/scroll-load";
+@import "../../common/dialog/dialog";
+@import "../../common/search/search";
+@import "../../common/menu/_menu";
+@import "../../common/add-to-cart/_goods-notice";
+
+/* modules */
+html,body{
+	background: #f2f2f2;
+}
+.ui-header {
+	position: fixed;
+	width: 100%;
+	z-index: 9;
+	top: 0px;
+}
+.search-3-empty {
+	margin-top: rem(100);
+	text-align: center;
+	img {
+		width: rem(350);
+	}
+	.ui-button{
+		display: none;
+	}
+}
+.shop-index {
+	font-size: rem(30);
+	margin-top: rem(100);
+	.hd {
+		font-size: rem(26);
+		height: rem(75);
+		background: #fff;
+		padding: 0 rem(18) 0 rem(18);
+		.left {
+			float: left;
+			height: rem(75);
+			line-height: rem(75);
+			input {
+				border:solid #d2d2d2 1px;
+				height: rem(50);
+				width: rem(320);
+			}
+		}
+		.right {
+			float: right;
+			height: rem(75);
+			line-height: rem(75);
+			font-size: rem(28);
+			i {
+				margin-right: rem(8);
+				font-size: rem(30);
+				color: #999;
+			}
+			.span {
+				margin-right: rem(38);
+			}
+			.span-color {
+				color: #ff0000;
+				i {
+					color: #ff0000;
+				}
+			}
+		}
+	}
+	.bd {
+		font-size: rem(30);
+		padding: 0 rem(18) 0 rem(18);
+		ul {
+			li{
+				position: relative;
+				background: #fff;
+				margin-top: 20px;
+				overflow: hidden;
+				padding: rem(20);
+				box-shadow: 2px 0px 5px #eee;
+				.left {
+					float: left;
+					width: rem(181);
+					margin-right: rem(19);
+					img {
+						width: rem(181);
+						height: rem(181);
+						border-radius: rem(10);
+					}
+				}
+				.right {
+					font-size: rem(26);
+					.title {
+						min-height: rem(70);
+						overflow: hidden;
+						a{
+							color: #333;
+						}
+					}
+					.m {
+						overflow: hidden;
+						margin-top: rem(10);
+						span {
+							float: left;
+							color: #ff0000;
+							font-size: rem(26);
+						}
+						label {
+							float: right;
+							font-size: rem(26);
+							a {
+								color: #fa7739;
+								margin-left: rem(10);
+							}
+						}
+					}
+					.g {
+						font-size: rem(24);
+						overflow: hidden;
+						a {
+							float: right;
+							font-size: rem(24);
+							width: rem(140);
+							height: rem(60);
+							background: #db0000;
+							color: #fff;
+							text-align:center;
+							border-radius: rem(5);
+							line-height: rem(60);
+							margin-top: rem(10);
+							padding: 0 rem(10) 0 rem(10);
+						}
+					}
+				}
+			}
+		}
+	}
+}

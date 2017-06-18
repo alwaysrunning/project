@@ -1,0 +1,69 @@
+.mod-cover-text {
+    width: 100%;
+    .hd {
+        display: block;
+        height: rem(240);
+        position: relative;
+        background: #fff3f3;
+        color: #666;
+        padding-top: rem(100);
+        .hd-txt {
+            font-size: rem(80);
+            text-align: center;
+            color: #f03468;
+        }
+        .hd-tips {
+            font-size: rem(26);
+            text-align: center;
+            margin-top: rem(10);
+            .tips-txt {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .icon {
+                &:after {
+                    font-family: 'iconglobal';
+                    content: '\e669';
+                    display: inline-block;
+                    vertical-align: middle;
+                    color: #ccc;
+                    font-size: rem(26);
+					margin-left:rem(10);
+                }
+            }
+        }
+        .link {
+            font-size: rem(26);
+            text-align: center;
+			display:block;
+			color:#666;
+			text-decoration: underline;
+			margin-top:rem(20);
+        }
+        .help {
+            position: absolute;
+            height: rem(36);
+            line-height: rem(36);
+            top: rem(20);
+            right: 0px;
+            display: block;
+            .help-hd {
+                position: absolute;
+                width: 100%;
+                height: rem(36);
+                line-height: rem(36);
+                border-radius: rem(30) 0px 0px rem(30);
+                background: #f9a7bb;
+            }
+            .help-bd {
+                height: rem(36);
+                line-height: rem(36);
+                font-size: rem(24);
+                padding: 0px rem(20);
+                position: relative;
+                z-index: 1;
+                color: #fff;
+            }
+        }
+    }
+}

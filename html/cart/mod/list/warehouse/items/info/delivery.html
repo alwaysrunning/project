@@ -1,0 +1,11 @@
+<script id="cart/list/warehouse/items/info/delivery" type="text/html">
+<% 
+		var isDelivery = false;//是否配送;
+		if(pro.productStatus && pro.productStatus==4){
+			isDelivery = true;
+		}
+ %>
+<% if(isDelivery){ %>
+	<!--<div class="box-wrap"><div class="no-dis"></div></div>-->
+<% } %>
+</script>

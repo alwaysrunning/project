@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{$bbgtitle}</title>
+<meta name="keywords" content="{$bbgkeywords}" />
+<meta name="description" content="{$bbgdesc}" />
+<meta name="pageid" content="3.0" />
+{template 'meta_for_mobile'}
+{template 'flexible'}
+<link rel="stylesheet" href="//s1.bbgstatic.com/gshop/css/conf/index/1.0.1/index.css" data-cdn="gshop/css/conf/index/1.0.1/index.css">
+<style>
+.mod-pop-newer-welfare-wrap{
+  display: none;
+  position: fixed;
+  z-index: 150;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.mod-pop-newer-welfare-mask{
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  filter:alpha(opacity=70);
+  opacity: .7;
+}
+.mod-pop-newer-welfare-pop-wrap{
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  width: 13.2267rem;
+  height: 9.1947rem;
+  margin: -4.5973rem 0 0 -6.6133rem;
+  background-image: url(http://img4.bbgstatic.com/14fbc13f7a7_bc_b97d8fda130d7fbfc904549dc270f421_620x431.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.mod-pop-newer-welfare-close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.3rem;
+  height: 1.3rem;
+}
+.mod-pop-newer-welfare-jump{
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.mod-pop-newer-welfare-min{
+  display: none;
+  z-index: 9;
+  position: fixed;
+  bottom: 3rem;
+  left: .5rem;
+  width: 2.9227rem;
+  height: 3.072rem;
+  margin-top: -1.4613rem;
+  background-image: url(http://img2.bbgstatic.com/14fbc141edc_bc_1be29c7c09216f6f2294dfedfd5bb6a5_137x144.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.global .mod-common .mod-img-item {max-height: 7rem; height: auto;}
+.global .mod-common .mod-img-item .gd-img {position: static; max-height: 7rem; height: auto;}
+.global .down-app { width: 16rem;height:2.7306666667rem;}
+.global .down-app img{width:100%;height:auto;}
+.mod-port-ms {background-size: cover;}
+</style>
+</head>
+<body>
+<div class="page-view global">
+
+  <!-- 头部begin -->
+  <header class="global-header">
+    {widgets id="6092" name="H5首页分类" islazy="0"}
+    <div class="header-province jProvince"></div>
+    <div class="header-logo">
+      <a href="http://m.yunhou.com">
+        <img src="//s1.bbgstatic.com/gshop/images/index/global-logo.png" alt="">
+      </a>
+    </div>
+    <div class="header-search jHeaderSearch"><i class="iconglobal">&#xe604;</i></div>
+  </header>
+  <!-- 头部end -->
+
+  <div class="page-view-body">
+
+    <widgets data-dx-region-id="1" data-dx-region-data="{&quot;ids&quot;:[111]}"><div data-dx-layout="dx-1" data-dx-widget-data="{&quot;widgets&quot;:&quot;ProductPageInfo&quot;,&quot;id&quot;:&quot;16920&quot;}">{widgets id="16920" name="" islazy="0"}</div><div data-dx-layout="dx-2" data-dx-widget-data="{&quot;widgets&quot;:&quot;ProductPageInfo&quot;,&quot;id&quot;:&quot;3884&quot;}">{widgets id="3884" name="" islazy="0"}</div></widgets>
+
+  </div>
+
+  <div class="footer">
+    <div class="copyright">
+      Copyright@云猴网2013-2015，All Rights Reserved<br>
+      版权所有&copy; 步步高电子商务有限责任公司 电话:0731-58222344
+    </div>
+  </div>
+</div>
+  {template 'js_plugin_utm_source_fix'}
+  {template 'js_for_h5_topic'}
+<script>require(['conf/index/1.0.1/index']);</script>
+<script>
+require(['jquery','lib/core/1.0.0/io/cookie'], function($, cookie) {
+    'use strict';
+
+    var $NewerWelfareWrap;
+    var $NewerWelfareMin;
+    var isLogin = cookie('_nick');
+    var isClosed = cookie('_newerWelfarePopClosed');
+    var regUrl = 'http://m.yunhou.com/act_newer_welfare.html';
+
+
+    var html = [
+    '<div class="mod-pop-newer-welfare-wrap" id="jNewerWelfareWrap">',
+    '<div class="mod-pop-newer-welfare-mask" id="jNewerWelfareMask"></div>',
+    '<div class="mod-pop-newer-welfare-pop-wrap">',
+    '<a href="javascript:void(0);" class="mod-pop-newer-welfare-close" id="jNewerWelfareClose"></a>',
+    '<a href="' + regUrl + '" class="mod-pop-newer-welfare-jump"></a>',
+    '</div>',
+    '</div>',
+    '<a href="' + regUrl + '" class="mod-pop-newer-welfare-min" id="jNewerWelfareMin"></a>'
+    ].join('');
+    if (isLogin === null) {
+      $('body').append(html);
+      $NewerWelfareWrap = $('#jNewerWelfareWrap');
+      $NewerWelfareMin = $('#jNewerWelfareMin');
+      $('#jNewerWelfareMask, #jNewerWelfareClose').on('click', function() {
+          $NewerWelfareWrap.css('display', 'none');
+          $NewerWelfareMin.css('display', 'block');
+          cookie('_newerWelfarePopClosed', '1', {expires: 365000});
+          });
+      if (isClosed === null) {
+        $NewerWelfareWrap.css('display', 'block');
+      } else {
+        $NewerWelfareMin.css('display', 'block');
+      }
+    }
+});
+</script>
+{template 'tongji_for_h5_topic'}
+</body>
+</html>

@@ -1,0 +1,33 @@
+<form id="addressForm">
+    <section class="mod-address-edit">
+        <div class="address">
+            <input id="zone" type="hidden" name="zone" value="" >
+            <div class="form-item clearfix">
+                <label><span class="ui-form-required">*</span>收货地区</label>
+                <div id="jZoneBtn" class="adr-sel">                    
+                    <input data-linkage-tab="" class="adr-msg" type="text" placeholder="请选择" value="" />
+                    <i class="icon iconfont">&#xe60e;</i>
+                </div>
+            </div>
+            <div class="form-item clearfix">
+                <label><span class="ui-form-required">*</span>详细地址</label>
+                <input id="xiangxiaddress" type="text" name="xiangxiaddress" placeholder="请输入详细地址" />
+            </div>
+            <div class="form-item clearfix">
+                <label><span class="ui-form-required">*</span>联系电话</label>
+                <input id="shoujihao" type="text" name="shoujihao" maxlength="11" placeholder="请输入收货人电话" />
+            </div>
+            <div class="form-item clearfix">
+                <label><span class="ui-form-required">*</span>收 货 人</label>
+                <input id="shouhuoren" type="text" name="shouhuoren" placeholder="请输入收货人姓名" />
+            </div>
+            <div class="form-item form-item-default clearfix">
+                <label>设置默认地址</label>(注：每次下单时会使用该地址)<input name="mourendizhi" class="checkbox jCheck" type="checkbox" />
+            </div>
+        </div>
+    </section>
+    <!--#include file="/html/include/my-center/id/add.html"-->
+    <section class="button">
+        <a id="submitBtn" class="ui-button" node-type="submitBtn">保存并使用</a>
+    </section>
+</form>

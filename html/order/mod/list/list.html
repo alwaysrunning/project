@@ -1,0 +1,51 @@
+<script id="order/list/list" type="text/html">
+<% if( groups && groups.length!=0 ){ 
+    //店铺列表
+    var shopList = groups;
+	for(var i=0;i<shopList.length;i++){ 
+		shopItem = shopList[i];
+		//配送方式
+		var delivery = shopList[i]['delivery'];
+		//其他优惠
+		var promotions = shopList[i]['promotions'];
+			promotions = promotions?promotions:[];
+		//使用优惠券
+		var useCoupon = shopList[i]['useCoupon'];
+		//是否是自营
+		var isSelfShop = (shopList[i]['shopType']==3);
+		var isOtherShop = (shopList[i]['shopType'] == 1);
+		var totalDis = shopList[i]['totalDiscount'];//共优惠;
+%>
+<div class="mod-list">
+	<%include('order/list/title', {shopItem : shopItem}) %>
+    <div class="bd">
+        <div class="inner">
+            <% if(shopList[i]['tipStatus'] && (shopList[i]['tipStatus']==1 || shopList[i]['tipStatus']==2)){ %>
+            <table class="box">
+				<tr>
+					<td colspan="2" class="market-tips">
+						<b>温馨提示：</b><%=shopList[i]['switchTips'] %>
+					</td>
+				</tr>
+			</table>
+            <% } %>
+			<% include('order/list/warehouse/warehouse', {warehouse: shopList[i].pkgs}) %>
+            <table class="box ">
+                <% include('jDiscountTmpl', {promotions: promotions, totalDis: totalDis, _source: _source }) %>
+                <% include('jCouponTmpl', { shopList: shopList[i], deliveryType: deliveryType, _source: _source })%>
+                <% include('jFollowTmpl'), { shopList: shopList[i], follow: isOtherShop } %>
+                <% include('order/list/total', {shopItem : shopItem}) %>
+            </table>
+        </div>
+    </div>
+</div>
+<% }} %>
+<% include('order/list/unable-list', {unableItems : unableItems, unableGifts : unableGifts, unableGroups: unableGroups, unablePreSale : unablePreSale}) %>
+</script>
+<!--#include file="title.html"-->
+<!--#include file="unable-list.html"-->
+<!--#include file="warehouse/warehouse.html"-->
+<!--#include file="total.html"-->
+<!--#include file="follow.html"-->
+<!--#include file="coupon.html"-->
+<!--#include file="discount-list.html"-->

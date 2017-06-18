@@ -1,0 +1,166 @@
+﻿@import '../../../sass/_inc';
+@import '../dialog/dialog';
+@import '../../common/menu/_menu4global';
+
+@mixin opacity($opacity:50) {
+  opacity: $opacity / 100;
+  filter: alpha(opacity=$opacity);
+}
+
+.page-view {
+  box-sizing: border-box;
+  padding-bottom: rem(100);
+}
+.footer .copyright {
+  padding-bottom: 0;
+  height: auto;
+}
+.fix-nav{
+  position: fixed;
+  left: 0px;
+  height: rem(100);
+  bottom: 0;
+  padding: 0px;
+  width: 100%;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-top: 1px solid #f2f2f2;
+  z-index: 13;
+  @include transform(translateY(100%));
+
+  .nav-list{
+    width: 100%;
+
+    a {
+      float: left;
+      width: 25%;
+      height: rem(86);
+      color: #333;
+      display: block;
+      text-align: center;
+      line-height: rem(30);
+      padding-top: rem(18);
+      @include tap-highlight;
+
+      .icon {
+        font-size: rem(46);
+        position: relative;
+        display: block;
+        height: rem(36);
+        .buy-num{
+          position: absolute;
+          top: -0.2rem;
+          left: 56%;
+          display: block;
+          width: rem(34);
+          line-height: rem(34);
+          text-align: center;
+          color: #fff;
+          background-color: #f03468;
+          border-radius: 50%;
+          font-size: rem(20);
+          font-family: sans-serif;
+          @include transform(scale(1));
+          @include transition(.3s);
+
+          &:empty {
+            opacity: 0;
+            @include transform(scale(.1));
+          }
+        }
+      }
+      p{
+        margin-top: rem(10);
+        font-size: rem(24);
+        color: #333;
+      }
+      .icon {
+        &:after {
+          color: #333;
+          font-family: 'iconglobal';
+        }
+      }
+      &.active {
+        color: #f03468;
+
+        p {
+          color: #f03468;
+        }
+        .icon {
+          color: #f03468;
+
+          &:after {
+            color: #f03468;
+          }
+        }
+      }
+      &:first-child {
+        .icon:after {
+          content: '\e648';
+        }
+        &.active .icon:after {
+          content: '\e649';
+        }
+      }
+    }
+    .wx-scan{
+      display: none;
+    }
+  }
+  &._nav-show {
+    display: block;
+    @include transform(translateY(0%));
+    @include transition(.3s ease-in-out);
+
+  }
+}
+
+.wx-fix-nav{
+  .nav-list{
+    a{
+      width: 20%;
+    }
+  }
+}
+
+.fix-nav-wrap {
+  position: fixed;
+  left: 0px;
+  top: rem(88);
+  width: 100%;
+  height: rem(100);
+  overflow: hidden;
+  z-index: 10;
+  display: none;
+
+}
+
+.tips-mask {
+  position:fixed;
+  z-index: 12;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background-color:gray;
+  display: none;
+  @include opacity(80); //传递参数
+  top: rem(88);
+}
+.bd-hidden {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .ui-header {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+  }
+}

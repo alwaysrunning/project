@@ -1,0 +1,9 @@
+$body-size: 24;
+
+@function em($px, $font-size: $body-size) {
+    @return ($px / $font-size) * 1em;
+}
+
+@mixin font-size-em($px) {
+    font-size: em($px);
+}

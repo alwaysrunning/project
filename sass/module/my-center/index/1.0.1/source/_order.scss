@@ -1,0 +1,121 @@
+.vip-body{
+    
+    .vip-order{
+        background-color: #fff;
+        .icon{
+            color: #6d6d6d;
+        }
+    }
+
+    .my-order{
+        display: box;
+        display: -webkit-box;
+        height: rem(80);
+        line-height: rem(80);
+        border-bottom: 1px solid #f6f6f6;
+        background-color: #fefefe;
+        .order-tips, .see-order{
+            display: block;
+            -webkit-box-flex:1;
+            box-flex:1;
+        }
+        .order-tips{
+            font-size: rem(28);
+            text-align: left;
+            padding-left: rem(48);
+            color: #333;
+            font-weight: 200;
+        }
+        .see-order{
+            font-size: rem(22);
+            text-align: right;
+            padding-right: rem(38);
+            color: #999;
+            font-weight: 200;
+            i{
+                font-size: rem(26);
+                color: #ccc;
+            }
+        }
+    }
+
+    .vip-list{
+        margin-top: rem(30);
+        background-color: #fff;
+        padding: 0 rem(20);
+    }
+
+    .mod-order{
+        display: box;
+        display: -webkit-box;
+        .order-box{
+            display: block;
+            -webkit-box-flex:1;
+            box-flex:1;
+            text-align: center;
+            padding-top: rem(30);
+            width: 100%;
+            height: rem(90);
+            line-height: rem(30);
+            position: relative;
+            i{
+                display: block;
+                font-size: rem(50);
+            }
+            span{
+                font-size: rem(20);
+                color: #999;
+                font-weight: 200;
+            }
+            .num{
+                position: absolute;
+                top: rem(15);
+                left: 50%;
+                margin-left: rem(10);
+                background-color: #f03468;
+                color: #fff;
+                font-size: rem(18);
+                padding: rem(1) rem(5);
+                border-radius: 10px;
+                height: rem(20);
+                line-height: rem(18);
+            }
+        }
+    }
+
+
+    .vip-area{
+        display: box;
+        display: -webkit-box;
+        border-bottom: 1px solid #f6f6f6;
+        .vip-box{
+            display: block;
+            -webkit-box-flex:1;
+            box-flex:1;
+            text-align: center;
+            padding-top: rem(50);
+            width: 100%;
+            height: rem(159);
+            line-height: rem(50);
+            i{
+                display: block;
+                font-size: rem(60);
+            }
+            span{
+                font-size: rem(24);
+                color: #333;
+                font-weight: 200;
+            }
+        }
+    }
+}
+
+.c-r{
+    color: #ff6d95;
+}
+.c-y{
+    color: #ffba00;
+}
+.c-g{
+    color: #d8e4eb;
+}

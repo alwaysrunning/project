@@ -1,0 +1,113 @@
+/* common */
+@charset "utf-8";
+@import "../../../common";
+@import "../../../common/slider/slider";
+@import "../../../common/go-top/go-top";
+@import "../../../common/search/search";
+@import "../../../common/header/_global";
+@import "../../../common/nav/_back2top";
+@import "../../../common/linkage-tab/linkage-tab";
+@import "../../../common/menu/_menu4global";
+@import "../../../common/nav/_nav";
+.wrap-menu {
+    top: rem(80);
+}
+.wrap-menu .mod-content .mod-content-item dd {
+    font-size: rem(24);
+    height: rem(52);
+    line-height: rem(52);
+}
+.wrap-menu .mod-content .mod-content-item dt > div a {
+    font-size: rem(24);
+}
+.wrap-menu .mod-content .mod-content-item dd a {
+    font-size: rem(24);
+}
+
+/* modules */
+@import "./source/common";
+@import "./source/inc";
+@import "./source/floor-bn";
+@import "./source/floor-cp";
+@import "./source/floor-3";
+@import "./source/floor-1";
+@import "./source/floor-2";
+@import "./source/floor-4";
+@import "./source/floor-5";
+@import "./source/floor-6";
+
+body {
+    background-color: #f5f5f5;
+}
+
+.page-view-body{
+    max-width: rem(640);
+    margin: 0 auto;
+}
+
+.nav, .mod-slider {
+    max-width: 100%;
+    background-color: #fff;
+}
+
+.mod-slider {
+    height: rem(220);
+    .ui-slider { height: rem(220); }
+    .ui-slider-slide {
+        img { width: 100%; height: rem(220); }
+    }
+}
+.ui-header {
+    background-color: #fff;
+
+    .ui-back {
+        color: #000;
+    }
+    .ui-title {
+        color: #000;
+    }
+}
+.mod-nav {
+    height: rem(64);
+    line-height: rem(64);
+    text-align: center;
+    border-bottom: 1px solid #e4e4e4;
+
+    a {
+        position: relative;
+        width: auto;
+        height: 100%;
+        padding-left: 5%;
+        padding-right: 5%;
+        line-height: rem(64);
+        text-align: center;
+        text-decoration: none;
+        font-size: rem(28);
+        color: #333;
+        display: inline-block;
+
+        span {
+            font-size: rem(24);
+            float: left;
+            line-height: rem(60);
+        }
+        &.active{
+            span {
+                color: #f03468;
+            }
+
+            &:after {
+                display: block;
+                content: "";
+                position: absolute;
+                right: 0;
+                bottom: -1px;
+                left: 0;
+                width: 100%;
+                margin: 0 auto;
+                border-bottom: 5px solid #f03468;
+            }
+            // border-bottom: 4px solid #f03468;
+        }
+    }
+}

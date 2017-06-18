@@ -1,0 +1,27 @@
+/* common */
+@import "../../../common-750";
+@import "../../../common/slider/slider";
+@import "../../../common/form/form";
+@import "../../../common/button/button";
+@import "../../../common/dialog/dialog";
+@import "../../../common/scroll-load/scroll-load";
+@import "../../../common/go-top/go-top";
+
+/* modules */
+@import "../common/base";
+@import "../common/pros";
+@import "../common/button";
+@import "./source/order-detail";
+
+html{
+    background: #f0f0ed;
+    padding: 0 0 rem(20);
+}
+
+.ztd-addr{
+	em{
+		color: #f33066;
+		font-size: rem(26);
+		font-style: normal;
+	}
+}

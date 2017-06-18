@@ -1,0 +1,13 @@
+<script id="order/list/warehouse/items/unable-items" type="text/html">
+<%
+	if(unableItems && unableItems.length!=0){
+		for(var e=0;e<unableItems.length;e++){
+			var pro = unableItems[e];
+			var _data = {pro : pro, _flag : _flag, _flagHtml: _flagHtml, _style : 'disabled'};
+%>
+	<tr class="jTableTr <%if(e==unableItems.length-1 && (!nextArray || (nextArray && nextArray.length==0))){%>end<% } %>">
+		<%include('order/list/warehouse/items/info/info', _data)%>
+	</tr>
+<% }} %>
+
+</script>

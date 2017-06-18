@@ -1,0 +1,9 @@
+%info {
+    .items-info {
+        @extend %tariff;
+		.pri,.del-pri {
+            font-family: 'microsoft yahei'!important;
+        }
+    }
+}
+@import '_tariff';//关税

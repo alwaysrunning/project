@@ -1,0 +1,73 @@
+@import "compass/css3/opacity";
+%list-warehouse-warehouse-items-info {
+    .price {
+        position: relative!important;
+		&-inner {
+		    position: absolute;
+		    left: 0px;
+		    bottom: 0px;
+		}
+    }
+	.pri,.del-pri {
+		font-family:'microsoft yahei'!important;
+	}
+	.box .describe {
+	    .price {
+	        float: left;
+			min-height:rem(30);
+			/* padding-top:rem(70); */
+	    }
+	}
+	@extend %list-warehouse-warehouse-disitems; 
+    @extend %list-warehouse-warehouse-items-info-tariff;
+}
+/* --- mod --- */
+
+%list-warehouse-warehouse-disitems {
+	.disabled-list {
+		.prem {
+			background-color:#999;
+			color:#fff;
+		}
+		.box {
+		    .describe {
+		        .des-hd a, .spec {
+		            color: #999!important;
+		        }
+		    }
+			li .img .pro-img img {
+			    @include opacity(0.8);
+			}
+			
+		}
+	}
+}
+
+%list-warehouse-warehouse-items-info-tariff {
+    .info-tariff {
+		font-family:'microsoft yahei'!important;
+		/* position:absolute; */
+		/* left:rem(0); */
+        .f-r {
+			@extend %actived;
+			/* height:rem(46); */
+			/* line-height:rem(46); */
+            font-size: rem(22)!important;
+            color: #999999!important;
+			width:rem(230);
+			.tariff-del{
+				text-decoration:line-through;
+				margin-right:0px!important;
+			}
+            .ico-arrow-box {
+                font-size: rem(30);
+                /* margin-left: rem(4); */
+            }
+            i,
+            span {
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+    }
+}

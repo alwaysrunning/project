@@ -1,0 +1,24 @@
+<script id="cart/list/warehouse/tariff" type="text/html">
+    <tbody class="warehouse-tariff">
+		<% if(warehouse.overflowLimitTaxation && !warehouse.overflowLimitAmount){%>
+        <tr>
+            <td colspan="3">
+                <div class="td-inner">
+                    <b class="arrow jTariffArrow arrow-limit" style="display:none;"></b>
+					<%==warehouse.taxactionTips%>
+                </div>
+            </td>
+        </tr>
+		<% } %>
+		<% if(warehouse.overflowLimitAmount){ %>
+        <tr>
+            <td colspan="3">
+                <div class="td-inner">
+                    <b class="arrow arrow-limit"></b>
+					<%==warehouse.limitAmountTips%>
+                </div>
+            </td>
+        </tr>
+		<% } %>
+    </tbody>
+</script>

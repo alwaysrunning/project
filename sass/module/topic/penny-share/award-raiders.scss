@@ -1,0 +1,177 @@
+/**
+* @file get-present.scss
+* @synopsis  get present
+* @author licuiting, 250602615@qq.com
+* @version 1.o
+* @date 2015-08-06
+*/
+
+@import "../../../common";
+@import "../../../../fonts/iconfont.css";
+@import "../../../common/dialog/dialog";
+@import "_pop";
+ .txt-els {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.page-view {
+    /* padding-bottom: rem(160); */
+}
+.mod-award-raiders {
+    .hd {
+        padding-top: rem(76);
+        background: #ec255e;
+        position: relative;
+        .logo-wrap {
+            position: absolute;
+            width: 100%;
+            bottom: rem(-46);
+            z-index: 1;
+            .ico-logo {
+                width: rem(100);
+                display: block;
+                height: rem(100);
+                margin: 0 auto;
+                background: url('//s1.bbgstatic.com/gshop/images/topic/penny-share/cloud.png') 0px 0px no-repeat;
+                background-size: 100%;
+            }
+        }
+        .ft {
+            background: url('//s1.bbgstatic.com/gshop/images/topic/penny-share/bottom-bg.png') 0px 0px repeat-x;
+            height: 15px;
+            margin-top: -1px;
+        }
+    }
+    .bd {}
+}
+.mod-banner {
+    padding-top: rem(60);
+    .bd-banner {
+        width: rem(488);
+        margin: 0 auto;
+        .lft {
+            float: left;
+            width: rem(26);
+            height: rem(60);
+            background: url('//s1.bbgstatic.com/gshop/images/topic/penny-share/banner-lft.png') 0px rem(6) no-repeat;
+            background-size: 100%;
+        }
+        .mid {
+            float: left;
+            text-align: center;
+            background: #ec255e;
+            color: #fff;
+            width: rem(436);
+            height: rem(60);
+            font-size: rem(30);
+            .text-pre, .text-next {
+                display: inline-block;
+                vertical-align: middle;
+                line-height: normal;
+                height: rem(60);
+                line-height: rem(60);
+            }
+            .text-next {
+                padding-left: rem(6);
+            }
+        }
+        .rit {
+            float: left;
+            width: rem(26);
+            height: rem(60);
+            margin-left: -1px;
+            background: url('//s1.bbgstatic.com/gshop/images/topic/penny-share/banner-rit.png') 0px rem(6) no-repeat;
+            background-size: 100%;
+        }
+    }
+}
+.mod-announcement {
+    font-size: rem(28);
+    line-height: rem(40);
+    text-align: center;
+    width: rem(492);
+    margin: 0 auto;
+    color: #666666;
+    margin-top: rem(30);
+    .item-a {
+        color: #ec255e;
+    }
+}
+.mod-download {
+    margin-top: rem(50);
+    .btn-a {
+        width: rem(440);
+        height: rem(120);
+        display: block;
+        margin: 0 auto;
+    }
+    .btn-a:active {
+        opacity: 0.8;
+    }
+    .btn-dld {
+        width: rem(440);
+        height: rem(120);
+        background: #f1cf3a;
+        color: #ec255e;
+        text-align: center;
+        border-radius: rem(60);
+        .dld-inner {
+            line-height: normal;
+            vertical-align: middle;
+            text-align: center;
+            font-weight: 700;
+            .up {
+                display: block;
+                font-size: rem(40);
+                line-height: normal;
+            }
+            .down {
+                display: block;
+                line-height: normal;
+                font-size: rem(28);
+            }
+        }
+    }
+}
+.mod-tips {
+    font-size: rem(24);
+    color: #bbbbbb;
+    text-align: center;
+    padding: rem(20) 0px;
+    margin: 0 auto;
+    line-height: rem(30);
+    .user-num {
+        color: #ee3167;
+    }
+}
+.mod-steps {
+    color: #ec255e;
+    text-align: center;
+    width: rem(554);
+    margin: 0 auto;
+    .steps-title {
+        font-size: rem(34);
+        margin-top: rem(20);
+    }
+    .steps-ctn {
+        font-size: rem(26);
+        margin-top: rem(14);
+    }
+    .steps-img {
+        margin-top: rem(14);
+        text-align: center;
+        margin-bottom: rem(30);
+        .img-item {
+            display: inline-block;
+			max-width:rem(540);
+        }
+    }
+    .steps-img-1 {
+        min-height: rem(500);
+    }
+    .steps-img-2 {
+        min-height: rem(400);
+    }
+}

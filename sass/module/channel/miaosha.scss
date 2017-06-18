@@ -1,0 +1,78 @@
+/* common */
+@charset "utf-8";
+@import "../../common-750";
+@import "../../common/search/_search";
+@import "../../common/dialog/dialog";
+@import "../../common/nav/_back2top";
+@import "../../common/nav/_nav";
+@import "../../module/index/_miaosha";
+
+
+.page-view {
+    font: 1rem/1rem sans-serif;
+}
+
+
+body {
+    background-color: #f0efed;
+}
+
+//  add by taotao
+.page-view-body {
+    max-width: 16rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mod-floor {
+    border-top: 1px solid #e5e5e5;
+    margin-top: rem(10);
+
+    .mod-title {
+        border-bottom: 1px solid #e5e5e5;
+        background-color: #fff;
+        height: rem(80);
+        padding-left: rem(30);
+        color: #333333;
+        font-size: rem(30);
+        line-height: rem(80);
+    }
+}
+
+.mod-ms-group {
+    position: relative;
+    padding-top: rem(50);
+    border-top: none;
+
+    .mod-ms-title {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: rem(4);
+        z-index: 3;
+        height: rem(80);
+        line-height: rem(80);
+        color: #fff;
+        background-image: inline-image('index/bg-ms-detail-title.png');
+        background-position: 100% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding-right: rem(20);
+        text-align: right;
+        font-size: rem(26);
+    }
+    .mod-bd .mod-item-ms .gd-info  {
+        padding-top: rem(44);
+        .gd-price {
+            .gd-price-now {
+                float: left;
+            }
+            .gd-price-ori {
+                margin-right: rem(20);
+                float: right;
+            }
+        }
+        .gd-title {
+            height: rem(108);
+        }
+    }
+}

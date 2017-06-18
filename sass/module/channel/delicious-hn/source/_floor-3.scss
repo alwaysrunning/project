@@ -1,0 +1,43 @@
+.floor-3 {
+    background-color: #fff;
+    margin-top: rem(20);
+    height: rem(362);
+    overflow: hidden;
+    .hd { color: #333; }
+    .bd {
+        height: rem(250);
+        padding: rem(20) 0 rem(30);
+        margin: 0;
+        width: 110%;
+        .gd-box{
+            float: left;
+            width: rem(209);
+            height: rem(249);
+            display: block;
+            border-right: 1px solid #f2f2f2;
+            &:last-child{
+                border-right:none;
+            }
+            .gd-img{
+                display: block;
+                width: rem(160);
+                height: rem(160);
+                margin: 0 auto;
+            }
+            .gd-name{
+                font-size: rem(22);
+                height: rem(36);
+                overflow: hidden;
+                color: #333;
+                text-align: center;
+                margin: rem(20) 0 0;
+                padding: 0 rem(10);
+            }
+            .gd-price{
+                font-size: rem(22);
+                color: #ff3333;
+                text-align: center;
+            }
+        }
+    }
+}

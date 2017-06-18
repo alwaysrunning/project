@@ -1,0 +1,20 @@
+/* common */
+@import "../../../common-750";
+@import "../../../common/slider/slider";
+@import "../../../common/form/form";
+@import "../../../common/button/button";
+@import "../../../common/dialog/dialog";
+@import "../../../common/scroll-load/scroll-load";
+@import "../../../common/go-top/go-top";
+
+/* modules */
+
+@import "../common/base";
+@import "../common/button";
+@import "../common/none";
+@import "./source/list";
+@import "./source/edit";
+html{
+    background: #f0f0ed;
+    padding: 0 0 rem(20);
+}

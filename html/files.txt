@@ -1,0 +1,11 @@
+cart/cart.html
+coupon/coupon.html
+order/buy-at-once.html
+order/buy-now.html
+order/modify-delivery.html
+order/modify-invoice.html
+order/order.html
+order/use-coupon.html
+pay/pay-ok.html
+pay/pay.html
+pay/pay-type.html

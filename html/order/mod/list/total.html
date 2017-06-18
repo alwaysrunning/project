@@ -1,0 +1,28 @@
+<script id="order/list/total" type="text/html">
+	<%  
+	var hasTax =(shopItem.totalTaxPrice && shopItem.totalTaxPrice.length!=0); 
+	%>
+    <tr>
+        <td colspan="2" class="info-box list-total-box">
+            <div class="jWrapBox list-total">
+                <div class="jClickInner clearfix">
+                    <div class="i-r">
+                        <p class="list-p ">
+							<% if(hasTax){ %>
+								<span class="other-money <%if(shopItem.isMarkingOut){%> other-money-del<%}%>">店铺税费:<em>￥<%=shopItem.totalTaxPrice%></em></span>
+							<% } %>
+                            <span class="other-money">优惠:<em>￥<%=shopItem.totalPmt%></em></span>
+                            <span class="other-money">运费:<em>￥<%=shopItem.totalFreight%></em></span>
+                        </p>
+                        <p class="list-p">
+                            <% if (shopItem.quantity) {%>
+                                <span class="other-money">共计<em class="txt-red"><%=shopItem.quantity%></em>件商品</span>
+							<%}%>
+						<span class="items total-money">店铺合计<%if(hasTax){%>(含税)<%}%>:<em>￥<%=shopItem.totalPrice%></em></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</script>

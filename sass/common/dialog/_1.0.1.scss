@@ -1,0 +1,51 @@
+/* ui-pop */
+
+.ui-pop {
+    background: #fff;
+    border-radius: rem(10);
+    width: rem(600);
+    position: relative;
+    .pop-close {
+        width: rem(44);
+        height: rem(44);
+		text-align:center;
+        line-height: rem(44);
+        font-size: rem(40);
+        position: absolute;
+        top: rem(20);
+        right: rem(20);
+        color: #a8a8a8;
+		border:1px solid #f7f7f7; 
+		border-radius:150%;
+    }
+    .pop-hd {
+        
+    }
+    .pop-bd {
+       margin: rem(70) rem(40) rem(40);
+       font-size:rem(30); 
+	   line-height:rem(40);
+	   text-align:center;
+	   color:#666666;
+    }
+    .pop-ft {
+        width: 100%;
+        margin: 0px auto rem(40);
+        .btn-0 {
+			float:left;
+			text-align:center;
+			height:rem(94);
+			line-height:rem(94);
+			font-size:rem(28);
+			border-top:1px solid #e5e5e5;
+			color:#333;
+        }
+		.btn-1 {
+			@extend .btn-0;
+			background:#f03468;
+			color:#fff;
+			border-top:1px solid #f03468;
+			border-radius: 0px 0px rem(10) 0px;
+		}
+    }
+}

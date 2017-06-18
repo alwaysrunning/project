@@ -1,0 +1,23 @@
+%total {
+    .warehouse-total {
+        font-size: rem(26);
+        text-align: right;
+        padding: rem(20);
+        .total-items {
+			font-family:'microsoft yahei';
+            margin-left: rem(20);
+			/* height:rem(20); */
+			display:inline-block;
+            em {
+                color: #f03668;
+            }
+        }
+        .total-items-del {
+            text-decoration: line-through;
+            em {
+                color: #666;
+            }
+        }
+        border-bottom:1px solid #e5e5e5;
+    }
+}

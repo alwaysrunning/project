@@ -1,0 +1,128 @@
+@mixin colors($color){
+    .cp-price{
+        color: $color;
+    }
+    .cp-btn{
+        background-color: $color;
+    }
+}
+
+.floor-cp{
+    overflow: hidden;
+    background-color: #f5f5f5;
+    .bd{
+        width: 110%;
+    }
+    .cp-box{
+        float: left;
+        width: rem(310);
+        height: rem(150);
+        margin: 0 rem(12) rem(10) 0;
+        border-radius: 5px;
+        background-color: #fff;
+        .cp-price{
+            width: rem(130);
+            padding-top:rem(38);
+            float: left;
+            font-family: 'microsoft yahei';
+            text-align: center;
+            .pri-box{
+                height: rem(48);
+                .pri-money{
+                    font-size: rem(58);
+                }
+                .pri-unit{
+                    font-size: rem(24);
+
+                }
+            }
+            .pri-cp{
+                width: rem(96);
+                margin: 0 auto;
+                overflow: hidden;
+                span{
+                    display: block;
+                    width: rem(120);
+                    font-size: rem(18);
+                    letter-spacing: 15px;
+                }
+            }
+        }
+        .split{
+            width: 0;
+            height: 100%;
+            border-left: 2px dotted #f2f2f2;
+            position: relative;
+            float: left;
+            .round{
+                display: block;
+                width: rem(20);
+                height: rem(20);
+                border-radius: 50%;
+                position: absolute;
+                background-color: #f2f2f2;
+                left: -0.25rem;
+                z-index: 1;
+            }
+            .top-round{
+                top: -0.25rem;
+            }
+            .bottom-round{
+                bottom: -0.25rem;
+            }
+        }
+        .cp-img{
+            float: left;
+            width: rem(178);
+            padding-top: rem(20);
+            img{
+                width: rem(120);
+                height: rem(40);
+                display: block;
+                margin: 0 auto;
+            }
+            .cp-btn{
+                display: block;
+                width: rem(135);
+                line-height: rem(50);
+                margin: rem(20) auto;
+                border-radius: 30px;
+                font-size: rem(22);
+                color: #fff;
+                text-align: center;
+            }
+            .btn-disabled{
+                background-color: #f2f2f2;
+                color: #666;
+            }
+        }
+        &:nth-last-child(2), &:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+    .c-pink{
+        @include colors(#f97272);
+        /*.cp-price{
+            color: #f97272;
+        }
+        .cp-btn{
+            background-color: #f97272;
+        }*/
+    }
+    .c-yellow{
+        @include colors(#ffb933);
+        /*.cp-price{
+            color: #ffb933;
+        }
+        .cp-btn{
+            background-color: #ffb933;
+        }*/
+    }
+    .c-green{
+        @include colors(#35c09e);
+    }
+    .c-bluegreen{
+        @include colors(#44c9d1);
+    }
+}

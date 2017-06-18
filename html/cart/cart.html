@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>购物车</title>
+<!--#include file="/html/include/common/intro.html"-->
+<meta content="3.6" name="pageid"/>
+<link rel="stylesheet" href="//s1.bbgstatic.com/gshop/css/module/cart/cart.css?v=3.0.22" type="text/css" charset="utf-8">
+</head>
+<body>
+<div class="page-view">
+    <!--#include file="mod/_head.html"-->
+    <div class="page-view-body mod-cart" id="jModCart">
+        <div class="bd">
+            <div class="inner">
+                <!-- 地址 begin -->
+                <!--#include file="mod/_addr.html"-->
+                <!-- 地址 end -->
+                <div id="jCart" class="cart mod-list">
+                    <div class="no-data" id="jNoData">
+                        <div class="page-view">
+                            <div class="empty">
+                                <p><img src="//s1.bbgstatic.com/gshop/images/public/loading.gif?v1"/></p>
+                                <p class="emt-txt loading-txt">拼命加载中...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 工具条 begin -->
+        <!--#include file="mod/_edit.html"-->
+        <!-- 工具条 end -->
+    </div>
+</div>
+
+<!-- 购物车模板 begin -->
+<script id="jCartTmpl" type="text/html">
+    <% include('jListTmpl') %>
+    <% include('jtotalTmpl') %>
+</script>
+
+<!-- 列表 begin -->
+<!--#include file="mod/_list.html"-->
+<!-- 列表 end -->
+<!-- 总计 begin -->
+<!--#include file="mod/_total.html"-->
+<!-- 总计 end -->
+
+<!--#include file="/html/include/common/outro.html"-->
+
+<!-- 统计 begin -->
+<!--#include file="mod/statistics.shtml"-->
+<!--#include file="/html/include/common/statistics-for-trade.html"-->
+<!-- 统计 end -->
+</body>
+</html>
+<!-- vim: set ft=html ff=unix et sw=4 ts=4 sts=4 tw=150: -->
+

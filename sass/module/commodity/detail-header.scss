@@ -1,0 +1,36 @@
+@import "../../_inc";
+@import "../../common/nav/_back2top";
+
+.item-detail-tabs{
+    position: absolute;
+    top: 0;
+    right: rem(20);
+    bottom: 0;
+    left: rem(80);
+
+    a{
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        float: left;
+        width: 50%;
+        color: #333;
+        font-size: rem(28);
+        text-align: center;
+        text-decoration: none;
+        line-height: rem(96);
+
+        &.active:after{
+            position: absolute;
+            content: '';
+            right: rem(40);
+            bottom: rem(0);
+            left: rem(40);
+            border-bottom: rem(6) solid $primary_color;
+        }
+    }
+
+    &.col-3 a{
+        width: 33.33333333%;
+    }
+}

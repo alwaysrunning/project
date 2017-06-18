@@ -1,0 +1,34 @@
+<script id="cart/list/total" type="text/html">
+<div class="cnt">
+	<div class="cnt-box">
+		<section class="cnt-weight">
+		<%
+		var totalWeight = group.totalWeight,
+		unit, totalPrice;
+
+		if (totalWeight < 1) {
+			totalWeight = totalWeight * 1000;
+			unit = 'g';
+			} else {
+			unit = 'kg';
+		}
+
+		totalPrice = group.totalPrice * 1 + group.totalFreight * 1;
+		var hasTax = (group.totalTaxPrice && group.totalTaxPrice.length!=0);
+		%>
+		<!-- 赋值变量-->
+		<span>重量: <%=totalWeight%><%=unit%></span>
+		</section>
+		<section class="cnt-price">
+			<span>运费:￥<%=group.totalFreight%></span> 
+			<span>订单优惠:￥<%=group.totalPmt%></span>
+		</section>
+		<section class="cnt-total">
+			<% if(hasTax){ %>
+				<span class="<%if(group.isMarkingOut){%> tariff-del<%}%>">本店税费:￥<%=group.totalTaxPrice%></span>
+			<% } %>
+		<span>本店合计<%if(hasTax){%>(含税)<%}%>:<span>￥<%=group.totalPrice_1%></span></span>
+		</section>
+	</div>
+</div>
+</script>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>云猴全球购送礼物啦</title>
+    <!--#include file="/html/include/common/intro.html"-->
+    <link rel="stylesheet" href="http://s1.bbgstatic.com/gshop/css/module/topic/penny-share/get-present.css" type="text/css" charset="utf-8">
+	<style>
+	.mod-share-pop .hd	
+	{
+		background-image:url('http://s1.bbgstatic.com/gshop/images/topic/penny-share/share-middle.png')
+	}
+	</style>
+</head>
+
+<body>
+	<input type="hidden" id="jUrlCache" value="fill-info.html"/>
+	<input type="hidden" id="jIndexUrl" value="index.html"/>
+	<input type="hidden" id="jShareTitle" value="9块9领取超值礼物"/>
+	<input type="hidden" id="jShareDesc" value="我刚花了9块9领取了一个超值礼物，包邮到家，你也来看看吧！"/>
+    <div class="page-view" id="jGetPresent">
+        <div class="mod-get-present" >
+            <div class="hd">
+                <div class="logo-wrap">
+                    <em class="ico-logo"></em>
+                </div>
+                <div class="ft"></div>
+            </div>
+            <div class="bd">
+                <div class="mod-banner clearfix">
+                    <div class="bd-banner">
+                        <div class="lft"></div>
+                        <div class="mid">
+                            <span class="text-pre">第一步</span>
+                            <span class="text-next">选取一件礼物</span>
+                        </div>
+                        <div class="rit"></div>
+                    </div>
+                </div>
+                <div class="pro-box clearfix">
+					<div class="mod-pro jModPro" data-productid="1">
+						<div class="pro-mask jProMask">
+							<div class="mask-bg"></div>
+							<div class="ico-box"><em class="mask-ico icon iconfont">&#xe634;</em>
+							</div>
+						</div>
+						<div class="img-box">
+							<a class="a-box" href="javascript:void('0');">
+								<img  class="img-item jImg img-error" src="//s1.bbgstatic.com/gshop/images/blank.gif" data-url="http://img04.bubugao.com/14dea8d42bb_2_39038615c234d32f37fd2f220f4ff9d3_800x800.jpeg!l1"/>
+							</a>
+						</div>
+						<div class="price-box clearfix">
+							<div class="detail">
+								<span class="a-detail">
+									Dior迪奥小姐香水迪奥小姐香水迪奥小姐香水迪奥小姐香水		
+								</span>
+							</div>
+							<div class="buy-info jBuyInfo clearfix">
+								<div class="buy-lft"><em class="ico-money">￥</em><span class="money-txt">450.00</span>
+								</div>
+								<div class="buy-penny">一分钱领取</div>
+							</div>
+						</div>
+					</div>
+						<div class="mod-pro jModPro" data-productid="2">
+							<div class="pro-mask jProMask">
+								<div class="mask-bg"></div>
+								<div class="ico-box"><em class="mask-ico icon iconfont">&#xe634;</em>
+								</div>
+							</div>
+							<div class="img-box">
+								<a class="a-box" href="javascript:void('0');">
+									<img  class="img-item jImg img-error" src="//s1.bbgstatic.com/gshop/images/blank.gif" data-url="http://img04.bubugao.com/14dea8d42bb_2_39038615c234d32f37fd2f220f4ff9d3_800x800.jpeg!l1"/>
+								</a>
+							</div>
+							<div class="price-box clearfix">
+								<div class="detail">
+									<span class="a-detail">
+										Dior迪奥小姐香水迪奥小姐香水迪奥小姐香水迪奥小姐香水		
+									</span>
+								</div>
+								<div class="buy-info jBuyInfo clearfix">
+									<div class="buy-lft"><em class="ico-money">￥</em><span class="money-txt">450.00</span>
+									</div>
+									<div class="buy-penny">一分钱领取</div>
+								</div>
+							</div>
+							</div>
+							<div class="mod-pro jModPro" data-productid="3">
+							<div class="pro-mask jProMask">
+								<div class="mask-bg"></div>
+								<div class="ico-box"><em class="mask-ico icon iconfont">&#xe634;</em>
+								</div>
+							</div>
+							<div class="img-box">
+								<a class="a-box" href="javascript:void('0');">
+									<img  class="img-item jImg img-error" src="//s1.bbgstatic.com/gshop/images/blank.gif" data-url="http://img04.bubugao.com/14dea8d42bb_2_39038615c234d32f37fd2f220f4ff9d3_800x800.jpeg!l1"/>
+								</a>
+							</div>
+							<div class="price-box clearfix">
+								<div class="detail">
+									<span class="a-detail">
+										Dior迪奥小姐香水迪奥小姐香水迪奥小姐香水迪奥小姐香水		
+									</span>
+								</div>
+								<div class="buy-info jBuyInfo clearfix">
+									<div class="buy-lft"><em class="ico-money">￥</em><span class="money-txt">450.00</span>
+									</div>
+									<div class="buy-penny">一分钱领取</div>
+								</div>
+							</div>
+						</div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="mod-share-get">
+            <div class="bg"></div>
+            <div class="bd">
+                <a class="btn-share btn-share-disabled " id="jBtnShare" href="javascript:void('0');">选好了</a>
+            </div>
+        </div>
+    </div>
+</body>
+<!--#include file="/html/include/common/outro.html"-->
+<!-- share pop  -->
+    <script type="text/html" id="jSharePopTmpl">
+        <div class="mod-share-pop" id="jSharePop">
+            <div class="hd"></div>
+            <div class="bd"></div>
+			<div class="ft">
+				<div class="item">已有<span class="num" id="jSNum"><%=num%></$$></span>人领取礼物</div>
+			</div>
+        </div>
+    </script>
+    <!-- share end  -->
+
+<script>
+    require(['conf/topic/penny-share/get-present']);
+</script>
+
+</html>

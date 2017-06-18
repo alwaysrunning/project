@@ -1,0 +1,89 @@
+﻿%mod-addr-block {
+    position: absolute;
+    // top: 0;
+    // bottom: 0;
+    top: 50%;
+    @include transform( translateY(-50%) );
+}
+%mod-addr-block-icon {
+    color: #333;
+    font-size: rem(28);
+}
+//收货地址
+.mod-addr {
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    overflow: hidden;
+    margin: rem(20) 0;
+    background: #fff image-url("order/order-letter.png") top left repeat-x;
+	@include tap-highlight;
+    .inner {
+        margin: rem(20) rem(20) 0 rem(20);
+        padding: rem(10) rem(38);
+        overflow: hidden;
+        position: relative;
+    }
+    .hd {
+        @extend %mod-addr-block;
+        left: 0;
+        .icon {
+            @extend %mod-addr-block-icon
+        }
+        // .txt-span {
+        //     font-size: rem(30);
+        //     color: #252525;
+        // }
+    }
+    .bd {
+        position: relative;
+        .item {
+            color: #333;
+            font-size: rem(28);
+            line-height: 1.25;
+            margin: rem(16) 0;
+			display:table;
+            .name {
+                font-size: rem(30);
+                vertical-align: middle;
+            }
+            .phone {
+                font-size: rem(30);
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: rem(30);
+            }
+            .tag {
+                display: inline-block;
+                color: #f03468;
+                border: 1px solid #f03468;
+                line-height: rem(28);
+                margin-right: rem(5);
+                padding: rem(1) rem(3);
+                font-size: rem(26);
+                @include border-radius( rem(2) );
+            }
+        }
+        .item-edit {
+            color: #f03468;
+            margin-bottom: rem(10);
+            .icon {
+                font-size: rem(24);
+                margin-right: rem(5);
+            }
+            .txt-span {
+                font-size: rem(20);
+            }
+        }
+        .addr {
+            width: 90%;
+        }
+    }
+    .ft {
+        @extend %mod-addr-block;
+        right: 0;
+        .icon {
+            @extend %mod-addr-block-icon;
+            color: #999;
+        }
+    }
+}

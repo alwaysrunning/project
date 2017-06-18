@@ -1,0 +1,14 @@
+<script id="jSubmitTmpl" type="text/html">
+    <div class="mod-sub">
+        <div class="inner">
+            <div class="b-l">
+				<p><i class="txt-span">实付款:</i><span class="txt-red money">￥<span id="jTotalPrice"><%=totalRealPrice%></span></span></p>
+            </div>
+            <div class="b-r">
+                <form id="jSubForm" onsubmit="return false;">
+                    <button class="ui-button ui-button-red" id="jSubBtn" data-sbTag="<%=submitTag%>" data-tips="<%=submitTips%>">提交订单</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</script>

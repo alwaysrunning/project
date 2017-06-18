@@ -1,0 +1,31 @@
+<script id="cart/list/warehouse/items/info/img" type="text/html">
+	<% 
+	   var styleDisabled = '';
+		if(!pro.canSelected){
+			styleDisabled = ' list-disabled';
+		}
+   	%>
+	<div class="img">
+		<% if(_flag=='gifts'||_flag=='unable-gifts'){ %>
+			<i class="prem">赠</i>
+		<% } %>
+	<!-- pic load -->
+	<a href="//m.yunhou.com/item/<%=pro.productId%>.html" class="pro-img">
+		<% if(i<6 && _flag=='products'){ %>
+			<img class="jImg img-error" src="<%=getImgByType(pro.productImage,'l1')%>" />
+		<% }else{ %>
+			<img class="jImg img-error" data-src="<%=getImgByType(pro.productImage,'l1')%>" src="//s1.bbgstatic.com/gshop/images/public/blank.gif" />
+		<% } %>
+	</a>
+	<!-- mask info -->
+	<% if(_flag == 'products'){ %>
+		<% if (styleDisabled && pro.statusTip &&pro.statusTip.length!=0 ) {%>
+			<div class="img-mask"><%=pro.statusTip%></div>
+		<%}%>
+	<% }else if(_flag!='gifts'){ %>
+		<% if(pro.qtyTips && pro.qtyTips.length!=0){ %>
+			<div class="img-mask"><%=pro.qtyTips%></div>
+		<% } %>
+	<% } %>
+	</div>
+</script>

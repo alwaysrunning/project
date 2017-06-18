@@ -1,0 +1,58 @@
+/* common */
+@charset "utf-8";
+@import "../../common-750";
+@import "../../common/button/button";
+@import "detail-header";
+html,body{
+	background-color: #f0f0ed;
+}
+.parameters {
+	padding-top: rem(20);
+	background-color: #f0f0ed;
+}
+.item-parameters-table{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background-color: #fff;
+	border-bottom: 1px solid #dfdfdf;
+	li{
+		list-style: none;
+	}
+	.item-para-title{
+		height: rem(76);
+		margin: 0;
+		padding: 0 rem(20);
+		color: #333;
+		font-size: rem(28);
+		line-height: rem(76);
+		background-color: #f8f8f8;
+		border-top: 1px solid #dfdfdf;
+		border-bottom: 1px solid #dfdfdf;
+	}
+	.item-para-item{
+		min-height: rem(42);
+		margin: 0 rem(20);
+		padding: rem(24) 0;
+		overflow: hidden;
+		line-height: rem(42);
+	}
+	.item-para-item + .item-para-item{
+		border-top: 1px solid #dfdfdf;
+	}
+	.item-para-name{
+		display: block;
+		float: left;
+		width: rem(260);
+		min-height: rem(42);
+		color: #666;
+		font-size: rem(24);
+	}
+	.item-para-value{
+		display: block;
+		overflow: hidden;
+		min-height: rem(42);
+		color: #333;
+		font-size: rem(28);
+	}
+}

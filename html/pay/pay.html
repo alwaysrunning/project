@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>订单支付</title>
+<meta content="3.8" name="pageid"/>
+<!--#include file="/project/html/include/common/intro.html"-->
+<link rel="stylesheet" type="text/css" href="//wx.yunhou.com/project/css/module/pay/pay-list.css?v3.0.123" >
+</head>
+<body>
+<div class="page-view">
+    <header class="ui-header">
+        <a href="http://m.yunhou.com/member/orders" class="icon iconfont ui-back">&#xe60d;</a>
+        <span class="ui-title">订单支付</span>
+        <a href="https://bubugao.qiyukf.com/client?k=10545d40ea75ae2acc2263ef22cc3667&wp=1" class="services-txt icon iconglobal">&#xe618;</a>
+    </header>
+
+    <div class="page-loading jPageLoading">
+        <p><img src="//wx.yunhou.com/project/images/public/loading.gif?v2"></p>
+        <p class="emt-txt loading-txt">拼命加载中...</p>
+    </div>
+
+    <div class="page-view-body jPageBody">
+        <div class="pay" id="jPayDom">
+            <div class="hd">
+                <div class="writer">
+                    <p><i class="iconglobal">&#xe617;</i></p>
+                    <div class="text">
+                        <p>
+                            订单提交成功请尽快付款
+                        </p>
+                        <p>
+                            <span id="jTimePay"></span>后未付款，订单将自动取消！
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-d">
+                <ul class="jOrderLi order-cnt"></ul>
+            </div>
+
+        </div>
+
+        <div class="error-pay" id='jPayErrorDom'>
+            <div class="error-img">
+                <div class="error-img-bj"></div>
+                <div class="error-monkey"></div>
+                <div class="error-tear"></div>
+            </div>
+            <div class="erro-text">
+                倒计时已结束，订单自动关闭。
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="//wx.yunhou.com/project/js/lib/require/2.1/require.js" crossorigin="*" ></script>
+<script src="//wx.yunhou.com/project/js/app.js" crossorigin="*"></script>
+
+<script>require(['conf/pay/pay-list']);</script>
+
+
+</body></html>

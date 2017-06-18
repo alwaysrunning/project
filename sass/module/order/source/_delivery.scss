@@ -1,0 +1,43 @@
+.mod-delivery {
+    overflow: hidden;
+    margin: 0 rem(20);
+    .bd {
+        .wrap-a {
+            display: block;
+        }
+        .inner-box {
+            padding: rem(20) 0;
+            font-size: rem(26);
+            overflow: hidden;
+            .i-l {
+                float: left;
+                // .delType {
+                //     color: #333333;
+                //     vertical-align: middle;
+                //     display: inline-block;
+                // }
+                // .delTxt {
+                //     vertical-align: middle;
+                //     display: inline-block;
+                //     color: #666;
+                // }
+            }
+            .i-r {
+                float: right;
+            }
+            .count {
+                margin-right: rem(45);
+            }
+            .number {
+                // vertical-align: middle;
+            }
+            .total {
+                font-size: rem(30);
+            }
+            // .arrow {
+            //     font-size: rem(30);
+            //     margin-left: rem(20);
+            // }
+       } 
+    }
+}

@@ -1,0 +1,19 @@
+<script id="jDeliveryTmpl" type="text/html">
+    <tr>
+        <td colspan="2" class="info-box">
+            <div class="mod-delivery jWrapBox">
+                <div class="bd">
+                    <div class="inner-box jClickInner">
+                        <div class="i-l">
+                            <span class="delv">运费:<em class="txt-red number">￥<%=totalFreight%></em></span>
+                        </div>
+                        <div class="i-r">
+                            <% if (quantity) {%>
+                            <span class="count">共计<em class="txt-red number"><%=quantity%></em>件商品</span><%}%><span class="total txt-red">合计<em class="number">￥<%=totalPrice%></em></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</script>

@@ -1,0 +1,124 @@
+.linkage-tab {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: rem(26);
+    color: #666666;
+    font-family: 'microsoft yahei';
+    display: none;
+    z-index: 12;
+    background: #fff;
+    .ui-header {
+        position: relative;
+    }
+    .ui-header .ui-back,.ui-header .ui-handle {
+        cursor: pointer;
+    }
+    .ui-handle {
+        display: none;
+    }
+    .linkage-tab-body {
+        position: relative;
+
+    }
+    .linkage-tab-input {
+        display: none;
+    }
+    .close {
+        position: fixed;
+        width: rem(70);
+        text-align: center;
+        height: rem(70);
+        line-height: rem(70);
+        background: #B2B2B2;
+        right: rem(30);
+        bottom: rem(120);
+        color: #fff;
+        opacity: .9;
+        border-radius: rem(70);
+        font-size: rem(56);
+        z-index: 11;
+        display: none;
+    }
+    .tab {
+        width: rem(216);
+        position: absolute;
+        top: 0;
+        left: 0px;
+        bottom: 0px;
+        height: 100%;
+        overflow: auto;
+        background: #F2F2F2;
+        ul {
+            li {
+                height: rem(86);
+                line-height: rem(86);
+                padding-left: rem(34);
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                -o-text-overflow: ellipsis;
+                -ms-text-overflow: ellipsis;
+                -webkit-text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            .hover {
+                height: rem(84);
+                line-height: rem(84);
+                width: rem(182);
+                border-bottom: rem(2) solid #E4E4E4;
+                background: #fff;
+            }
+        }
+    }
+    .content {
+        background: #fff;
+        margin-left: rem(284);
+        overflow: auto;
+        height: 300px;
+        .inner {
+            width: 100%;
+
+            ul {
+                li {
+                    height: rem(84);
+                    line-height: rem(84);
+                    border-bottom: 1px solid #DFDFDF;
+                    a {
+                        color: #666666;
+                    }
+                }
+                .hover {
+                    a {
+                        background: #005ea7;
+                        color: #fff;
+                        padding: 0px rem(2);
+                    }
+                }
+            }
+        }
+    }
+}
+.linkage-tab-hover {
+    display: block;
+}
+.linkage-tab-hidden {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    .body {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+    .linkage-tab-hover {
+        z-index: 13;
+    }
+    .page-view {
+        display: none;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+}

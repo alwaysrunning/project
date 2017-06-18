@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>云猴全球购送礼物啦</title>
+    <!--#include file="/html/include/common/intro.html"-->
+    <link rel="stylesheet" href="http://s1.bbgstatic.com/gshop/css/module/topic/penny-share/fill-info.css" type="text/css" charset="utf-8">
+</head>
+
+<body>
+	<input type="hidden" id="jUrlCache" value="award-raiders.html"/>
+    <div class="page-view" id="jFillInfo">
+        <div class="mod-fill-info">
+            <div class="hd">
+                <div class="logo-wrap">
+                    <em class="ico-logo"></em>
+                </div>
+                <div class="ft"></div>
+            </div>
+            <div class="bd">
+                <div class="bd-wrap" id="jProItemWrap">
+                    <div class="tips-box" id="jErrorBox">数据加载中，请稍后...</div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <script type="text/html" id="jProItemTmpl">
+        <div class="mod-share-pop" id="jProItemBox">
+            <div class="mod-banner clearfix">
+                <div class="bd-banner">
+                    <div class="lft"></div>
+                    <div class="mid">
+                        <span class="text-pre">第一步</span>
+                        <span class="text-next">填写手机号码</span>
+                    </div>
+                    <div class="rit"></div>
+                </div>
+            </div>
+            <div class="mod-pro jModPro clearfix">
+                <div class="img-box">
+                    <a class="a-box" href="javascript:void('0');">
+						<img class="img-item jImg img-error" src="//s1.bbgstatic.com/gshop/images/blank.gif" data-url="<%=productInfo.img%>" />
+					</a>
+                </div>
+                <div class="price-box clearfix">
+                    <div class="detail">
+                        <span class="a-detail"><%=productInfo.productName%></span>
+                    </div>
+                    <div class="buy-info jBuyInfo clearfix">
+                        <div class="buy-lft"><em class="ico-money">￥</em><span class="money-txt"><%=productInfo.price%></span>
+                        </div>
+                        <div class="buy-penny">一分钱领取</div>
+                    </div>
+                </div>
+            </div>
+            <div class="mod-tips">
+				<% if(userList.length==0){ %>
+					0
+					<% }else{ %>
+					<span class="user-list"><%=userList%></span>等<span class="user-num"><%=totalNum%></span>
+					<% } %>
+					位用户已领取了礼包
+                            </div>
+            <div class="mod-form">
+                <div class="form-hd"></div>
+                <div class="form-bd">
+                    <form action="award-raiders.html">
+                        <div class="form-item">
+                            <div class="form-input">
+                                <input type="text" class="input-phone" name="phone" id="jPhone" placeholder="请输入手机号码" /><a class="btn-security-code" id="jGetSeCode">获取验证码</a>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <div class="form-input">
+                                <input type="text" class="input-security-code" name="securityCode" id="jSecurityCode" placeholder="请输入手机验证码" />
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <a class="form-btn" id="jFormBtn">确定</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </script>
+</body>
+<!--#include file="/html/include/common/outro.html"-->
+<script>
+    require(['conf/topic/penny-share/fill-info']);
+</script>
+
+</html>

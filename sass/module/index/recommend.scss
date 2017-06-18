@@ -1,0 +1,232 @@
+/* common */
+@charset "utf-8";
+@import "../../common";
+@import "../../common/slider/slider";
+@import "../../common/linkage-tab/linkage-tab";
+@import "../../common/search/_search";
+@import "../../common/nav/_back2top";
+@import "../../common/header/_global";
+@import "../../common/menu/_menu4global";
+@import "../../common/nav/_nav";
+.wrap-menu {
+    top: rem(80);
+}
+.wrap-menu .mod-content .mod-content-item dd {
+    font-size: rem(24);
+    height: rem(52);
+    line-height: rem(52);
+}
+.wrap-menu .mod-content .mod-content-item dt > div a {
+    font-size: rem(24);
+}
+.wrap-menu .mod-content .mod-content-item dd a {
+    font-size: rem(24);
+}
+
+
+/* begin */
+$focusImg-1 : (rem(270), rem(285), 0px, 0px), (rem(369), rem(116), rem(271), 0), (rem(184), rem(168), rem(271), rem(117)),
+(rem(184), rem(168), rem(456), rem(117));
+
+$focusImg-2 : (rem(640), rem(164), 0px, 0px), (rem(640), rem(164), 0px, 0px);
+
+$focusImg-3 : (rem(320), rem(136), 0px, 0px), (rem(320), rem(136), rem(320), 0), (rem(320), rem(136), rem(0), rem(136)),
+(rem(320), rem(136), rem(0), rem(272)), (rem(320), rem(272), rem(320), rem(136));
+
+$focusImg-4 : (rem(320), rem(136), 0px, 0px), (rem(320), rem(136), rem(320), 0), (rem(320), rem(272), rem(0), rem(136)),
+(rem(320), rem(136), rem(320), rem(136)), (rem(320), rem(136), rem(320), rem(272));
+
+$borderImg-1 : (0, 1px, 0, 0), (0, 0, 1px , 0), (0, 1px, 0, 0), (0, 0, 0, 0);
+$borderImg-2 : (0, 1px, 1px, 0), (0, 0, 1px, 0), (0, 1px, 1px, 0), (0, 1px, 0, 0), (0, 0, 0, 0);
+$borderImg-3 : (0, 1px, 1px, 0), (0, 0, 1px, 0), (0, 1px, 0, 0), (0, 0, 1px, 0), (0, 0, 0, 0);
+/* end */
+
+/* img absolute */
+@mixin img-abs($img, $imgLength:0, $imgClass:'.img-', $imgInc:0){
+    @for $i from 0 to $imgLength {
+        $focusItem : nth($img,$i+1);
+        #{$imgClass}#{$i+1} {
+            position: absolute;
+            display: block;
+            width: nth($focusItem,1);
+            height: nth($focusItem,2);
+            left: nth($focusItem,3);
+            top: nth($focusItem,4);
+            background-color: #fff;
+            -webkit-box-sizing:border-box;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@mixin img-border($img, $imgLength:0, $imgClass:'.img-', $imgInc:0){
+    @for $i from 0 to $imgLength {
+        $borderItem : nth($img,$i+1);
+        #{$imgClass}#{$i+1} {
+            border-color: #f2f2f2;
+            border-style:solid;
+            border-width: nth($borderItem,1) nth($borderItem,2) nth($borderItem,3) nth($borderItem,4);
+        }
+    }
+}
+
+.rcmd{
+    .mod-slider{
+        height: rem(220);
+        .ui-slider{
+            height: rem(220);
+        }
+        .ui-slider-slide{
+            img{
+                width: 100%;
+                height: rem(220);
+            }
+        }
+    }
+    .nav{
+        height: rem(60);
+        a{
+            display: inline-block;
+            width: 50%;
+            height: 100%;
+            line-height: rem(60);
+            float: left;
+            text-align: center;
+            font-size: rem(26);
+            color: #333;
+            text-decoration: none;
+            span{
+                display: inline-block;
+                -webkit-box-sizing:border-box;
+                height: 100%;
+                padding: 0 rem(5);
+            }
+        }
+        a.active{
+            span{
+                border-bottom: 3px solid #f16320;
+                color: #f16320;
+            }
+        }
+    }
+
+    .cnt{
+        max-width: rem(640);
+        margin: 0 auto;
+        background-color: #f2f2f2;
+        padding: rem(20) 0;
+        .floor{
+            margin-bottom: rem(20);
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            .title-1{
+                border-left: rem(6) solid #ff7575;
+                font-size: rem(32);
+                line-height: rem(40);
+                padding-left: rem(18);
+                margin: rem(16) 0;
+                color: #333;
+            }
+        }
+        .floor-bn{
+            background-color: #fff;
+            height: rem(285);
+            @include img-abs($focusImg-1, 4);
+            @include img-border($borderImg-1, 4);
+            .img-1{
+                .limit-time{
+                    top: rem(98);
+                    left: rem(28);
+                }
+            }
+        }
+        .floor-img{
+            height: rem(164);
+            @include img-abs($focusImg-2, 1);
+            .img-1{
+                .limit-time{
+                    top: rem(94);
+                    left: rem(20);
+                }
+            }
+        }
+        .floor-1{
+            background-color: #fff;
+            padding-bottom: rem(14);
+            .img-item{
+                height: rem(394);
+                position: relative;
+                @include img-abs($focusImg-3, 5);
+                @include img-border($borderImg-2, 5);
+            }
+        }
+        .floor-2{
+            background-color: #fff;
+            padding-bottom: rem(14);
+            .img-item{
+                height: rem(394);
+                position: relative;
+                @include img-abs($focusImg-4, 5);
+                @include img-border($borderImg-3, 5);
+            }
+        }
+    }
+}
+.ui-header {
+    background-color: #fff;
+
+    .ui-back {
+        color: #000;
+    }
+    .ui-title {
+        color: #000;
+    }
+}
+.mod-nav {
+    height: rem(64);
+    line-height: rem(64);
+    text-align: center;
+    border-bottom: 1px solid #e4e4e4;
+
+    a {
+        position: relative;
+        width: auto;
+        height: 100%;
+        padding-left: 5%;
+        padding-right: 5%;
+        line-height: rem(64);
+        text-align: center;
+        text-decoration: none;
+        font-size: rem(28);
+        color: #333;
+        display: inline-block;
+
+        span {
+            font-size: rem(24);
+            float: left;
+            line-height: rem(60);
+        }
+        &.active{
+            span {
+                color: #f03468;
+            }
+
+            &:after {
+                display: block;
+                content: "";
+                position: absolute;
+                right: 0;
+                bottom: -1px;
+                left: 0;
+                width: 100%;
+                margin: 0 auto;
+                border-bottom: 5px solid #f03468;
+            }
+            // border-bottom: 4px solid #f03468;
+        }
+    }
+}

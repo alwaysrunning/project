@@ -1,0 +1,43 @@
+/* 为空样式 */
+html {
+    // background-color: #fff;
+}
+
+.empty {
+    padding: rem(100) rem(60);
+    text-align: center;
+    background-color: transparent;
+    height: auto;
+    .icon{
+        font-size: rem(120);
+        display: inline-block;
+        color: #cdcdcd;
+    }
+    .emt-img {
+        margin: 0 auto;
+        width: rem(254);
+        height: rem(291);
+        background: image-url("cart/empty.png") no-repeat center center;
+        background-size: 100%;
+    }
+    .emt-txt{
+        font-size: rem(30);
+        text-align: center;
+        color: #666;
+        margin: rem(40) auto rem(5);
+    }
+    .emt-txt-tag{
+        font-size: rem(24);
+        text-align: center;
+        color: #999;
+        margin: 0 auto rem(20);
+    }
+    .ui-button-white {
+        display: inline-block;
+        width: rem(138);
+        height: rem(58);
+        line-height: rem(58);
+        font-size: rem(24);
+        color: #666;
+    }
+}

@@ -1,0 +1,59 @@
+.mod-links{
+    padding: 0 rem(20);
+    .bd{
+        a {
+            float: left;
+            width: 33%;
+            font-size: rem(28);
+            color: #333;
+            border-right: solid #fff7e7 1px;
+            border-bottom: solid #fff7e7 1px;
+            label,
+            span {
+                display: block;
+                text-align: center;
+                i {
+                    font-size: rem(60);
+                   
+                }
+                .font-icon-color1 {
+                    color: #ffd861;
+                }
+                .font-icon-color2 {
+                    color: #feb3c2;
+                }
+                .font-icon-color3 {
+                    color: #ccc;
+                }
+            }
+            span {
+                padding: rem(80) 0 rem(40) 0;
+            }
+            label {
+                padding-bottom: rem(25);
+            }
+          &.my-group{
+            .iconglobal{
+              position: relative;
+              .hot{
+                font-style: normal;
+                display: inline-block;
+                position: absolute;
+                font-size: rem(18);
+                line-height: rem(28);
+                padding:0 rem(10);
+                background: #f03468;
+                top: 0;
+                right: rem(-20);
+                color: #fff;
+                border-radius: rem(18);
+              }
+            }
+
+          }
+        }
+        .a-border {
+            border-right: 0;
+        }
+    }
+}

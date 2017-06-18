@@ -1,0 +1,87 @@
+/* common */
+@charset "utf-8";
+@import "../common-750";
+@import "../common/button/button";
+
+/* 为空样式 */
+html{
+	background-color: #ffffff;
+}
+.empty{
+    padding-top: rem(200);
+	text-align: center;
+	background-color: #ffffff;
+	height: 100%;
+
+	.error{
+		.error-img{
+            margin-left: auto;
+            margin-right: auto;
+            background-image: inline-image('404/bg-404.png');
+            height: rem(400);
+            width: rem(750);
+            background-size: 100%;
+		}
+		.error-txt{
+            text-align: center;
+
+			.ico{
+				font-size: rem(60);
+				line-height: rem(60);
+				color: #f03468;
+			}
+			.msg{
+				margin-top: rem(20);
+				font-size: rem(30);
+				line-height: rem(30);
+				color: #000000;
+			}
+		}
+	}
+	.mod-btn{
+		margin-top: rem(78);
+		a{
+			display: inline-block;
+            width: rem(150);
+            height: rem(55);
+            line-height: rem(55);
+			text-align: center;
+			font-size: rem(28);
+			border-radius: 3px;
+            color: #f03468;
+
+			&:first-child {
+				margin-right:rem(50);
+			}
+			&:last-child {
+                color: #fff;
+                background-color: #f03468;
+			}
+		}
+		a.ui-button-white {
+			border: 1px solid #f03468;
+		}
+	}
+}
+
+@keyframes mymove
+{
+	from {height:0px;}
+	to {height:rem(58);}
+}
+
+@-webkit-keyframes mymove
+{
+	from {height:0px;}
+	to {height:rem(58);}
+}
+
+
+@-webkit-keyframes rotate{
+	from{-webkit-transform:rotate(0deg)}
+	to{-webkit-transform:rotate(360deg)}
+}
+@keyframes rotate{
+	from{transform:rotate(0deg)}
+	to{transform:rotate(360deg)}
+}

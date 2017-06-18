@@ -1,0 +1,229 @@
+._global_cata {
+  overflow: hidden;
+
+  body {
+    padding-bottom: 0;
+    overflow: hidden;
+  }
+  .page-view {
+    overflow: hidden;
+    height: 100% !important;
+    padding-bottom: 0;
+  }
+  .fix-nav .nav-list a {
+    &#global-cata {
+      .icon,
+      p {
+        color: #f03468;
+      }
+      .icon {
+        color: #f03468;
+
+        &:after {
+          color: #f03468;
+          content: "\e64b";
+        }
+      }
+    }
+    &:first-child {
+      color: #333;
+      p {
+        color: #333;
+      }
+      .icon:after {
+        color: #333;
+        content: '\e648' !important;
+      }
+    }
+  }
+}
+.wrap-menu-cata {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  padding-bottom: rem(100);
+  z-index: 11;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+
+  @include transform(translateX(-100%));
+  @include transition(.3s transform ease-in-out 0.2s);
+
+  .mod-menu {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-bottom: rem(100);
+    width: rem(182);
+    background-image: inline-image('catalogue/bg-left.png');
+    background-position: 0 0;
+    background-repeat: repeat-y;
+    background-size: 100% 100%;
+    color: #666;
+    font-size: rem(24);
+
+    ul {
+      position: relative;
+
+      li {
+        overflow: hidden;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: rem(10);
+        padding-right: rem(10);
+        font-size: rem(22);
+        color: #999999;
+        height: rem(180);
+        text-align: center;
+
+        &.current  {
+          border-right: none;
+          background-color: #fff;
+
+          .item {
+            border-bottom: 1px solid #f03468;
+          }
+        }
+        &:first-child .item {
+          border-top:  none;
+        }
+        .item {
+          height: rem(88);
+          padding-top: rem(45);
+          padding-bottom: rem(45);
+          border-bottom: 1px solid #e5e5e5;
+          overflow: hidden;
+
+          .name {
+            margin-top: rem(20);
+            height: rem(20);
+            line-height: rem(20);
+            overflow: hidden;
+          }
+        }
+
+        i {
+          color: #999999;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+          height: rem(54);
+          line-height: rem(54);
+          font-size: rem(54);
+          display: block;
+        }
+      }
+    }
+  }
+  .mod-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: rem(186);
+    padding-bottom: rem(100);
+    z-index: 10;
+    overflow-y: auto;
+    background-color: #fff;
+    color: #666;
+    font-size: rem(24);
+    line-height: rem(84);
+    opacity: 1;
+
+    .mod-content-item {
+      margin-top: rem(20);
+      display: none;
+
+      &:empty {
+        min-height: 13rem;
+        background-image: inline-image('public/load.gif');
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-color: rgba(0, 0, 0, 0);
+        background-size: 34%;
+      }
+
+      &:first-child {
+        display: block;
+      }
+
+      dl {
+        margin-left: rem(20);
+        clear: both;
+        height: auto;
+        overflow: hidden;
+
+      }
+
+      dt {
+        background-color: #f8f8f8;
+        height: rem(60);
+        line-height: rem(60);
+        color: #f03468;
+        font-size: rem(28);
+        overflow: hidden;
+        margin-bottom: rem(28);
+
+        &>div {
+          height: rem(60);
+          margin-left: 1rem;
+          line-height: rem(60);
+          font-size: rem(28);
+          color: #f03468;
+          display: list-item;
+          list-style-type: disc;
+
+          a {
+            color: #f03468;
+          }
+        }
+      }
+      dd {
+        height: rem(80);
+        line-height: rem(80);
+        float: left;
+        width: 28%;
+        margin-left: 5%;
+
+        a {
+          color: #333333;
+          font-size: rem(28);
+          display: block;
+          white-space:nowrap;
+          -o-text-overflow:ellipsis;
+          -ms-text-overflow:ellipsis;
+          -webkit-text-overflow:ellipsis;
+          text-overflow:ellipsis;
+          overflow: hidden;
+
+          &.red {
+            color: #f03468;
+          }
+        }
+      }
+    }
+  }
+}
+.wrap-menu-animate {
+  @include transform(translateX(0));
+  .mod-content {
+    opacity: 1;
+  }
+}
+#global-cata {
+  .icon {
+    &:after {
+      font-family: 'iconglobal';
+      content: "\e64a";
+      font-size: rem(40);
+    }
+  }
+}
+

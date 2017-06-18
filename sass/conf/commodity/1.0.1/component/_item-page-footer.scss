@@ -1,0 +1,123 @@
+.item-page-footer {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: rem(100);
+  background-color: #fff;
+  border-top: 1px solid rgba(0,0,0,.1);
+
+  &:before,&:after{
+    position: absolute;
+    display: block;
+    content: '';
+    top: rem(10);
+    height: rem(80);
+    border-right: 1px solid #e5e5e5;
+  }
+  &:before{
+    left: rem(170);
+  }
+  &:after{
+    left: rem(340);
+  }
+
+  a{
+    display: block;
+    float: left;
+    height: rem(100);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    .iconglobal{
+      font-size: rem(50);
+    }
+    &:active{
+      @include tap-highlight;
+    }
+  }
+  .btn-personal-center,
+  .btn-cart,
+  .btn-collect{
+    width: rem(170);
+    color: #333;
+    i{
+      display: block;
+      margin-top: rem(15);
+      height: rem(52);
+      font-size: rem(40);
+      line-height: rem(52);
+    }
+    .btn-title{
+      display: block;
+      height: rem(20);
+      font-size: rem(20);
+      line-height: rem(20);
+    }
+    &.active{
+      color: $primary_color;
+    }
+  }
+  .btn-collect{
+    .icon-heart{
+      display: none;
+    }
+    .btn-title em{
+      font-style: normal;
+      display: none;
+    }
+    &.active{
+      .icon-heart{
+        display: block;
+      }
+      .icon-heart-o{
+        display: none;
+      }
+      .btn-title em{
+        display: inline;
+      }
+    }
+  }
+  .btn-cart{
+    position: relative;
+    .cart-badge{
+      position: absolute;
+      top: rem(10);
+      right: rem(45);
+      min-width: rem(20);
+      padding: 0 rem(5);
+      height: rem(30);
+      color: #fff;
+      text-align: center;
+      line-height: rem(32);
+      background-color: $primary_color;
+      border-radius: rem(15);
+      opacity: 1;
+      -webkit-transform: scale(1);
+      -webkit-transition: .3s;
+      &:empty{
+        opacity: 0;
+        -webkit-transform: scale(0.1);
+      }
+    }
+
+  }
+  .btn-add-to-cart{
+    float: right;
+    width: rem(220);
+    color: #fff;
+    font-size: rem(28);
+    line-height: rem(100);
+    background-color: $primary_color;
+    &.disabled{
+      color: #999;
+      background-color: #ccc;
+      pointer-events: none;
+    }
+  }
+}
+

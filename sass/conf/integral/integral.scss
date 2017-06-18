@@ -1,0 +1,21 @@
+@import "common-750";
+@import "common/page-tips/1.0.0/page-tips";
+@import "common/pop-box/1.0.0/pop-box";
+@import "module/integral/text";
+@import "common/tab/1.0.0/tab";
+@import "module/integral/coupon";
+@import "module/integral/record";
+ .ui-tab {
+    .bd-item {
+        padding: rem(0) rem(20) rem(20);
+        background: #f6f6f6;
+		overflow:hidden;
+    }
+}
+.loading {
+	height:rem(80);
+	line-height:rem(80);
+	background:#f6f6f6;
+	color:#999;
+	font-size:rem(26);
+}

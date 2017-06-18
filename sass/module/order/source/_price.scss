@@ -1,0 +1,27 @@
+.mod-price {
+    margin: rem(20) 0px rem(120) 0px;
+    font-size: rem(28);
+    overflow: hidden;
+    background: #fff;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    .bd {
+        margin: rem(20);
+        .item {
+            font-size: rem(28);
+            margin-bottom: rem(20);
+        }
+        .b-l {
+            float: left;
+            color: #333;
+            padding-right: 10px;
+        }
+        .b-r {
+			font-family:'microsoft yahei';
+            float: right;
+        }
+        .discount {
+            color: #f59f11;
+        }
+    }
+}

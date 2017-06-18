@@ -1,0 +1,31 @@
+<script id="order/list/warehouse/items/info/info" type="text/html">
+<%
+	var _data = {pro : pro, _flag : _flag, _flagHtml : _flagHtml, _style : _style};
+%>
+<td colspan="2" class="td-active items-info">
+	<div class="detail">
+		<ul class="box">
+			<li class="tit">
+				<%include('order/list/warehouse/items/info/img', _data)%>
+				<div class="info">
+					<%include('order/list/warehouse/items/info/title', _data)%>
+					<%include('order/list/warehouse/items/info/specification', _data)%>
+					<div class="info-ft">
+						<div class="pri">
+							<%include('order/list/warehouse/items/info/price', _data)%>
+							<%include('order/list/warehouse/items/info/tariff', _data)%>
+						</div>
+						<%include('order/list/warehouse/items/info/quantity', _data)%>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</td>
+</script>
+<!--#include file="img.html"-->
+<!--#include file="title.html"-->
+<!--#include file="specification.html"-->
+<!--#include file="price.html"-->
+<!--#include file="tariff.html"-->
+<!--#include file="quantity.html"-->

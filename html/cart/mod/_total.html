@@ -1,0 +1,43 @@
+<script id="jtotalTmpl" type="text/html">
+    <% if(groups && groups.length > 0){ %>
+    <div class="list bottom jTotal cart-total">
+        <table class="box">
+            <hbody>
+                <tr>
+                    <th class="chk">
+						<input type="checkbox" class="checkbox jChkAll" />
+						<span class="chk-txt">全选</span>
+                    </th>
+                    <th class="info-th">
+						<div class="tariff-wrap">
+							<div class="tariff-ctn">
+								<p class="p-items clearfix">
+									<span class="total-txt">总价:￥<%=totalProductPrice%></span>
+									<!--<em class="txt-666 tottal-tips"> (不含运费)</em>-->
+								</p>
+								<p class="p-items clearfix">
+									<span class="total-freight">
+										(
+										<% if(totalTaxPrice && totalTaxPrice.length!=0){ %>
+											含关税:￥<%=totalTaxPrice%>，
+										<% } %>
+										不含运费
+										)	
+									</span>
+								</p>
+							<!-- <p>
+									<span class="total-freight">运费:￥<%=totalFreight%></span><span class="total-price">订单优惠:￥<%=totalPmt%></span>
+									共<%=totalType%>件,总重量:<i><%=totalWeight%>kg</i>
+								</p>-->
+							</div>
+							<div class="tariff-btn oper">
+								<button class="ui-button" id="jSubmit">去结算(<%=totalQuantity%>)</button>
+							</div>
+						</div>
+                    </th>
+                </tr>
+            </hbody>
+        </table>
+    </div>
+    <% } %>
+</script>

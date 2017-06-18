@@ -1,0 +1,116 @@
+﻿.item-mask {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,.6);
+	z-index: 100;
+}
+.arrival-notice-wrap{
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+.arrival-notice {
+	width: rem(580);
+	height: rem(540);
+	position: absolute;
+	z-index: 101;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	border-radius: rem(10);
+	font-size: rem(28);
+	color: #666;
+	background: #fff;
+	.title {
+		height: rem(90);
+		margin: 0 rem(20);
+		color: #999;
+		font-size: rem(28);
+		line-height: rem(90);
+		text-align: center;
+		border-bottom: 1px solid #dfdfdf;
+	}
+	.explain {
+		margin: 0 rem(20);
+		padding: rem(30) 0;
+		color: #333;
+		font-size: rem(26);
+		line-height: rem(24*1.35);
+		border-bottom: 1px solid #dfdfdf;
+		p{
+			display: table-cell;
+		}
+	}
+	.dialog-input {
+		height: rem(100);
+		margin: 0 rem(20);
+		border-bottom: 1px solid #dfdfdf;
+		i{
+			display: inline-block;
+			float: left;
+			width: rem(60);
+			height: rem(100);
+			color: #ccc;
+			font-size: rem(40);
+			line-height: rem(100);
+			text-align: left;
+		}
+		input {
+			width: rem(430);
+			height: rem(50);
+			margin: rem(25) 0;
+			color: #333;
+			font-size: rem(28);
+			background-color: #fff;
+			border: none;
+		}
+	}
+	.close-arrival-notice{
+		position: absolute;
+	    top: rem(-20);
+	    right: rem(-20);
+	    width: rem(52);
+	    height: rem(52);
+	    color: #333;
+	    text-align: center;
+	    text-decoration: none;
+	    background-color: #fff;
+	    border-radius: 50%;
+	    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+
+	    i{
+	        display: block;
+	        width: rem(52);
+	        height: rem(52);
+	        font-size: rem(28);
+	        line-height: rem(52);
+	    }
+	}
+	.dialog-button{
+		button {
+			box-sizing: border-box;
+			width: 50%;
+			height: rem(100);
+			background-color: #fff;
+			border: none;
+			color: #999;
+			font-size: rem(28);
+
+			&:first-child{
+				border-right: 1px solid #dfdfdf;
+				border-radius: 0 0 0 rem(10);
+			}
+			&:last-child{
+				border-radius: 0 0 rem(10) 0;
+			}
+		}
+	}
+}

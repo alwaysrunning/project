@@ -1,0 +1,17 @@
+.mod-banner {
+  margin-top: rem(10);
+  border-top: 1px solid #e5e5e5;
+  background-color: #fff;
+
+  .banner-img-3 {
+    margin-top: rem(10);
+
+    a {
+      display: block;
+    }
+    img {
+      width: 100%;
+      height: rem(320);
+    }
+  }
+}

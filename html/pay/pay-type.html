@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>订单支付-方式</title>
+<meta content="3.9" name="pageid"/>
+<!--#include file="/html/include/common/intro.html"-->
+<link rel="stylesheet" type="text/css" href="//s1.bbgstatic.com/gshop/css/module/pay/pay-type.css?v3.0.9" data-cdn="gshop/css/module/pay/pay.css">
+</head>
+<body>
+<div class="page-view">
+    <header class="ui-header">
+        <a href="javascript:window.history.back();" class="icon iconfont ui-back">&#xe60d;</a>
+        <span class="ui-title">订单支付</span>
+        <a href="https://bubugao.qiyukf.com/client?k=10545d40ea75ae2acc2263ef22cc3667&wp=1" class="services-txt icon iconglobal">&#xe618;</a>
+    </header>
+    <div class="page-loading jPageLoading">
+        <p><img src="//s1.bbgstatic.com/gshop/images/public/loading.gif?v2"></p>
+        <p class="emt-txt loading-txt">拼命加载中...</p>
+    </div>
+
+    <div class="page-view-body jPageBody">
+
+        <div class="pay" id="jPayDom">
+            <div class="tips-top jGlobalOrderTips">部分全球购订单仅支持支付宝支付</div>
+            <div class="tips-top jGlobalOnWxOrderTips">部分全球购订单仅支持微信支付</div>
+
+            <div class="bd jPayListContent">
+                <div class="bill-count jBillCount">
+                    支付金额：<span class="jBillPrice"></span>
+                </div>
+                <div class="title"><span class="title-text"><span class="icon iconglobal ico-payWay">&#xe637;</span>支付方式</span><span class="title-btn jChange">更改<span class="icon iconfont ico-stretch">&#xe60b;</span></span></div>
+                <ul id="jPayLi" class="pay-list" data-code=""></ul>
+            </div>
+
+            <div class="order-d">
+                <ul class="jOrderLi order-cnt"></ul>
+            </div>
+
+            <form action="" method="get" id="jForm" style="display:none">
+                <input type="submit" value="Submit"/>
+            </form>
+        </div>
+
+
+        <div class="error-pay" id='jPayErrorDom'>
+            <div class="error-img">
+                <div class="error-img-bj"></div>
+                <div class="error-monkey"></div>
+                <div class="error-tear"></div>
+            </div>
+            <div class="erro-text">
+                倒计时已结束，订单自动关闭。
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--#include file="/html/include/common/outro.html"-->
+<script>require(['conf/pay/pay-type']);</script>
+
+<!--#include file="/html/include/common/statistics.html"-->
+</body></html>
+

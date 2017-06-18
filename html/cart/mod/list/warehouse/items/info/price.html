@@ -1,0 +1,12 @@
+<script id="cart/list/warehouse/items/info/price" type="text/html">
+<% if(_flag!='unable-items'){ %>
+	<% if (pro.totalMktprice && pro.totalMktprice.length != 0) { %>
+		<!-- <p class="del-price">￥<%=pro.totalMktprice%></p> -->
+	<% } %>
+	<% if(_flag == 'products'){ %>
+		<p class="pri"><i>￥</i><span class="jPriceSpan"><%=pro.bargainPrice%></span></p>
+	<% }else{ %>
+	<p class="pri"><i>￥</i><span class="jPriceSpan"><%=pro.subtotal%></span></p>
+	<% } %>
+<% } %>
+</script>

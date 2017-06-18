@@ -1,0 +1,9 @@
+<script id="order/list/warehouse/items/info/quantity" type="text/html">
+	<% if(_flag=='pre'||_flag=='groups'){ %>
+		<span class="quty jQuty"><span class="jQutySpan"><%=pro['stockName']%></span></span>
+	<% }else if(_flag=='gifts'){ %>
+		<span class="quty">无库存</span>
+	<% }else{ %>
+		<span class="quty  jQuty">x<span class="jQutySpan"><%=pro['quantity']%></span></span>
+	<% } %>
+</script>

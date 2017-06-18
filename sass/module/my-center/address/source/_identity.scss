@@ -1,0 +1,78 @@
+.mod-id-list {
+    border: solid #e5e5e5;
+    border-width: 1px 0;
+    background: #fff;
+    padding: rem(15) rem(38);
+    .id-header {
+        .title {
+            color: #333;
+            line-height: 150%;
+            font-size: rem(28);
+            margin: 0;
+        }
+        .content {
+            position: relative;
+            color: #bfbfbf;
+            font-size: rem(22);
+            line-height: 125%;
+            padding: rem(10) rem(65) rem(10) 0;
+            &.checked {
+                .btn {
+                    &:after {
+                        content: "\e641";
+                    }    
+                }
+            }
+        }
+        .btn {
+            position: absolute;
+            top: rem(10);
+            right: rem(5);
+            color: #999;
+            font-style: normal;
+            &:after {
+                font-size: rem(28);
+                font-family: "iconglobal";
+                content: "\e642";
+            }    
+        }
+    }
+    .id-body {
+        display: none;
+        &.active {
+            display: block;
+        }
+        .form-item {
+            border: solid #e5e5e5;
+            border-width: 1px 0;
+            padding: rem(15) 0;
+            label {
+                margin-right: rem(30);
+            }
+            input {
+                border: none;
+            }
+        }
+        .id-item {
+            @include clearfix;
+            margin: rem(50) 0 rem(25) 0;
+        }
+        .id-img {
+            float: left;
+            width: rem(280);
+            height: rem(180);
+            background: image-url("order/identity-bg.png") no-repeat center center;
+            @include background-size(100%);
+            &~.id-img {
+                float: right;
+            }
+            &::nth-child(even) {
+                float: right;
+            }
+        }
+        .tip {
+            color: #f03468;
+            line-height: 125%;
+        }
+    }
+}

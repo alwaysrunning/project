@@ -1,0 +1,41 @@
+<script>
+	try {
+		require(['conf/order/order'], function(){
+            //获取商品productId和数量,items
+            function getProductInfo() {
+                var proList = [];
+                var pId = [];
+				var items = [];
+                $('.jProductlistTable').each(function() {
+                    var proId = $(this).attr('data-id'); //产品id
+                    var num = $(this).find('.jQutySpan').text(); //产品数量
+					var price = $(this).find('.jPriceSpan').text();//价格
+					items.push([proId, num, price]);
+                    pId.push(proId);
+                    proList.push(proId + ',' + num);
+                })
+                return {
+					items: items,
+                    pId: pId.join(','),
+                    list: proList.join(';')
+                };
+            };
+            window.TJ = {
+                item: function(data) {
+
+					/* bpm 埋点 begin */
+					window.BPM = window.BPM || [];
+					BPM.push([ 'setGatherMore', { 
+					"page_type": "order", // 当前页面标识,请勿修改 
+					"plat":"h5",//平台 
+					"total":$('#jTotalPrice').text(),//实付款
+					"promotion":$('#jShippingTotal').text(),//优惠总计
+					"orderItems":getProductInfo().items
+					} ]);
+					/* bpm 埋点 end */
+			  }
+			};
+
+		});
+    } catch (e) {}
+</script>

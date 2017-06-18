@@ -1,0 +1,50 @@
+<script id="jZtdAddrTmpl" type="text/html">
+    <% 
+        if(groups.length && groups[0].deliveries.length && buyType == "direct"){
+            var addrSelf = groups[0].deliveries[0];
+            if(addrSelf.type == 2){ 
+    %>
+        <div class="mod-ztd">
+            <div class="ztd-addr clearfix">
+                <label class="f-l lbl"><em>*</em>自提点地址</label>
+                    <form id="jZtdAddrForm">
+                        <label class="f-r sel-addr icon-arrow-down icon-arrow-down">
+                            <input type="hidden" name="deliveryId" value="<%=addrSelf.id %>" />
+                            <input type="hidden" name="shopId" value="<%=addrSelf.shopId %>" />
+                            <input type="hidden" name="transportConfigId" value="<%=addrSelf.transportConfigId %>" />
+                            <input type="hidden" name="buyType" value="direct" />
+                            <select name="transportConfigId" id="jZtdAddrSel">
+                                <option value="none">请务必选择正确的门店</option>
+                                <% 
+                                    var arrAddr = addrSelf.cartDeliverySelfs;
+                                    for(var i=0,len=arrAddr.length;i<len;i++){ 
+                                %>
+                                <option value="<%=arrAddr[i].transportConfigId %>"><%=arrAddr[i].address %></option>
+                                <% } %>
+                            </select>
+                        </label>
+                    </form>
+            </div>
+            <div class="ztd-time">
+                <label class="f-l lbl"><em>*</em>自提时间段</label>
+                    <form id="jZtdTimeForm">
+                        <label class="f-r sel-time icon-arrow-down">
+                            <input type="hidden" name="shopId" value="<%=addrSelf.shopId %>" />
+                            <input type="hidden" name="buyType" value="direct" />
+                            <select name="memo" id="jZtdTimeSel">
+                                <option value="none">请选择自提时间段</option>
+                                <option value="25号上午10:00-12:00">25号上午10:00-12:00</option>
+                                <option value="25号下午14:00-18:00">25号下午14:00-18:00</option>
+                                <option value="26号上午10:00-12:00">26号上午10:00-12:00</option>
+                                <option value="26号下午14:00-18:00">26号下午14:00-18:00</option>
+                                <option value="27号上午10:00-12:00">27号上午10:00-12:00</option>
+                            </select>
+                        </label>
+                    </form>
+            </div>
+        </div>
+    <% 
+        }
+    }
+    %>
+</script>

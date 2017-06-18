@@ -1,0 +1,46 @@
+%list-warehouse-warehouse-tariff {
+    .warehouse-tariff {
+        td {
+            background: #fef6f3!important;
+            color: #f03467!important;
+            font-size: rem(24);
+            padding: 0px!important;
+            .td-inner {
+                padding: rem(14) rem(20)!important;
+                position: relative;
+                .arrow {
+                    position: absolute;
+                    display: inline-block;
+                    width: 0;
+                    height: 0;
+                    border-width: rem(16);
+                    border-style: solid;
+                    border-color: transparent;
+                    overflow: hidden;
+                    font-size: 0;
+                    line-height: 0;
+                    vertical-align: top;
+                    _color: #fef6f3;
+                    _filter: chroma(color=#fef6f3);
+                    border-bottom-color: #fef6f3;
+                    margin: 1px 0 0 rem(-32);
+                    top: rem(-30);
+                }
+                .arrow-limit {
+                    right: rem(40);
+                }
+            }
+        }
+    }
+}
+%list-warehouse-warehouse-tariff-selected {
+    .warehouse-tariff {
+        td {
+            background: #f03467!important;
+            color: #fff!important;
+        }
+        .arrow-limit {
+            border-bottom-color: #f03467!important;
+        }
+    }
+}

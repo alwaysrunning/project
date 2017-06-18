@@ -1,0 +1,19 @@
+<script id="cart/list/full-cut" type="text/html">
+<!-- 满减信息 begin -->
+<%
+var promotions = group.promotions;
+if (promotions && promotions.length > 0) {
+%>
+	<ul class="prolist">
+	<% for (var j = 0; j < promotions.length; j++) {
+		var proUrl = promotions[j]['url'],
+			tgStr = (!proUrl || proUrl.length ==0 )? 'span' : 'a';
+	%>
+		<li class="pre-info txt-els">
+			<span class="txt-red">[<%=promotions[j]['toolName']%>]</span><<%=tgStr%> href="<%=proUrl%>" class="text"><%=promotions[j]['ad']%></<%=tgStr%>>
+		</li>
+	<%}%>
+	</ul>
+<%}%>
+<!-- 满减信息 end -->
+</script>

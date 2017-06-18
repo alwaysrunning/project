@@ -1,0 +1,39 @@
+$nav-bottom-height: 2.4rem;
+body {
+    padding-bottom: $nav-bottom-height;
+}
+
+#nav-bottom {
+    position: fixed;
+    bottom: 0;
+    height: $nav-bottom-height;
+    width: 100%;
+    background-color: #222729;
+
+    ul li {
+        float: left;
+        width: 20%;
+        text-align: center;
+
+        a {
+            color: #FFF;
+        }
+
+        .iconfont {
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+        }
+
+        .text {
+            font-size: 0.6rem;
+            color: #f7f7f7;
+        }
+
+    }
+    .current {
+        .iconfont,
+        .text {
+            color: #81c878;
+        }
+    }
+}

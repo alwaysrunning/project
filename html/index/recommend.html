@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>demo</title>
+<meta charset="utf-8" />
+<!-- <script src="//s1.bbgstatic.com/gshop/js/common/widget/flexible.js"></script> -->
+<script>
+// flexible.js
+!function(y){function x(){var a,c=p.getBoundingClientRect().width;c/w>640&&(c=640*w),a=Math.floor(c/16),p.style.fontSize=a+"px",y.rem=a}var w,v,u,t,s,r=y.document,q=y.navigator,p=r.documentElement,o=r.querySelector('meta[name="viewport"]'),n=r.querySelector('meta[name="flexible"]');o?(t=o.getAttribute("content").match(/initial\-scale=(["']?)([\d\.]+)\1?/),t&&(v=parseFloat(t[2]),w=parseInt(1/v))):n&&(t=n.getAttribute("content").match(/initial\-dpr=(["']?)([\d\.]+)\1?/),t&&(w=parseFloat(j[2]),v=parseFloat((1/w).toFixed(2)))),w||v||(w=y.devicePixelRatio,w=q.appVersion.match(/android/gi)||q.appVersion.match(/iphone/gi)?w>=2?2:1:1,v=1/w),p.setAttribute("data-dpr",w),o||(o=r.createElement("meta"),o.setAttribute("name","viewport"),o.setAttribute("content","width=device-width, target-densitydpi=high-dpi, initial-scale="+v+", maximum-scale="+v+", minimum-scale="+v+", user-scalable=no"),p.firstElementChild?p.firstElementChild.appendChild(o):(s=r.createElement("div"),s.appendChild(o),r.write(s.innerHTML))),y.dpr=w,y.addEventListener("resize",function(){clearTimeout(u),u=setTimeout(x,300)},!1),y.addEventListener("pageshow",function(b){b.persisted&&(clearTimeout(u),u=setTimeout(x,300))},!1),"complete"===r.readyState?r.body.style.fontSize=12*w+"px":r.addEventListener("DOMContentLoaded",function(){r.body.style.fontSize=12*w+"px"},!1),x()}(window);
+</script>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name='apple-touch-fullscreen' content='yes'>
+<!-- <meta name="full-screen" content="yes"> -->
+<meta content="fullscreen=yes,preventMove=no" name="ML-Config">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<!-- <meta name="format-detection" content="telephone=no,email=no,address=no" /> -->
+
+<link rel="stylesheet" href="//s1.bbgstatic.com/gshop/css/module/index/recommend.css">
+</head>
+<body>
+<div class="page-view rcmd">
+	<!-- 头部begin -->
+	<header class="ui-header">
+		<a href="javascript:;" class="icon iconfont ui-logo">&#xe61b;</a>
+		<label class="search-mod"><i class="icon iconfont ui-search">&#xe614;</i><span class="search-key">搜索</span></label>
+		<a href="javascript:;" class="icon iconfont ui-handle" id="jCategory">&#xe60a;</a>
+	</header>
+	<!-- 头部end -->
+
+	<div class="page-view-body">
+		<div class="nav">
+			<a href="#" class="active"><span>商品推荐</span></a>
+			<a href="#"><span>原装进口</span></a>
+			<!-- <a href="#"><span>步步高超市</span></a> -->
+		</div>
+		
+		<div class="mod-slider">
+			<div id="slides" class="ui-slider">
+	            <a href=""><img src="http://ww4.sinaimg.cn/bmiddle/6d5d6a55gw1ep4a2qecklj21kw11xk3x.jpg" alt="Photo by: Allex Link: http://www.flickr.com/photos/allex_wang/5087404401/"></a>
+	            <a href=""><img src="http://ww3.sinaimg.cn/bmiddle/6d5d6a55gw1ep4a5eh92sj21kw11x145.jpg" alt="Photo by: Allex Link: http://www.flickr.com/photos/allex_wang/5227623068/"></a>
+	            <a href=""><img src="http://ww2.sinaimg.cn/bmiddle/6d5d6a55gw1ep4a5yle6yj21kw11xwor.jpg" alt="Photo by: Allex Link: http://www.flickr.com/photos/allex_wang/4833059991/"></a>
+	            <a href=""><img src="http://ww3.sinaimg.cn/bmiddle/6d5d6a55gw1ep4a6h1chfj21kw11xn8r.jpg" alt="Photo by: Allex Link: http://www.flickr.com/photos/allex_wang/97577796/"></a>
+	            <a href=""><img src="http://ww4.sinaimg.cn/bmiddle/6d5d6a55gw1ep4a8sr13wj21kw11xgws.jpg"alt="Photo by: Allex Link: http://www.flickr.com/photos/allex_wang/97577796/"></a>
+	        </div>
+        </div>
+
+		<div class="cnt">
+			<div class="floor floor-bn">
+				<a href="javascript:;" class="img-1">
+					<img src="//s1.bbgstatic.com/gshop/images/blank.gif" class="jImg img-error" data-url="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" />
+					<div data-endTime="1423479539617" class="limit-time jCountTime" data-startTime="1423468439617"> 
+						<b>0</b>
+						<b>0</b> 
+						<em>:</em> 
+						<b>0</b>
+						<b>0</b> 
+						<em>:</em>
+	                	<b>0</b>
+	                	<b>0</b>
+	            	</div>
+				</a>
+				<a href="javascript:;" class="img-2"><img src="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" class="jImg" /></a>
+				<a href="javascript:;" class="img-3"><img src="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" class="jImg" /></a>
+				<a href="javascript:;" class="img-4"><img src="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" class="jImg" /></a>
+			</div>
+
+			<div class="floor floor-img">
+				<a href="javascript:;" class="img-1">
+					<img src="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" class="jImg" />
+					<div data-endTime="1423580539617" class="limit-time jCountTime" data-startTime="1423468439617"> 
+						<b>0</b>
+						<b>0</b> 
+						<em>:</em> 
+						<b>0</b>
+						<b>0</b> 
+						<em>:</em>
+	                	<b>0</b>
+	                	<b>0</b>
+	            	</div>
+				</a>
+			</div>
+
+			<div class="floor floor-1">
+				<h3 class="title-1">品牌分类</h3>
+				<div class="img-item">
+					<a href="javascript:;" class="img-1"><img data-url="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" src="" class="jImg" /></a>
+					<a href="javascript:;" class="img-2"><img data-url="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" src="" class="jImg" /></a>
+					<a href="javascript:;" class="img-3"><img data-url="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" src="" class="jImg" /></a>
+					<a href="javascript:;" class="img-4"><img data-url="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" src="" class="jImg" /></a>
+					<a href="javascript:;" class="img-5"><img data-url="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" src="" class="jImg" /></a>
+				</div>
+			</div>
+
+			<div class="floor floor-2">
+				<h3 class="title-1">品牌分类</h3>
+				<div class="img-item">
+					<a href="javascript:;" class="img-1"><img data-url="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" src="" class="jImg" /></a>
+					<a href="javascript:;" class="img-2"><img data-url="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" src="" class="jImg" /></a>
+					<a href="javascript:;" class="img-3"><img data-url="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" src="" class="jImg" /></a>
+					<a href="javascript:;" class="img-4"><img data-url="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" src="" class="jImg" /></a>
+					<a href="javascript:;" class="img-5"><img data-url="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" src="" class="jImg" /></a>
+				</div>
+			</div>
+
+			<div class="floor floor-1">
+				<h3 class="title-1">品牌分类</h3>
+				<div class="img-item">
+					<a href="javascript:;" class="img-1"><img data-url="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" src="" class="jImg" /></a>
+					<a href="javascript:;" class="img-2"><img data-url="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" src="" class="jImg" /></a>
+					<a href="javascript:;" class="img-3"><img data-url="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" src="" class="jImg" /></a>
+					<a href="javascript:;" class="img-4"><img data-url="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" src="" class="jImg" /></a>
+					<a href="javascript:;" class="img-5"><img data-url="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" src="" class="jImg" /></a>
+				</div>
+			</div>
+
+			<div class="floor floor-1">
+				<h3 class="title-1">品牌分类</h3>
+				<div class="img-item">
+					<a href="javascript:;" class="img-1"><img data-url="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" src="" class="jImg" /></a>
+					<a href="javascript:;" class="img-2"><img data-url="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" src="" class="jImg" /></a>
+					<a href="javascript:;" class="img-3"><img data-url="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" src="" class="jImg" /></a>
+					<a href="javascript:;" class="img-4"><img data-url="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" src="" class="jImg" /></a>
+					<a href="javascript:;" class="img-5"><img data-url="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" src="" class="jImg" /></a>
+				</div>
+			</div>
+
+			<div class="floor floor-1">
+				<h3 class="title-1">品牌分类</h3>
+				<div class="img-item">
+					<a href="javascript:;" class="img-1"><img data-url="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" src="" class="jImg" /></a>
+					<a href="javascript:;" class="img-2"><img data-url="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" src="" class="jImg" /></a>
+					<a href="javascript:;" class="img-3"><img data-url="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" src="" class="jImg" /></a>
+					<a href="javascript:;" class="img-4"><img data-url="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" src="" class="jImg" /></a>
+					<a href="javascript:;" class="img-5"><img data-url="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" src="" class="jImg" /></a>
+				</div>
+			</div>
+
+			<div class="floor floor-1">
+				<h3 class="title-1">品牌分类</h3>
+				<div class="img-item">
+					<a href="javascript:;" class="img-1"><img data-url="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" src="" class="jImg" /></a>
+					<a href="javascript:;" class="img-2"><img data-url="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" src="" class="jImg" /></a>
+					<a href="javascript:;" class="img-3"><img data-url="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" src="" class="jImg" /></a>
+					<a href="javascript:;" class="img-4"><img data-url="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" src="" class="jImg" /></a>
+					<a href="javascript:;" class="img-5"><img data-url="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" src="" class="jImg" /></a>
+				</div>
+			</div>
+
+			<div class="floor floor-1">
+				<h3 class="title-1">品牌分类</h3>
+				<div class="img-item">
+					<a href="javascript:;" class="img-1"><img src="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" class="jImg" /></a>
+					<a href="javascript:;" class="img-2"><img src="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" class="jImg" /></a>
+					<a href="javascript:;" class="img-3"><img src="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" class="jImg" /></a>
+					<a href="javascript:;" class="img-4"><img src="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" class="jImg" /></a>
+					<a href="javascript:;" class="img-5"><img src="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" class="jImg" /></a>
+				</div>
+			</div>
+
+			<div class="floor floor-1">
+				<h3 class="title-1">品牌分类</h3>
+				<div class="img-item">
+					<a href="javascript:;" class="img-1"><img src="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" class="jImg" /></a>
+					<a href="javascript:;" class="img-2"><img src="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" class="jImg" /></a>
+					<a href="javascript:;" class="img-3"><img src="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" class="jImg" /></a>
+					<a href="javascript:;" class="img-4"><img src="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" class="jImg" /></a>
+					<a href="javascript:;" class="img-5"><img src="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" class="jImg" /></a>
+				</div>
+			</div>
+
+			<div class="floor floor-1">
+				<h3 class="title-1">品牌分类</h3>
+				<div class="img-item">
+					<a href="javascript:;" class="img-1"><img src="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" class="jImg" /></a>
+					<a href="javascript:;" class="img-2"><img src="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" class="jImg" /></a>
+					<a href="javascript:;" class="img-3"><img src="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" class="jImg" /></a>
+					<a href="javascript:;" class="img-4"><img src="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" class="jImg" /></a>
+					<a href="javascript:;" class="img-5"><img src="http://img04.bubugao.com/14a04794586_2_a6ce7d2bc0f5f386e9af29c634af62f4_600x600.jpeg!m1" class="jImg" /></a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</div>
+<script src="//s1.bbgstatic.com/lib/require/2.1/require.js"></script>
+<script src="//s1.bbgstatic.com/gshop/js/app.js?v=3.0.11.3"></script>
+<script>require(['conf/index/recommend']);</script>
+</body></html>
+<!-- vim: set ft=html ff=unix et sw=4 ts=4 sts=4 tw=150: -->

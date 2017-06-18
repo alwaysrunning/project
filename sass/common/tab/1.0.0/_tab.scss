@@ -1,0 +1,70 @@
+.ui-tab {
+    height: rem(76);
+    background: #fff;
+    width: 100%;
+    text-align: left;
+    position: relative;
+    display: block;
+    .tab-hd {
+        clear: both;
+		height: rem(76);
+        .hd-item {
+            float: left;
+            text-align: center;
+            font-size: rem(28);
+            text-decoration: none;
+            height: rem(76);
+            line-height: rem(76);
+            .item-line {
+                display: inline-block;
+                -webkit-box-sizing: border-box;
+                height: 100%;
+                padding: 0 rem(8);
+                .count {
+                    padding-left: rem(8);
+                    display: inline;
+                    font-size: rem(28);
+                    font-weight: 100;
+                }
+            }
+        }
+    }
+	.tab-bd {
+        .bd-item {
+            display:none;
+            &:first-child, &.active {
+                display:block;
+            }
+        }
+    }
+}
+
+@mixin ui-tab(
+	$name:2,
+	$txt-color: #73787c,
+	$count-color:#73787c,
+	$hover-color:#f03468,
+	$line-color:#f03468
+){
+	.ui-tab-#{"" + $name}{
+		.tab-hd {
+			.hd-item {
+				width: (100%/$name);
+				color: $txt-color;
+				.item-line {
+					.count {
+						color:$count-color;
+					}
+				}
+			}
+			a.hover {
+				.item-line {
+					border-bottom: rem(3) solid $line-color;
+					color: $hover-color;
+				}
+			}
+		}
+	}
+}
+
+@include ui-tab(2);

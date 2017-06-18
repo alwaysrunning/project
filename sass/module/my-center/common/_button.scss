@@ -1,0 +1,38 @@
+ /* .ui-button-white */
+@include ui-button(white, #666, #fff, #999, #f6f6f6, #ccc);
+.ui-button{
+    display: block;
+    &.ui-button-white{
+        box-shadow:none;
+        border:1px solid #ccc;
+        padding: 0 rem(8);
+        width:auto;
+        font-size:rem(24);
+        min-width:rem(140);
+        color:#666;
+        &:hover,:active{
+            background-color: #f6f6f6;
+        }
+        &.disabled{
+            background-color: #eee;
+            color:#ccc;
+        }
+    }
+    &.ui-button-red{
+        border:1px solid #DB0000;
+        padding: 0 rem(8);
+        width:auto;
+        display: block;
+        font-size:rem(24);
+        min-width:rem(140);
+        &:hover,:active{
+            border-color: #f63b3b;
+            background-color: #f63b3b;
+        }
+        &.disabled{
+            border-color: #ff9292;
+            background-color: #ff9292;
+            color:#fff;
+        }
+    }
+}

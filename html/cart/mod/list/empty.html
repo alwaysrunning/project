@@ -1,0 +1,16 @@
+<script id="cart/list/empty" type="text/html">
+<%
+if(!(groups && groups.length > 0)&&!(invalidProducts && invalidProducts.length!=0)){ %>
+	<div class="page-view">
+		<div class="empty">
+			<p class="emt-img"></p>
+			<p class="emt-txt">购物车快饿瘪了T.T</p>
+			<p class="emt-txt-tag">主人快给我挑点宝贝吧</p>
+			<a href="#" class="ui-button-white" id="goToIndex">去逛逛</a>
+			<% if (!memberId) {%>
+				<a href="#" class="ui-button-white" id="goToLogin">登录</a>
+			<%}%>
+		</div>
+	</div>
+<% } %>
+</script>

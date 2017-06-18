@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>砍价</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!--#include file="/html/include/common/intro.html"-->
+    <link rel="stylesheet" href="//s1.bbgstatic.com/gshop/css/module/topic/bargain/bargain-take.css" type="text/css" charset="utf-8"></head>
+<body>
+<div class="page-view">
+    <div class="mod-bargain">
+        <div class="banner">
+            <a class="active-rule" id="jActiveRule"></a>
+            <p class="img-box"><img class="jActPic" src="//s1.bbgstatic.com/gshop/images/topic/bargain/bg.jpg"/></p>
+            <div class="time">
+                <p>砍价时间</p>
+                <p class="ctn jTimeStamp">
+                    <span>2015.06.07</span>
+                    <span>20:00</span>
+                    <span>至</span>
+                    <span>2015.06.07</span>
+                    <span>20:00</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="bd">
+            <div class="bd-mark">
+                <span>填写信息：</span>
+                <div class="mark-up"></div>
+                <div class="mark-down"></div>
+            </div>
+
+            <div class="ac-goods clearfix jAcGoods">
+
+            </div>
+        </div>
+
+        <div class="info-content jInfo">
+
+        </div>
+
+        <div class="btn-box jbtnBox">
+            <a class="btn-l">
+                <span class="btn-txt">提交</span>
+            </a>
+
+        </div>
+
+        <div class="poster-content">
+            <div class="poster-two clearfix">
+                <div class="poster-item jposter">
+                    <a target="_blank" href="#">
+                        <img src="http://s1.bbgstatic.com/pub/img/blank.gif" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<script id="goodsItemTpl" type="text/html">
+    <% var imgUrl = goodsPic?"//img04.bubugao.com/"+goodsPic+"!m1":"http://s1.bbgstatic.com/pub/img/blank.gif";%>
+    <div class="goods-item">
+        <a class="goods-link">
+            <img class="goods-img" src="<%=imgUrl%>"/>
+            <div class="goods-pri">
+                <div class="pri-dot">
+                    ￥<span><%=goodsPrice%></span>
+                </div>
+                <div class="ack"></div>
+            </div>
+            <span class="goods-name"><%=goodsDesc%></span>
+        </a>
+    </div>
+</script>
+
+
+<!--#include file="/html/include/common/outro.html"-->
+<script>require(['conf/topic/bargain/bargain-take']);</script>
+</body>
+</html>
+<!-- vim: set ft=html ff=unix et sw=4 ts=4 sts=4 tw=150: -->

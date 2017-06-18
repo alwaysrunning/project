@@ -1,0 +1,11 @@
+%tariff {
+    .info-tariff {
+        padding: rem(10) 0px;
+		margin-left:rem(4);
+    }
+    .info-tariff-del {
+        @extend .info-tariff;
+        color: #999999;
+        text-decoration: line-through;
+    }
+}

@@ -1,0 +1,295 @@
+@import "../../common-750";
+@import "../../common/button/button";
+@import "../trade/_trade";
+/* 不同颜色 */
+$coupon-default:('.coupon-item','','','',#f03468,#FDF0F5);
+$coupon-active:('.active','',#fff,#fc8aaa, #f03468,#FDF0F5);
+$coupon-expired:('.expired',#e4e4e4,#ccc,'',#ccc,#f8f8f8);
+/* active style */
+@mixin active() {
+    &:active {
+        background-color: #dedede;
+    }
+}
+/*  */
+@mixin couponItem($items) {
+	$class : nth($items, 1); 
+	$border-color: nth($items, 2);
+	$money-color: nth($items, 3);
+   	$money-bg-color: nth($items, 4);
+	$info-color:nth($items, 5);
+	$info-bg-color:nth($items, 6);
+	#{$class} {
+        position: relative;
+        margin-bottom: rem(20);
+        background-color: #fff;
+		color: $info-color;
+        .cp-item-tp {
+			position:relative;
+            overflow: hidden;
+            height: rem(116);
+            padding: 0px;
+            border: 1px solid #{$border-color};
+            border-radius: rem(4);
+            /* background-image: url(//s1.bbgstatic.com/gshop/images/coupon/coupon-bottom.png); */
+            background-position: left bottom;
+            background-repeat: repeat-x;
+            background-size: rem(20);
+			.info-ico {
+			    position: absolute;
+			    right: 0px;
+			    bottom: rem(10);
+			    font-size: rem(40);
+			    width: rem(110);
+			    height: rem(100);
+			    line-height: rem(100);
+			    overflow: hidden;
+			    text-align: center;
+				@include tap-highlight;
+			    .iconglobal {
+			        font-size: rem(30);
+			    }
+			}
+            .cp-code {
+                position: relative;
+                display: table-cell;
+                float: left;
+                width: rem(200);
+                height: rem(116);
+                line-height: rem(114);
+                /* padding:rem(24) 0px; */
+                font-family: Helvetica;
+                font-size: rem(24);
+                text-align: center;
+                vertical-align: bottom;
+				background:#{$money-bg-color};
+				color:#{$money-color};
+                .half-circle {
+                    position: absolute;
+					margin-right:-1px;
+                    top: 0px;
+                    right: 0px;
+                    width: 8px;
+                    height: 100%;
+                    background-image: url(//s1.bbgstatic.com/gshop/images/coupon/half-circle.png);
+					@if $class=='.expired'{
+                    background-image: url(//s1.bbgstatic.com/gshop/images/coupon/half-circle-gray.png);
+				}
+                    background-size: 6px;
+                    background-repeat: repeat-y;
+					background-position:top right;
+                }
+                em {
+                    font-size: rem(32);
+                    font-style: normal;
+                    &:last-child {
+                        font-size: rem(24);
+                    }
+                }
+                span {
+                    font-size: rem(80);
+                    font-weight: bold;
+                }
+            }
+            .cp-metas {
+                float: left;
+                padding: rem(6) rem(34);
+                .cp-source, .cp-name {
+                    height: rem(50);
+                    margin: 0;
+                    padding: 0;
+                    overflow: hidden;
+                    font-size: rem(24);
+                    line-height: rem(50);
+                }
+				.cp-name {
+					/* color: $info-color; */
+				    position: relative;
+					opacity:0.5;
+				}
+                .iconglobal {
+                    font-size: rem(30);
+					/* color: $info-color; */
+                }
+            }
+        }
+        .cp-item-bt {
+            padding: rem(14) rem(35);
+            color: $info-color;
+            font-size: rem(24);
+            line-height: rem(40);
+            background-color: $info-bg-color;
+            border-radius: 0px 0px rem(4) rem(4);
+            display: none;
+        }
+		/* @if $class=='.expired' { */
+			/* &:after { */
+				/* display: block; */
+				/* content: ''; */
+				/* position: absolute; */
+				/* z-index: 3; */
+				/* right: 0; */
+				/* top: rem(-14); */
+				/* width: rem(133); */
+				/* height: rem(98); */
+				/* background-image: url(//s1.bbgstatic.com/gshop/images/coupon/coupon-expired.png); */
+				/* background-repeat: no-repeat; */
+				/* background-size: rem(133) rem(98); */
+			/* } */
+		/* } */
+    }
+}
+
+ .mod-use-coupon {
+    .hd {
+        margin-bottom: rem(20);
+        overflow: hidden;
+        background: #f8f8f8;
+        border-bottom: 1px solid #e5e5e5;
+        .coupon-form {
+            position: relative;
+            height: rem(60);
+            margin: rem(20);
+            overflow: hidden;
+        }
+        .input-coupon-txt-wrap {
+            display: block;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            right: rem(100);
+            left: 0;
+            height: rem(60);
+            input {
+                display: block;
+                box-sizing: border-box;
+                width: 100%;
+                height: rem(60);
+                padding: 0 rem(80) 0 rem(20);
+                color: #666;
+                font-size: rem(28);
+                background-color: #fff;
+                border: none;
+                border-radius: rem(3);
+            }
+        }
+        .btn-clear-coupon {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 2;
+            width: rem(60);
+            height: rem(60);
+            color: #bbb;
+            font-size: rem(32);
+            background-color: transparent;
+            border: none;
+        }
+        .btn-submit-coupon {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: rem(80);
+            height: rem(60);
+            color: #333;
+            font-size: rem(28);
+            background-color: transparent;
+            border: none;
+            &:active {
+                color: $primary_color;
+            }
+        }
+        .coupon-form-desc {
+            height: rem(40);
+            margin-bottom: rem(20);
+            padding: 0 rem(20);
+            color: #c0c0c0;
+            font-size: rem(24);
+            line-height: rem(40);
+        }
+    }
+    .bd {
+        .cnt {
+            padding-bottom: rem(50);
+            overflow: hidden;
+            background: #fff;
+            border-top: 1px solid #e5e5e5;
+            border-bottom: 1px solid #e5e5e5;
+            .coupon-list-header {
+                height: rem(76);
+                margin-bottom: rem(30);
+                a {
+                    display: block;
+                    float: left;
+                    width: 50%;
+                    height: rem(76);
+                    text-align: center;
+                    span {
+                        display: inline-block;
+                        height: rem(72);
+                        color: #333;
+                        font-size: rem(28);
+                        line-height: rem(72);
+                        text-align: center;
+                        text-decoration: none;
+                        border-bottom: rem(4) solid #fff;
+                    }
+                    em {
+                        color: $primary_color;
+                        font-style: normal;
+                    }
+                    &.active span {
+                        color: $primary_color;
+                        border-color: $primary_color;
+                    }
+                }
+            }
+            .coupon-list {
+                display: none;
+                margin: 0 rem(20);
+                > .empty {
+                    height: rem(400);
+                    background-color: #fff;
+                    background-image: url('//s1.bbgstatic.com/gshop/images/coupon/no-coupon.png');
+                    background-size: rem(361) rem(454);
+                    background-position: 50% 50%;
+                    background-repeat: no-repeat;
+                }
+            }
+            .available-coupon-list {
+                display: block;
+            }
+			@include couponItem($coupon-default);
+			@include couponItem($coupon-active);
+			@include couponItem($coupon-expired);
+            .coupon-list-title {
+                height: rem(30);
+                margin: rem(30) 0 rem(50) 0;
+                padding: 0;
+                color: #ddd;
+                font-size: rem(24);
+                line-height: rem(60);
+                text-align: center;
+                border-bottom: 1px solid #e5e5e5;
+                span {
+                    background-color: #fff;
+                    padding: 0 rem(20);
+                }
+            }
+            .btn-cancel-coupon {
+                display: block;
+                width: 100%;
+                height: rem(80);
+                margin-top: rem(60);
+                color: #fff;
+                font-size: rem(28);
+                background-color: $primary_color;
+                border: none;
+                border-radius: rem(4);
+                &[disabled] {
+                    background-color: #ccc;
+                }
+            }
+        }
+    }
+}

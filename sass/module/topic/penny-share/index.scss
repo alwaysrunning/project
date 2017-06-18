@@ -1,0 +1,241 @@
+/**
+* @file index.scss
+* @synopsis  penny share
+* @author licuiting, 250602615@qq.com
+* @version 1.0
+* @date 2015-08-03
+*/
+
+@import "../../../common";
+@import "../../../../fonts/iconfont.css";
+@import "../../../common/dialog/dialog";
+@import "_pop";
+html{
+	font-size:40px;
+}
+ html,
+body {
+    /* background: #ec255e; */
+}
+img {
+    max-width: 100%;
+    border: none;
+    vertical-align: middle;
+}
+.txt-els {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/* show penny ctn  */
+
+.penny-inner {
+    background: #ec255e;
+}
+.mod-waves {
+    background: url('//s1.bbgstatic.com/gshop/images/topic/penny-share/bottom-bg.png') 0px 0px repeat-x;
+    height: 15px;
+    margin-top: -1px;
+}
+.mod-penny {
+    padding-top: rem(256);
+    background: url('//s1.bbgstatic.com/gshop/images/topic/penny-share/top-bg.png') 50% rem(20) no-repeat;
+    background-size: 100%;
+}
+.mod-record-tips {
+    font-size: rem(30);
+    text-align: center;
+	padding-top:rem(40);
+}
+/* present */
+
+.mod-get-present {
+    width: rem(446);
+    margin: 0 auto;
+    .hd {
+        position: relative;
+        .logo-wrap {
+            position: absolute;
+            width: 100%;
+            top: rem(-50);
+            z-index: 1;
+            .ico-logo {
+                width: rem(100);
+                display: block;
+                height: rem(100);
+                margin: 0 auto;
+                background: url('//s1.bbgstatic.com/gshop/images/topic/penny-share/cloud.png') 0px 0px no-repeat;
+                background-size: 100%;
+            }
+        }
+    }
+    .bd {
+        color: white;
+        text-align: center;
+        font-size: rem(26);
+        .announcement {
+            .inner-box {
+                position: relative;
+                height: rem(210);
+                padding-top: rem(70);
+                font-family: 'microsoft yahei';
+                width: rem(360);
+                margin: 0 auto;
+                .bg-box {
+                    background: #c51f4d;
+                    height: rem(280);
+                    width: 100%;
+                    position: absolute;
+                    opacity: 0.3;
+                    top: 0px;
+                    left: 0px;
+                }
+                .ctn {
+                    position: relative;
+                    z-index: 1;
+                    .item-li {
+						.user-name{
+							color:#f1ce3a;
+							font-style:normal;
+							display:inline-block;
+							max-width:rem(100);
+							vertical-align:bottom;
+							overflow: hidden;
+							text-overflow: ellipsis;
+							white-space: nowrap;
+						}
+                        .money-txt {
+                            color: #f1ce3a;
+                            font-size: rem(30);
+                        }
+                    }
+                    .present-li {
+                        font-size: rem(44);
+                        font-weight: bold;
+                        margin: rem(4) 0px rem(20) 0px;
+                    }
+                }
+            }
+        }
+        .btn-add {
+            display: block;
+            height: rem(120);
+            line-height: rem(120);
+            font-size: rem(44);
+            background: #f1cf3b;
+            border-radius: rem(60);
+            color: #eb255e;
+            font-weight: bold;
+            font-family: 'microsoft yahei';
+        }
+        .disabled-btn {
+            background: #dbdbdb;
+            cursor: default;
+            color: #fff;
+        }
+        .rules {
+            color: #f1cf3b;
+            padding-top: rem(26);
+            display: block;
+        }
+        .tips {
+            padding-top: rem(54);
+            padding-bottom: rem(30);
+            .item-tips {
+                font-size: rem(20);
+                line-height: rem(30);
+                .span-txt {
+                    color: #f1ce3a;
+                }
+            }
+        }
+    }
+}
+/* record prize */
+
+.mod-record-prize {
+    background: #fff;
+    .hd {
+        /* background: url('//s1.bbgstatic.com/gshop/images/topic/penny-share/bottom-bg.png') 0px 0px repeat-x; */
+        .title {
+            font-size: rem(28);
+            text-align: center;
+            color: #ed255e;
+            padding: rem(20) 0px rem(20) 0px;
+            margin: 0px;
+        }
+    }
+    .bd {
+        position: relative;
+        height: rem(400);
+        overflow: hidden;
+        .bd-wrap {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+        .ctn {
+            font-size: rem(24);
+            color: #666666;
+            .item-li {
+                position: relative;
+                padding: rem(10) rem(20);
+                width: 100%;
+                border-top: 1px solid #eeeeee;
+                .ico-usr, .name, .detail, .date {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                .ico-usr {
+                    /* background: url('//s1.bbgstatic.com/gshop/images/topic/penny-share/default-img.png') 0px 0px no-repeat; */
+                    background-size: 100%;
+                    width: rem(80);
+                    height: rem(80);
+                    margin-right: rem(16);
+                    .img-usr {
+                        width: rem(80);
+                        height: rem(80);
+                    }
+                }
+                .name {
+                    margin-right: rem(6);
+                    width: rem(94);
+                }
+                .detail {
+                    margin-right: rem(6);
+                    width: rem(230);
+                }
+                .date {
+                    color: #bbbbbb;
+                }
+            }
+        }
+    }
+}
+.mod-rules {
+    font-size: rem(26);
+    color: #666666;
+    width: rem(500);
+    .hd {
+        font-size: rem(30);
+        margin: 0px;
+        position: relative;
+        font-weight: normal;
+        border-bottom: 1px solid #eeeeee;
+        padding: rem(40) 0px rem(36) 0px;
+        display: block;
+    }
+    .bd {
+        .items-ul {
+            padding: rem(20) rem(30) rem(20) rem(30);
+        }
+        .item-li {
+            text-align: left;
+            line-height: rem(34);
+        }
+    }
+}
+.div-hid {
+	display:none;
+}

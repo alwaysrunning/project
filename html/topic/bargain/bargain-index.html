@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>砍价</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!--#include file="/html/include/common/intro.html"-->
+    <link rel="stylesheet" href="//s1.bbgstatic.com/gshop/css/module/topic/bargain/bargain-index.css" type="text/css" charset="utf-8"></head>
+<body>
+<div class="page-view">
+    <div class="mod-bargain">
+        <div class="banner">
+            <a class="active-rule" id="jActiveRule"></a>
+            <p class="img-box"><img class="jActPic" src="//s1.bbgstatic.com/gshop/images/topic/bargain/bg.jpg"/></p>
+            <div class="time">
+                <p>砍价时间</p>
+                <p class="ctn jTimeStamp">
+                    <span>2015.06.07</span>
+                    <span>20:00</span>
+                    <span>至</span>
+                    <span>2015.06.07</span>
+                    <span>20:00</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="bd">
+            <div class="bd-mark">
+                <span>挑个心仪的商品呗~~</span>
+                <div class="mark-up"></div>
+                <div class="mark-down"></div>
+            </div>
+            <div class="jAcGoods ac-goods clearfix">
+
+            </div>
+        </div>
+
+        <div class="poster-content">
+            <div class="jPoster1 poster-one clearfix">
+
+            </div>
+            <div class="jPoster2 poster-two clearfix">
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<script id="goodsTpl" type="text/html">
+   <%var imgUrl = goodsImage?"//img04.bubugao.com/"+goodsImage+"!m1":"http://s1.bbgstatic.com/pub/img/blank.gif";%>
+    <div class="jgoodsItem goods-item">
+        <a class="goods-link">
+            <img class="goods-img" src="<%=imgUrl%>"/>
+            <div class="goods-pri">
+                <div class="pri-dot">
+                    ￥<span><%=goodsPrice%></span>
+                </div>
+                <div class="ack"></div>
+            </div>
+            <span class="goods-name"><%=goodsName%></span>
+        </a>
+    </div>
+</script>
+
+
+<script id="posterItemTpl" type="text/html">
+    <%
+            var imgUrl = adPic?adPic:"http://s1.bbgstatic.com/pub/img/blank.gif";
+            if(adType ==1){
+            imgUrl += "!sp1";
+            }else{
+             imgUrl += "!m1";
+            }
+    %>
+    <div class="poster-item">
+        <a target="_blank" href="<%=adUrl%>">
+            <img src="<%=imgUrl%>"/>
+        </a>
+    </div>
+</script>
+
+
+
+
+
+<!--#include file="/html/include/common/outro.html"-->
+<script>require(['conf/topic/bargain/bargain-index']);</script>
+</body>
+</html>
+<!-- vim: set ft=html ff=unix et sw=4 ts=4 sts=4 tw=150: -->

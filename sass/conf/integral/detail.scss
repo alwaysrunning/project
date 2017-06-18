@@ -1,0 +1,74 @@
+@import "common-750";
+@import "common/page-tips/1.0.0/page-tips";
+html {
+	background-color:#f6f6f6;
+}
+ .mod-list-detail {
+    background: #fff;
+	.detail-item {
+		padding: rem(30) rem(24);
+		border-bottom: 1px solid #f6f6f6;
+		table {
+			border-collapse: collapse;
+			width: 100%;
+			border-spacing: 0;
+			td {
+				width: 20%;
+				color: #999;
+				font-size: rem(26);
+				.time {
+					color: #ccc;
+				}
+			}
+			td:first-child {
+				width:40%;
+			}
+			td:nth-child(2) {
+				width:40%;
+			}
+			.num {
+				text-align: center;
+			}
+			.time{
+				color: #ccc;
+				font-size:rem(24);
+			}
+			.oper {
+				color: #f03468;
+				text-align: right;
+				.oper-txt {
+					font-size: rem(36);
+					display:inline-block;
+					vertical-align:middle;
+				}
+				.icon {
+					font-size: rem(40);
+					display:inline-block;
+					vertical-align:middle;
+					&:after {
+						content: "\e676";
+						font-family: "iconglobal";
+						color:#ffaac1;
+					}
+				}
+				.oper-tips {
+					border:1px dashed #f03468;
+					border-radius: rem(4);
+					color: #f03468;
+					padding: 0px rem(6);
+					height:rem(30);
+					line-height:rem(30);
+					font-size: rem(24);
+					text-align: center;
+				}
+			}
+		}
+	}
+	.loading {
+		height:rem(80);
+		line-height:rem(80);
+		background:#f6f6f6;
+		color:#999;
+		font-size:rem(26);
+	}
+}

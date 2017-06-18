@@ -1,0 +1,23 @@
+.floor-1 {
+    background-color: #fff;
+    margin-top: rem(20);
+    .hd { color: #ff6666; }
+    .bd {
+        height: rem(280);
+        padding-bottom: rem(10);
+        .i {
+            background-color: #fff;
+            border-style: solid;
+            border-color: #fff;
+        }
+        .limit-time {
+            top: rem(98);
+            left: rem(28);
+        }
+        $images: (rem(315), rem(281), 0px, 0px),
+                 (rem(315), rem(140), rem(316), 0),
+                 (rem(315), rem(140), rem(316), rem(141));
+        $borders: (0 1px 0 0), (0 0 1px 0), (0);
+        @include img-abs($images, 3, '.i-', $borders);
+    }
+}

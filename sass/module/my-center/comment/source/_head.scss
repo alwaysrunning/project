@@ -1,0 +1,26 @@
+.mod-comment-head {
+    height: rem(76);
+    background: #f8f8f8;
+    a{
+        display: inline-block;
+        width: 50%;
+        line-height: rem(73);
+        float: left;
+        text-align: center;
+        font-size: rem(26);
+        color: #666;
+        text-decoration: none;
+        span{
+            display: inline-block;
+            -webkit-box-sizing:border-box;
+            height: 100%;
+            padding: 0 rem(6);
+        }
+    }
+    a.active{
+        span{
+            border-bottom: rem(3) solid #f33066;
+            color: #f03468;
+        }
+    }
+}

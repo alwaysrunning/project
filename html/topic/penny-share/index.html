@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>云猴全球购送礼物啦</title>
+    <!--#include file="/html/include/common/intro.html"-->
+    <link rel="stylesheet" href="http://s1.bbgstatic.com/gshop/css/module/topic/penny-share/index.css" type="text/css" charset="utf-8">
+</head>
+
+<body>
+	<input type="hidden" id="jUrlCache" value="get-present.html"/>
+    <div class="page-view">
+        <div class="penny-inner">
+            <div class="mod-penny" id="jPenny">
+                <div class="mod-get-present">
+                    <div class="hd">
+                        <div class="logo-wrap">
+                            <em class="ico-logo"></em>	
+                        </div>
+                    </div>
+                    <div class="bd">
+                        <div class="announcement">
+                            <div class="inner-box">
+                                <div class="bg-box"></div>
+                                <ul class="ctn">
+									<li class="item-li"><span id="jUserName" class="div-hid"><em class="user-name" id="jUserNameBox"></em>在</span>云猴全球购发给你</li>
+                                    <li class="item-li present-li">100件好礼</li>
+                                    <li class="item-li">只需<span class="money-txt">一分钱</span>包邮到家</li>
+                                    <li class="item-li">赶紧来选一个吧</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a class="btn-add disabled-btn" href="javascript:void('0');" id="jAddBtn" data-recipients-num="0">一分钱领宝贝</a>
+                        <a class="rules" href="javascript:void('0');" id="jRules">活动规则></a>
+                        <ul class="tips">
+                            <li class="item-tips">*本活动成本已由<span class="span-txt">云猴全球购</span>进行支付，
+                            </li>
+                            <li class="item-tips">请放心参与，假一赔十。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<div class="mod-waves"></div>
+		<div id="jRecordBox"></div> 
+    </div>
+    <!--#include file="/html/include/common/outro.html"-->
+    <!-- rules begin -->
+	<script type="text/html" id="jRecordPrizeTmpl">
+		<% if(records && records.length!=0){ %>
+			<div class="mod-record-prize">
+				<div class="hd">
+					<h1 class="title">领奖记录</h1>	
+				</div>
+				<div class="bd" id="jRecordBd">
+					<div class="bd-wrap" id="jRecordCtn">
+						<ul class="ctn">
+							<% for(var i=0;i<records.length;i++){ %>
+								<li class="item-li">
+									<i class="ico-usr"><img src="http://s1.bbgstatic.com/gshop/images/topic/penny-share/default-img.png" data-url="<%=records[i]['img']%>" class="img-usr jImg"></i>	
+									<span class="name  txt-els"><%=records[i]['name']%></span>	
+									<span class="detail txt-els"><%=records[i]['detail']%></span>	
+									<span class="date"><%=records[i]['date']%></span>	
+								</li>
+								<% } %>
+						</ul>
+
+					</div>
+				</div>
+			</div>
+			<% } %>
+	</script>
+    <script type="text/html" id="jRulesTmpl">
+        <div class="mod-rules">
+            <h1 class="hd">活动规则
+				<em class="close jCloseBtn"></em>
+			</h1>
+            <div class="bd">
+                <ul class="items-ul">
+                    <li class="item-li">1.该活动仅限未注册过云猴全球购的新用户，进入活动页，选择你喜欢的礼物，并填写收货人手机号码。
+                        <br/>2.下载云猴全球购APP，必须使用填写的手机号注册并登录，方可在个人中心-我的购物车可看到该礼物订单。
+                        <br/>3.在我的订单内支付0.01元完成身份验证，即可成功领取礼物。
+                        <br/>4.每人最多仅领取一件礼物，如发现存在作弊行为（如批量注册、恶意购买、虚假交易等）云猴全球购将删除订单，严重者将追究法律责任。
+                        <br/>5.同一用户仅能参与一次活动，其中收货人姓名、手机号码、身份证号码、收货地址中有两项相同则视为同一用户。
+                        <br/>6.本次活动最终解释权归云猴全球购所有。
+                        <br/>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </script>
+    <!-- rules end -->
+        <script>
+        require(['conf/topic/penny-share/index']);
+    </script>
+</body>
+
+</html>

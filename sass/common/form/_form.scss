@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+/* form */
+.ui-ipt-item{
+    display: -webkit-box;
+    height: 2.15rem;
+    line-height:2.15rem;
+    color: #666;
+}
+.ui-ipt-item .ui-sel-box, .ui-ipt-box{
+    -webkit-box-flex:11;
+    position:relative;
+}
+.ui-ipt-item .ui-sel-box:after{
+    content: "";
+    top: .6rem;
+    right: .4rem;
+    position: absolute;
+    display: inline-block;
+    font-size: 0;
+    border-top: 2px solid #666666;
+    border-left: 2px solid #666666;
+    width: 6px;
+    height: 6px;
+    background-color: transparent;
+    -webkit-transform: rotate(225deg);
+}
+.ui-ipt-item .ui-lbl{
+    display:block;
+    width: 2.25rem;
+    height:2.15rem;
+    padding:0 0 0 10px;
+    line-height:2.3rem;
+    font-size:.7rem;
+    white-space:nowrap;
+    position:relative;
+    color: #666;
+}
+.ui-ipt-item .ui-ipt{
+    display:block;
+    width: 100%;
+    height:2.15rem;
+    line-height:2.3rem;
+    font-size:.7rem;
+    text-align: left;
+    color: #333;
+    -webkit-box-sizing:border-box;
+}
+
+.ui-ipt-item .ui-sel{
+    display:block;
+    background-color: #fff;
+    width:100%;
+    height:1.35rem;
+    line-height:1.35rem;
+    font-size:.7rem;
+    border:none;
+    color: #333;
+}
+
+.ui-lter-spac-12{
+    letter-spacing: 12px;
+}
+
+@mixin ui-bd($left,$top,$blur,$spread,$color){
+    box-shadow: inset 0 0 0 $color, inset 0 0 0 $color, 
+                $left $top $blur $spread rgba($color, .5)
+}
+
+.ui-bd{
+    @include ui-bd(0,0px,1px,0px,#000);
+}
+.ui-bd-left{
+    @include ui-bd(-1px,0,1px,-1px,#000);
+}
+.ui-bd-right{
+    @include ui-bd(1px,0,1px,-1px,#000);
+}
+.ui-bd-top{
+    @include ui-bd(0,-1px,1px,-1px,#000);
+}
+.ui-bd-bottom{
+    @include ui-bd(0,1px,1px,-1px,#000);
+}

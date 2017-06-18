@@ -1,0 +1,42 @@
+%list-warehouse-warehouse-items-items {
+    .warehouse-items {
+		@extend %list-warehouse-warehouse-items-info;
+		@extend %list-warehouse-warehouse-items-tariff;
+    }
+}
+/* ---- mod ------ */
+%list-warehouse-warehouse-items-tariff {
+    .items-tariff {
+        display: none;
+        td {
+            padding: 0px!important;
+            .tariff-inner {
+                position: relative;
+                background: #feebf1!important;
+                font-size: rem(22);
+                color: #f13567;
+                padding: rem(10) rem(20)!important;
+                .arrow {
+                    position: absolute;
+                    display: inline-block;
+                    width: 0;
+                    height: 0;
+                    border-width: rem(16);
+                    border-style: solid;
+                    border-color: transparent;
+                    overflow: hidden;
+                    font-size: 0;
+                    line-height: 0;
+                    vertical-align: top;
+                    top: rem(-30);
+                    _color: #feebf1;
+                    _filter: chroma(color=#feebf1);
+                    border-bottom-color: #feebf1;
+                    margin: 1px 0 0 rem(-32);
+                    left: rem(320);
+                }
+            }
+        }
+    }
+}
+@import "_info";

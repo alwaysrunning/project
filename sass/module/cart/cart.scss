@@ -1,0 +1,67 @@
+﻿@import "../../common-750";
+@import "../../common/button/button";
+@import "../../common/scroll-load/scroll-load";
+@import "../../common/linkage-tab/linkage-tab";
+@import "../trade/_trade";
+@import "common/dialog/1.0.1";
+ html {
+    color: #000;
+}
+@import "source/common";
+@import "source/head";
+@import "source/addr";
+@import "source/list/_list";
+@import "source/_total";
+@import "source/no-data";
+// modify - add module
+@import "source/detail";
+@import "source/edit";
+ .mod-cart {
+    @extend %total;
+}
+.ui-header {
+    z-index: 2;
+}
+/* new mod */
+
+.mod-choice-box {
+    .box-hd {
+        color: #999;
+        font-size: rem(28);
+    }
+    .box-bd {
+        padding-bottom: rem(20);
+        input[type="checkbox"] {
+            @extend %checkbox;
+        }
+        .checkbox {
+            -webkit-appearance: none;
+            color: #999;
+            width: rem(45);
+            border: none;
+            background: none;
+			margin-right:rem(10);
+            &:after {
+                font-size: rem(40);
+                font-family: "iconglobal";
+                content: "\e616";
+            }
+            &:checked {
+                color: #f03468;
+                &:after {
+                    content: "\e617";
+                }
+            }
+        }
+        .bd-item {
+            margin-top: rem(50);
+            text-align: left;
+            position: relative;
+            .item-len {
+                position: absolute;
+                top: 0px;
+                right: 0px;
+            }
+        }
+    }
+}

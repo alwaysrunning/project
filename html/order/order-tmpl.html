@@ -1,0 +1,75 @@
+    <div class="page-view">
+        <head><!--#include file="/html/order/mod/_head.html"--></head>
+        <div class="page-view-body mod-order">
+            <div id="jOrder">
+                <div class="inner no-data" id="jNoData">
+                    <div class="page-view">
+                        <div class="empty">
+                            <p><img src="//s1.bbgstatic.com/gshop/images/public/loading.gif?v1"/></p>
+                            <p class="emt-txt loading-txt">拼命加载中...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!-- <footer> xx </footer> -->
+    </div>
+    <!-- 结算模板 begin -->
+    <script id="jOrderTmpl" type="text/html">
+        <div class="wrap">
+            <div class="inner">
+                <div id="jAddress">
+                    <% include('jAddressTmpl') %>
+                </div>
+                <div id="jZtdAddr">
+                    <% include('jZtdAddrTmpl') %>
+                </div>
+                <div id="jIdInfo">
+                    <% include('jIdInfoTmpl') %>
+                </div>
+                <div id="jPayment">
+                </div>
+                <div id="jInvoice">
+                    <% include('jInvoiceTmpl') %>
+                </div>
+                <div id="jList">
+                    <% include('order/list/list') %>
+                </div>
+            </div>
+        </div>
+        <div id="jPrice">
+            <% include('jPriceTmpl') %>
+        </div>
+        <div id="jSubmit">
+            <% include('jSubmitTmpl') %>
+        </div>
+    </script>
+    <!-- 结算模板 end -->
+
+    <!-- 收货地址 begin -->
+    <!--#include file="/html/order/mod/_address.html"-->
+    <!-- 收货地址 end -->
+    <!-- 收货地址 begin -->
+    <!--#include file="/html/order/mod/_ztdAddr.html"-->
+    <!-- 收货地址 end -->
+    <!-- 身份证信息 begin -->
+    <!--#include file="/html/order/mod/_ID-info.html"-->
+    <!-- 身份证信息 end -->
+    <!-- 支付方式 begin -->
+    <!--#include file="/html/order/mod/_payment.html"-->
+    <!-- 支付方式 end -->
+    <!-- 发票信息 begin -->
+    <!--#include file="/html/order/mod/_invoice.html"-->
+    <!-- 发票信息 end -->
+    <!--#include file="/html/order/mod/list/list.html"-->
+    <!-- 价格 begin -->
+    <!--#include file="/html/order/mod/_price.html"-->
+    <!-- 价格 end -->
+    <!-- 提交 begin -->
+    <!--#include file="/html/order/mod/_submit.html"-->
+    <!-- 提交 end -->
+
+    <!--#include file="/html/include/common/outro.html"-->
+
+    <!--#include file="/html/order/mod/statistics.html"-->
+    <!--#include file="/html/include/common/statistics-for-trade.html"-->

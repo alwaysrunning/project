@@ -1,0 +1,116 @@
+.group-nav{
+  height: rem(80);
+  background: #f8f8f8;
+  a{
+    float: left;
+    display:block;
+    width: 50%;
+    text-align: center;
+    font-size: rem(30);
+    line-height: rem(80);
+    color: #333;
+    &.current{
+      border-bottom: 2px solid #f03468;
+      color: #f03468;
+    }
+  }
+}
+.group-box{
+  margin-top:rem(20);
+  padding:rem(20);
+  background: #fff;
+  overflow: hidden;
+  .gp-img{
+    float: left;
+    margin-bottom: rem(20);
+    width: rem(160);
+    height: rem(160);
+    line-height: rem(160);
+    img{
+      max-width: rem(160);
+      max-height: rem(160);
+      vertical-align: middle;
+    }
+    overflow: hidden;
+  }
+  .gp-title{
+    position: relative;
+    margin-left: rem(180);
+    margin-bottom: rem(20);
+    min-height: rem(160);
+    overflow: hidden;
+    a{
+      display: block;
+      margin-bottom: rem(20);
+      font-size: rem(30);
+      line-height: rem(40);
+      max-height: rem(80);
+      color: #333;
+      overflow: hidden;
+    }
+    .price{
+      font-size: rem(24);
+      color: #c7c7c7;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      strong,span{
+        display: inline-block;
+        vertical-align: middle;
+      }
+      span{
+        text-decoration: line-through;
+        vertical-align: bottom;
+      }
+      strong{
+        margin-right: rem(10);
+        font-size: rem(40);
+        color: #f03468;
+        font-weight: 400;
+        em{
+          font-style: normal;
+          font-size: rem(24);
+        }
+      }
+      .f-r{
+        font-size: rem(26);
+        color: #6c6c6c;
+        text-decoration: none;
+      }
+      .num{
+        color: #f03468;
+        font-style: normal;
+      }
+    }
+  }
+  .gp-time{
+    clear: both;
+    padding-top: rem(20);
+    width: 100%;
+    border-top: 1px solid #e5e5e5;
+    font-size: rem(24);
+    color: #c0c0c0;
+    overflow: hidden;
+    .f-r{
+      font-size: rem(28);
+    }
+    .cl-r{
+      color: #f03468;
+    }
+    .ui-button{
+      display: inline-block;
+      padding:0 rem(20);
+      width: auto;
+      height: rem(55);
+      line-height: rem(55);
+      font-size: rem(28);
+    }
+    .need-num{
+      margin: rem(4) rem(20) 0 0;
+    }
+    .num{
+      color: #f03468;
+      font-style: normal;
+    }
+  }
+}

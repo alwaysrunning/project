@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>抽奖</title>
+    <meta charset="utf-8" />
+    <!-- <script src="//s1.bbgstatic.com/gshop/js/common/widget/flexible.js"></script> -->
+    <script>
+        // flexible.js
+        !function(y){function x(){var a,c=p.getBoundingClientRect().width;c/w>640&&(c=640*w),a=Math.floor(c/16),p.style.fontSize=a+"px",y.rem=a}var w,v,u,t,s,r=y.document,q=y.navigator,p=r.documentElement,o=r.querySelector('meta[name="viewport"]'),n=r.querySelector('meta[name="flexible"]');o?(t=o.getAttribute("content").match(/initial\-scale=(["']?)([\d\.]+)\1?/),t&&(v=parseFloat(t[2]),w=parseInt(1/v))):n&&(t=n.getAttribute("content").match(/initial\-dpr=(["']?)([\d\.]+)\1?/),t&&(w=parseFloat(j[2]),v=parseFloat((1/w).toFixed(2)))),w||v||(w=y.devicePixelRatio,w=q.appVersion.match(/android/gi)||q.appVersion.match(/iphone/gi)?w>=2?2:1:1,v=1/w),p.setAttribute("data-dpr",w),o||(o=r.createElement("meta"),o.setAttribute("name","viewport"),o.setAttribute("content","width=device-width, target-densitydpi=high-dpi, initial-scale="+v+", maximum-scale="+v+", minimum-scale="+v+", user-scalable=no"),p.firstElementChild?p.firstElementChild.appendChild(o):(s=r.createElement("div"),s.appendChild(o),r.write(s.innerHTML))),y.dpr=w,y.addEventListener("resize",function(){clearTimeout(u),u=setTimeout(x,300)},!1),y.addEventListener("pageshow",function(b){b.persisted&&(clearTimeout(u),u=setTimeout(x,300))},!1),"complete"===r.readyState?r.body.style.fontSize=12*w+"px":r.addEventListener("DOMContentLoaded",function(){r.body.style.fontSize=12*w+"px"},!1),x()}(window);
+    </script>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name='apple-touch-fullscreen' content='yes'>
+    <!-- <meta name="full-screen" content="yes"> -->
+    <meta content="fullscreen=yes,preventMove=no" name="ML-Config">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- <meta name="format-detection" content="telephone=no,email=no,address=no" /> -->
+
+    <link rel="stylesheet" type="text/css" href="//s1.bbgstatic.com/gshop/css/module/coupon/coupon-shake.css">
+</head>
+<body>
+
+<input type="hidden" class="partnerKey" value="ZFPD"/>
+<input type="hidden" class="outlucky" value="true"/>
+
+<div class="coupon-content">
+    <div class="img-d">
+        <img class="img-1" src="//s1.bbgstatic.com/gshop/images/coupon/shake/coupon-shake_01.png" alt=""/>
+    </div>
+    <div class="img-d">
+        <img class="img-2" src="//s1.bbgstatic.com/gshop/images/coupon/shake/coupon-shake_02.png"/>
+    </div>
+    <div class="img-d">
+        <img class="img-3" src="//s1.bbgstatic.com/gshop/images/coupon/shake/coupon-shake_03.png"/>
+        <a href="javascript:void(0)" data-url="" data-active-id="" class="jActCouponApply" >
+
+        </a>
+    </div>
+    <div class="img-d">
+        <img class="img-4" src="//s1.bbgstatic.com/gshop/images/coupon/shake/coupon-shake_04.png"/>
+    </div>
+    <div class="img-d">
+        <img class="img-5" src="//s1.bbgstatic.com/gshop/images/coupon/shake/coupon-shake_05.png"/>
+    </div>
+    <div class="img-d">
+        <img class="img-6" src="//s1.bbgstatic.com/gshop/images/coupon/shake/coupon-shake_06.png"/>
+    </div>
+</div>
+
+
+<script src="//s1.bbgstatic.com/lib/require/2.1/require.js"></script>
+<script src="//s1.bbgstatic.com/gshop/js/app.js?v=3.0.11.3"></script>
+<script>require(['conf/coupon/coupon-shake']);</script>
+
+<!--#include file="/html/include/common/statistics.html"-->
+</body></html>

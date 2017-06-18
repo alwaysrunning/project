@@ -1,0 +1,29 @@
+﻿@import "../../common-750";
+@import "../../../fonts/iconfont.css";
+@import "../../common/button/button";
+@import "../trade/_trade";
+.mod-modify-delivery {
+    font-size: rem(26);
+    color: #333;
+    .bd {
+        ul {
+            background: #fff;
+            li {
+                label {
+                    padding: rem(20);
+                    border-bottom: 1px solid #dad9d9;
+                    display: block;
+                    .input {
+                        display: inline-block;
+                        // vertical-align: middle;
+                    }
+                    .text {
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-left: rem(20);
+                    }
+                }
+            }
+        }
+    }
+}

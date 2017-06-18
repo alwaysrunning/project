@@ -1,0 +1,14 @@
+<script id="cart/list/warehouse/items/info/specification" type="text/html">
+<% var strSpec = '';
+if(pro.specList && pro.specList.length!=0){
+	for(var k=0;k<pro.specList.length;k++){
+		if(k == 0){
+			strSpec=pro.specList[k].name + ':' + pro.specList[k].value;
+		}else{
+			strSpec+=','+pro.specList[k].name + ':' + pro.specList[k].value;
+		}
+	}
+}
+%>
+<p class="spec"><%=strSpec%></p>
+</script>

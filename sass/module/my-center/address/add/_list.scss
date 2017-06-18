@@ -1,0 +1,215 @@
+%mod-addr-block {
+    position: absolute;  
+    top: 50%;
+    @include transform( translateY(-50%) );
+}
+
+%mod-addr-block-icon {
+    color: #333;
+    font-size: rem(40);
+}
+
+.mod-address {
+    &-list {
+        .address-item {
+            background-color: #fff;
+        }
+        .wapper {
+            margin: rem(20);
+            padding: rem(10) rem(70);
+            overflow: hidden;
+            position: relative;
+        }
+        .checkbox {
+            color: #999;
+            width: rem(40);
+            height: rem(40);
+            &:after {
+                font-size: rem(40);
+                font-family: "iconglobal";
+                content: "\e616";
+            }
+            &.checked {
+                color: #f03468;
+                &:after {
+                    content: "\e617";
+                }
+            }
+            &.disabled {
+                &:after {
+                    content: "\e615";
+                }
+            }
+        }
+        .hd {
+            @extend %mod-addr-block;
+            left: 0;
+            .icon {
+                @extend %mod-addr-block-icon
+            }
+        }
+        .bd {
+            position: relative;
+            .item {
+                display: table;
+                color: #333;
+                font-size: rem(24);
+                line-height: 1.25;
+                margin: rem(16) 0;
+                text-align: left;
+                .name {
+                    font-size: rem(28);
+                    vertical-align: middle;
+                }
+                .phone {
+                    font-size: rem(28);
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-left: rem(30);
+                }
+                .tag {
+                    display: none;
+                    color: #f03468;
+                    border: 1px solid #f03468;
+                    line-height: rem(22);
+                    margin-right: rem(5);
+                    padding: rem(1) rem(3);
+                    font-size: rem(21);
+                    @include border-radius( rem(2) );
+                }
+            }
+        }
+        .ft {
+            @extend %mod-addr-block;
+            right: 0;
+            .icon {
+                @extend %mod-addr-block-icon;
+                color: #999;
+            }
+        }
+        .default {
+            .checkbox {
+                color: #f03468;
+                &:after {
+                    content: "\e617";
+                }
+            }
+            .bd {
+                .tag {
+                    display: inline-block;
+                }
+            }
+        }
+        .btn-icon {
+            display: block;
+            width: rem(40);
+            height: rem(40);
+        }
+        .button {
+            margin: rem(50) rem(20) rem(20) rem(20);
+            .ui-button {
+                border: none;
+                font-size: rem(30);
+                height: rem(90);
+                line-height: 100%;
+                background: #f03468;
+                &-disabled {
+                    color: #999;
+                    background: #e4e4e4;
+                    &:active {
+                        color: #999;
+                        background: #e4e4e4;
+                    }
+                }
+            }    
+        }
+    }
+}
+
+// .address_hd {
+//     height: rem(60);
+//     font-size: rem(20);
+//     background: #fff;
+//     line-height: rem(60);
+//     padding-left: rem(15);
+// }
+// .mod-address-list{
+//     .address-item{
+//         color:#333;
+//         margin: rem(20) 0 0 0;
+//         background: #fff;
+//         border-radius:0.1rem;
+//         &.default{
+//             .bd{
+//                 .address-text{
+//                     .default-text{
+//                         display: block;
+//                     }
+//                 }
+//             }
+//             .ft{
+//                 .set-default-btn{
+//                     display: none;
+//                 }
+//             }
+//         }
+//         .bd{
+//             padding: rem(20) rem(20) rem(20) rem(30);
+//             font-size: rem(28);
+//             .address-text{
+//                 position: relative;
+//                 padding: 0 rem(92) 0 0 ;
+//                 .default-text{
+//                     display: none;
+//                     position: absolute;
+//                     right: 0;
+//                     top:40%;
+//                     color:#FF4352;
+//                 }
+//                 .iconfont{
+//                     font-size: rem(36);
+//                 }
+//             }
+//             .man{
+//                 padding:rem(12) 0 0;
+//             }
+//             &:active {
+//                 background: #eee;
+//             }
+//         }
+//         .ft{
+//             margin: 0 rem(20) 0 rem(20);
+//             border-top:1px solid #ccc;
+//             line-height: rem(80);
+//             padding: 0 rem(20) rem(20) rem(20);
+//             .buttons{
+//                 text-align:right;
+//                 .ui-button{
+//                     display: inline-block;
+//                 }
+//             }
+//         }
+//     }
+// }
+// .address_btn_bot {
+//     width: 100%;
+//     height: rem(90);
+//     background: #fff;
+//     margin: 0 auto;
+//     text-align: center;
+//     font-size: rem(24);
+//     position: fixed;
+//     bottom: 0;
+//     border-top: solid #ccc 1px;
+//     a {
+//         display: block;
+//         color: #fff;
+//         width: rem(200);
+//         height: rem(55);
+//         background: #f16320;
+//         line-height: rem(55);
+//         margin: 0 auto;
+//         margin-top: rem(18);
+//         border-radius: 2px;
+//     }
+// }

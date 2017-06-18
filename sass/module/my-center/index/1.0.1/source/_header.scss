@@ -1,0 +1,61 @@
+html, body{
+    background-color: #f6f6f6;
+    height: 100%;
+}
+
+.mod-header{
+    height: rem(330);
+    padding-bottom: rem(60);
+    background: inline-image("my-center/index-head-bj.jpg") no-repeat 0 0;
+    background-size: 100%;
+    position: relative;
+    .ui-header{
+        height: rem(80);
+        background-color: transparent;
+        border: none;
+    }
+
+    .mod-vip{
+        text-align: center;
+        .head-portrait{
+            width: rem(117);
+            height: rem(117);
+            border: 3px solid #fff9f9;
+            border-radius: 50%;
+            margin: 0 auto;
+            img{
+                display: block;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+        }
+        .personal-msg{
+            font-size: rem(32);
+            color: #333;
+            text-align: center;
+            margin: rem(30) auto rem(10);
+        }
+        .vip-level{
+            display: inline-block;
+            height: rem(34);
+            line-height: rem(26);
+            padding: 0 rem(16);
+            margin: 0 auto;
+            border-radius: 30px;
+            background-color: #ffeaec;
+            .vip-ico{
+                width: rem(30);
+                height: rem(30);
+                vertical-align: middle;
+                margin-right: rem(10);
+            }
+            .vip-name{
+                font-size: rem(24);
+                color: #555460;
+                vertical-align: middle;
+                font-weight: 200;
+            }
+        }
+    }
+}

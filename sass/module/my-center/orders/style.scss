@@ -1,0 +1,80 @@
+/* common */
+@import "../../../common-750";
+@import "../../../common/slider/slider";
+@import "../../../common/form/form";
+@import "../../../common/button/button";
+@import "../../../common/dialog/dialog";
+@import "../../../common/scroll-load/scroll-load";
+@import "../../../common/go-top/go-top";
+@import "../../../no-data";
+
+/* modules */
+@import "../common/base";
+@import "../common/pros";
+@import "../common/none";
+@import "../common/button";
+@import "./source/orders";
+.mod-orders-head {
+    height: rem(76);
+    background: #f8f8f8;
+    width: 100%;
+    text-align: left;
+    position: relative;
+    display: block;
+    .hd{
+        clear: both;
+        a{
+            width: 25%;
+            float: left;
+            text-align: center;
+            font-size: rem(28);
+            color: #666;
+            text-decoration: none;
+            height: rem(76);
+            line-height: rem(76);
+            b{
+                font-weight: 100;
+            }
+            span{
+                display: inline-block;
+                -webkit-box-sizing: border-box;
+                height: 100%;
+                padding: 0 rem(8);
+                .count{
+                    padding-left:rem(8);
+                    color: #f03468;
+                    display: inline;
+                    font-size: rem(28)
+                }
+            }
+        }
+        a.active{
+            span{
+                border-bottom: rem(3) solid #f03468;
+                color: #f03468;
+            }
+        }
+    }
+
+}
+
+html{
+    padding: 0 0 rem(20);
+    background: #f0f0ed;
+}
+.pro-item .pro-img {
+    border: 0px;
+}
+.pro-item .pro-details .detail-content .info-1 {
+    color: #333;
+}
+.info-1 .ui-pri {
+    color: #f03468;
+    font-size: rem(28);
+}
+.pro-item .pro-details .detail-content .info-1 .pro-name {
+    font-size: rem(30);
+}
+a.ui-button-red:visited {
+    color: #fff;
+}

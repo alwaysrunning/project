@@ -1,0 +1,109 @@
+<script type="text/javascript">
+    try {
+        //"utmcsr=mediav"   "utm_source=pinyou" 
+        function cookieContainsDspKey(key) {
+            try {
+                var cookies = document.cookie.split(";");
+                var len = cookies.length;
+                var i = 0;
+                for (i; i < len; i++) {
+                    var c = cookies[i];
+                    if (c.indexOf(key) > 0) {
+                        return true;
+                    }
+                }
+            } catch (e) {}
+            return false;
+        }
+        var _mvq = window._mvq || [];
+        window._mvq = _mvq;
+        var _py = _py || []; //品友参数容器
+        require(['conf/cart/cart'], function() {
+
+            //获取商品productId和数量,items
+            function getProductInfo() {
+                var proList = [];
+                var pId = [];
+				var items = [];
+                $('.jProInfo').each(function() {
+                    var proId = $(this).attr('data-id'); //产品id
+                    var num = $(this).attr('data-num'); //产品数量
+					var price = $(this).find('.jPriceSpan').text();//价格
+					items.push([proId, num, price]);
+                    pId.push(proId);
+                    proList.push(proId + ',' + num);
+                })
+                return {
+					items: items,
+                    pId: pId.join(','),
+                    list: proList.join(';')
+                };
+            }
+
+
+            //ajax获取即时数据后的回调
+            window.TJ = {
+                item: function(data) {
+					/* bpm 埋点 begin */
+					window.BPM = window.BPM || [];
+					BPM.push([ 'setGatherMore', { 
+					"page_type": "cart", // 当前页面标识,请勿修改 
+					"plat":"h5",//平台 
+					"items":getProductInfo().items
+					} ]);
+					/* bpm 埋点 end */
+
+                    //mediav 购物车
+                    _mvq.push(['$setAccount', 'm-171574-0']);
+                    _mvq.push(['$setGeneral', 'cartview', '', '', '']);
+                    _mvq.push(['$addItem', '', getProductInfo().pId, '', '']);
+                    _mvq.push(['$logConversion']);
+                    _mvq.push(['$logData']);
+
+                    //mediav
+                    if(cookieContainsDspKey("__bbg_utm_source=mediav")){
+                    (function() {
+                        var mvl = document.createElement('script');
+                        mvl.type = 'text/javascript';
+                        mvl.async = true;
+                        mvl.src = ('https:' == document.location.protocol ? 'https://static-ssl.mediav.com/mvl.js' : 'http://static.mediav.com/mvl.js');
+                        var s = document.getElementsByTagName('script')[0];
+                        s.parentNode.insertBefore(mvl, s);
+                    })();
+                    }
+
+                    //品友
+                    if(cookieContainsDspKey("__bbg_utm_source=pinyou")){
+                    ! function(w, d, e) {
+                        var _money = data.totalPrice
+                        var _productList = getProductInfo().list;
+                        var b = location.href,
+                            c = d.referrer,
+                            f, s, g = d.cookie,
+                            h = g.match(/(^|;)\s*ipycookie=([^;]*)/),
+                            i = g.match(/(^|;)\s*ipysession=([^;]*)/);
+                        if (w.parent != w) {
+                            f = b;
+                            b = c;
+                            c = f;
+                        };
+                        u = '//stats.ipinyou.com/cvt?a=' + e('kD.5Q.w0MdOKK0T76lZ2s7l66VTP') + '&c=' + e(h ? h[2] : '') + '&s=' + e(i ? i[2].match(/jump\%3D(\d+)/)[1] : '') + '&u=' + e(b) + '&r=' + e(c) + '&rd=' + (new Date()).getTime() + '&Money=' + e(_money) + '&ProductList=' + e(_productList) + '&e=';
+
+                        function _() {
+                            if (!d.body) {
+                                setTimeout(_(), 100);
+                            } else {
+                                s = d.createElement('script');
+                                s.src = u;
+
+                                d.body.insertBefore(s, d.body.firstChild);
+                            }
+                        }
+                        _();
+                    }(window, document, encodeURIComponent);
+                    }
+                }
+            }
+        });
+    } catch (e) {}
+</script>

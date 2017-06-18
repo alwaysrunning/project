@@ -1,0 +1,23 @@
+<script id="cart/list/warehouse/items/items" type="text/html">
+<%
+	if (items&& items.length!=0) {
+	for (var j=0;j<items.length;j++){
+		var pro = items[j];
+		var styleDisabled = '';
+		if(!pro.canSelected){
+			styleDisabled = ' list-disabled';
+		}
+		var _data = {_flagHtml : _flagHtml, pro : pro, _flag : 'products', i:j, group:group};
+%>
+<tbody class="warehouse-items jItem jTable<%=styleDisabled%> jProInfo pro-info<% if (pro.selected) {%> checked<%}%>" data-id="<%=pro.productId%>" data-goods-id="<%=pro.goodsId%>" data-num="<%=pro.quantity%>">
+	<tr class="jTableTr">
+		<%include('cart/list/warehouse/items/chk', _data)%>
+		<%include('cart/list/warehouse/items/info/info', _data)%>
+		<%include('cart/list/warehouse/items/tariff', _data)%>
+	</tr>
+</tbody>
+<% }} %>
+</script>
+<!--#include file="chk.html"-->
+<!--#include file="info/info.html"-->
+<!--#include file="tariff.html"-->

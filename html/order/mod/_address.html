@@ -1,0 +1,96 @@
+<script id="jAddressTmpl" type="text/html">
+    <%
+        var addrList = addresses;
+        var addrNum = 10;//地址能显示的最多个数
+        var isStd = false;//是否默认
+        var url = '//m.yunhou.com/member/address_add?source='+_source;
+        //判断url;
+        if(addrList && addrList.length!=0){
+            for(var h=0;h<addrList.length;h++){
+                if(addrList[h]['selected']){
+                    isStd = true;
+                    url = '//m.yunhou.com/member/address_list?source='+_source;
+                    break;
+                }
+            }
+        }
+    %>
+    <div class="mod-addr" onclick="javascript:location.href='<%=url%>'">
+        <div class="inner">
+            <!--<div class="hd"><i class="icon iconfont">&#xe601;</i><span class="txt-span">收货人信息</span></div>-->
+            <div class="hd"><i class="icon iconglobal">&#xe630;</i></div>
+            <div class="bd">
+        <% if(addrList && addrList.length!=0){ %>
+            <% for(var k=0;k<addrList.length;k++){
+                //四级地址
+                var areaInfo = addrList[k]['areaInfo'];
+                //详细地址
+                var addr = addrList[k]['addr'];
+                    addr = addr?addr:'';
+                var areaStr = addrList[k]['area'];
+                //是否默认
+                var isDefault = addrList[k]['defAddr'];
+
+                //是否显示自提点
+                var isZtd = addrList[k]['selectSelf'];
+                //自提点名称
+                var _selfName = addrList[k]['selfName'];
+                var selfName = _selfName;
+                    selfName = (selfName && isZtd && showSelectSelf)?selfName:'';
+                //具体地址判断
+                if(areaInfo && areaInfo.indexOf(':')>-1){
+                    areaInfo = areaInfo.split(':')[0].replace(/[_]/g,'');
+                }else{
+                    if(areaStr && areaStr.indexOf(':')>-1){
+                        areaInfo =  areaStr.split(':')[1].replace(/\//g,'');
+                    }else{
+                        areaInfo = '';
+                    }
+                }
+                areaInfo = areaInfo + addr;
+                //是否是旧地址;三级地址取areaName
+                var isOldAddr = 0;
+                if(addrList[k]['selected'] && addrList[k]['needEdit']){
+                    isOldAddr = 1;
+                    areaInfo = addrList[k]['areaName'];
+                }
+                areaInfo = areaInfo + '&nbsp;&nbsp;' + selfName;
+                if(addrList[k]['selected']) {
+
+                    var idCardsIdx = -1;
+                    for(var kk=0; kk<idCards.length; kk++) {
+                        if (idCards[kk].realName == addrList[k]['name']) {
+                            idCardsIdx= kk
+                        }
+                    }
+                %>
+                <div class="item jAddrList jAddrListItem"  data-addrId="<%=addrList[k]['addrId']%>" data-is-old="<%=isOldAddr%>" id="jAddrDiv">
+                    <span class="name txt-els"><%=addrList[k]['name']%></span>
+                    <span class="phone"><%=addrList[k]['mobile']%></span>
+                </div>
+                <div class="item">
+                    <% if (isDefault) {%>
+                    <em class="tag">默认</em><%}%><%= areaInfo%>
+                </div>
+                <% if (idCardsIdx !== -1) { %>
+                <div class="item">
+                    身份证号码：<%=idCards[idCardsIdx].idCard%>
+                </div>
+                <%} else { %>
+					<% if (idCheckType && idCheckType != 0){ %>
+					<%}%>
+                <%}%>
+            <%
+                break;
+            }
+        }
+    } %>
+
+            <% if(!isStd){ %>
+                <div class="item addr txt-els jNoData">未填写收货地址，立即去填写</div>
+             <% } %>
+            </div>
+            <div class="ft"><i class="icon iconfont arrow">&#xe60e;</i></div>
+        </div>
+    </div>
+</script>

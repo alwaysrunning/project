@@ -1,0 +1,91 @@
+﻿// 留言
+.mod-follow {
+    margin: 0 rem(20);
+    .inner-box {
+        padding: rem(20) 0;
+        border-bottom: 1px solid #e5e5e5; 
+    }
+    .ui-input {
+        border: none;
+        margin-left: rem(38);
+    }
+}
+// 优惠券
+.mod-coupon {
+    overflow: hidden;
+    padding: 0 rem(20)!important;
+	border-bottom: 1px solid #e5e5e5!important; 
+    .bd {
+        .wrap-a {
+            display: block;
+        }
+        .inner-box {
+            // margin: rem(20);
+            padding: rem(20) 0;
+            overflow: hidden;
+            .i-l {
+                float: left;
+                .icon {
+                    font-size: rem(28);
+                    vertical-align: middle;
+                    margin-right: rem(10);
+                    width: rem(28);
+                    height: rem(28);
+                }
+                .delType {
+                    font-size: rem(28);
+                    color: #333;
+                    vertical-align: middle;
+                    display: inline-block;
+                }
+                .delTxt {
+                    vertical-align: middle;
+                    display: inline-block;
+                    color: #666;
+                }
+            }
+            .i-r {
+                font-size: rem(24);
+                float: right;
+                color: #f03468;
+            }
+            .arrow {
+                font-size: rem(28);
+                margin-left: rem(20);
+                color: #999;
+            }
+       } 
+        .cnt {
+            background: #fff;
+            .row {
+                margin-left: 0px;
+                .text-input {
+                    width: rem(280);
+                }
+                .select {
+                    width: rem(300);
+                }
+                .ui-button-red {
+                    margin-left: rem(10);
+                    padding-left: rem(5);
+                    padding-right: rem(5); 
+                    vertical-align: middle;
+                }
+            }
+            .tips {
+                color: #adadad;
+                padding-left: rem(170);
+                padding-right: rem(20);
+                font-size: rem(24);
+                margin-top: rem(10);
+                text-align: left;
+            }
+            .coupons-tips {
+                padding-left: rem(170);
+                font-size: rem(24);
+                color: red;
+                text-align: left;
+            }
+        }
+    }
+}

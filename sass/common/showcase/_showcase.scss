@@ -1,0 +1,60 @@
+.ui-showcase-list {
+    $imageWidth: 45px;
+    $imageHeight: 45px;
+    $showcaseHeight: 110px;
+
+    a {
+        text-decoration: none;
+        display: block;
+        color: #000;
+    }
+    ul {
+        padding-left: 0;
+    }
+
+    li {
+        float: none;
+        overflow: hidden;
+        margin-top: 4px;
+        border-bottom: 1px #ccc solid;
+        width: auto;
+
+        .thumbnail {
+            float: left;
+
+            img {
+                width: $imageWidth;
+                height: $imageHeight;
+                vertical-align: middle;
+            }
+        }
+
+        .intro {
+            margin-left: $imageWidth + 20;
+            height: $showcaseHeight;
+
+            .title {
+                overflow: hidden;
+                height: 1.5em;
+                font-size: 14px;
+                line-height: 1.5em;
+            }
+
+            .one-line {
+                overflow: hidden;
+                height: 1.8em;
+                color: #666666;
+                font-size: 12px;
+                line-height: 1.8em;
+            }
+
+            .multi-lines {
+                overflow: hidden;
+                color: #666666;
+                font-size: 12px;
+                height: 1.8em;
+                line-height: 1.8em;
+            }
+        }
+    }
+}

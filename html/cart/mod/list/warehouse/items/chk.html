@@ -1,0 +1,28 @@
+<script id="cart/list/warehouse/items/chk" type="text/html">
+	<% if(_flag == 'products'){
+	   var disabled = '';
+	   var checked = '';
+	   var classStr ='';
+		if(!pro.canSelected){
+			disabled = ' disabled = disabled';
+		}else{
+			if(pro.selected){
+				checked = 'checked';	
+				//全球购已选中商品
+				if(group.shopType==4){
+					classStr=' jGlobalPro';	
+				}
+			}
+		}
+	%>
+		<td class="chk jChkBox jOther ">
+			<input type="checkbox" class="checkbox jChkItem <%=classStr%>" <%=checked%><%=disabled%> data-quantity="<%=pro.quantity%>"/>
+		</td>
+	<% }else{%>
+		<td class="chk">
+			<% if(_flagHtml && _flagHtml.length!=0){ %>
+				<i class="fail-prem flag-gray"><%=_flagHtml%></i>
+			<% } %>
+		</td>
+	<%	} %>
+</script>

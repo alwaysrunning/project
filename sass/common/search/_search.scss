@@ -1,0 +1,229 @@
+html._search {
+    height: 100%;
+    body {
+        position: relative;
+        height: 100%;
+        .page-view {
+            overflow: auto;
+            height: 100%;
+        }
+    }
+}
+
+body {
+    $search-header: rem(66);
+    $header-padding: rem(14);
+    $highlight-color: #f03468;
+
+    ._search-popup-animate {
+        display: block !important;
+        visibility: visible !important;
+        overflow: auto;
+        ._wrap-search-cnt {
+            opacity: 1;
+        }
+    }
+    ._wrap-search-cnt {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: auto;
+        opacity: 0;
+        -webkit-transition: opacity 0s  3s linear;
+        -webkit-transition: display 0s  3s linear;
+        transition: opacity 0s  3s linear;
+        transition: display 0s  3s linear;
+    }
+
+    #_search-popup {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 14;
+        visibility: hidden;
+        overflow: auto;
+        width: 100%;
+        background-color: #fff;
+        text-decoration: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        #_search-header {
+            overflow: hidden;
+            padding: $header-padding 0;
+            height: $search-header;
+            background-color: #fff;
+
+            #_search-form {
+                overflow: hidden;
+                margin-left: rem(80);
+                margin-right: rem(104);
+                background-color: #f2f2f2;
+                border-radius: rem(4);
+                height: rem(66);
+            }
+
+            ._search-input-icon{
+                font-size: rem(28);
+                position: absolute;
+                top: rem(27);
+                left: rem(92);
+                width: rem(40);
+                height: rem(40);
+                overflow: hidden;
+                line-height: rem(40);
+                color: #a9a9a9;
+            }
+
+            ._input-cnt {
+                float: left;
+                padding: rem(14) rem(20) rem(14) rem(68);
+                width: 80%;
+                height: rem(38);
+                border: none;
+                background-color: #f2f2f2;
+                color: #a9a9a9;
+                font-size: rem(28);
+                // line-height: rem(30);
+                -webkit-font-smoothing: antialiased;
+
+                &::-webkit-input-placeholder {
+        		    color: #c0c0c0;
+                    font-weight: 300;
+                    -webkit-font-smoothing: antialiased;
+        		}
+            }
+            ._btn-serch {
+                position: absolute;
+                width: rem(64);
+                right: 0;
+                height: rem(66);
+                border: none;
+                color: #333;
+                background-color: rgba(0,0,0,0);
+                text-align: center;
+                font-size: rem(28);
+                line-height: rem(66);
+                margin-right: rem(18);
+            }
+        }
+    }
+    #_search-cnt-default {
+        position: absolute;
+        top: 2.8rem;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: auto;
+        text-align: center;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    ._search-cnt {
+        position: absolute;
+        top: $search-header + $header-padding*2;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        display: none;
+        background-color: #fff;
+        border-top: 1px solid #e5e5e5;
+        ul {
+            padding: 0 rem(12);
+            color: #666;
+            font-size: rem(26);
+            li {
+                height: rem(80);
+                line-height: rem(80);
+                padding: 0 0 0 rem(10);
+                border-bottom: 1px solid #e5e5e5;
+                a {
+                    display: block;
+                    color: #666;
+                    overflow:hidden;
+                    white-space:nowrap;
+                    text-overflow:ellipsis;
+
+                    &:active{
+                        color: $highlight-color;
+                    }
+                }
+            }
+        }
+        .clear-history-btn{
+            background-color:#fff;
+            padding: rem(40) 0;
+            text-align: center;
+            display: none;
+            text-decoration: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            a{
+                display: inline-block;
+                width: auto;
+                height: rem(60);
+                font-size: rem(28);
+                line-height: rem(60);
+                padding: 0 rem(24);
+                border: 1px solid $highlight-color;
+                background-color:#fff;
+                color: $highlight-color;
+                border-radius: rem(2);
+            }
+        }
+    }
+    ._search-close-btn {
+        position: absolute;
+        left: 0;
+        width: rem(80);
+        font-size: rem(40);
+        border: none;
+        color: $highlight-color;
+        text-align: center;
+        line-height: rem(66);
+        text-decoration: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .clear-input{
+        position: absolute;
+        font-size: rem(28);
+        right: rem(116);
+        top: 0;
+        width: rem(66);
+        height: rem(94);
+        line-height: rem(94);
+        font-size: rem(32);
+        color:#bbb;
+        text-align: right;
+        text-decoration: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .ui-button {
+        width: 30%;
+        border: 1px solid #999;
+        background-color: #fdfdfd;
+        color: #666;
+        line-height: rem(60);
+        text-decoration: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+}

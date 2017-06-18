@@ -1,0 +1,156 @@
+/* common */
+@import "../../common";
+@import "../../common/nav/_nav";
+@import "../../../fonts/iconfont.css";
+@import "../../common/dialog/dialog";
+.dialog .d-pop{
+  -moz-transform:scale(1.2);    -o-transform:scale(1.2);    -ms-transform:scale(1.2);transform:scale(1.2);
+}
+/* modules */
+html,body{
+    background: #f2f2f2;
+}
+img{
+    max-width:100%;
+    border:none;
+    vertical-align:middle;
+}
+.page-view{
+  overflow: hidden;
+  width: rem(640);
+  margin: 0 auto;
+  .page-view-body {
+    font-family: "Microsoft YaHei", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Helvetica, Arial, sans-serif;
+    .blo1{
+      color: #fde573;
+      height: rem(108);
+      background: url("http://s1.bbgstatic.com/gshop/images/topic/chouj_bg.png") center 0 no-repeat;
+      background-size:100% auto;
+      padding-left: rem(18);
+      p:nth-child(1){
+        padding-top: rem(22);
+        font-size: rem(24);
+        line-height: rem(30);
+        span{
+          color: #e4007f;
+        }
+      }
+      p:nth-child(2){
+        font-size: rem(18);
+        color: #fde070;
+      }
+    }
+    .blo2{
+      height: rem(584);
+      background: url("http://s1.bbgstatic.com/gshop/images/topic/chouj_bg.png") center rem(-108) no-repeat;
+      background-size:100% auto;
+      position: relative;
+      .zhuangp{
+        position: absolute;
+        background: url("http://s1.bbgstatic.com/gshop/images/topic/chouj_zhuangp.png") center top no-repeat;
+        background-size: 100% 100%;
+        z-index: 9;
+        left: rem(63);
+        top: rem(10);
+        width: rem(515);
+        height: rem(515);
+      }
+      .btn{
+        background: url("http://s1.bbgstatic.com/gshop/images/topic/chouj_btn.png?v=1")  no-repeat;
+        background-size:100% auto;
+        position: absolute;
+        top: rem(110);
+        left: rem(201);
+        display: block;
+        width: rem(240);
+        height: rem(279);
+        cursor: pointer;
+        z-index: 10;
+      }
+    }
+    .clearfix:after{clear: both;display:table;content:" ";}
+    .bloxx{
+      font-size: rem(18);
+      background: url("http://s1.bbgstatic.com/gshop/images/topic/chouj_xxbg.png") center top;
+      background-size:100% auto;
+      .title{
+        background: url("http://s1.bbgstatic.com/gshop/images/topic/chouj_xx.png") center -1px no-repeat;
+        background-size:100% auto;
+        line-height: rem(75);
+        padding-left:8em;
+        margin: 0 auto;
+        height: rem(60);
+        font-size: rem(22);
+        color: #fff;
+      }
+      .module{
+
+        color: #f9df37;
+        ul{
+          width: rem(330);
+          margin: 0 auto;
+          li{
+            height: rem(30);
+          }
+        }
+      }
+
+      .bottom{
+        height: rem(25);
+        display: block;
+        background: url("http://s1.bbgstatic.com/gshop/images/topic/chouj_xx.png") center rem(-136) no-repeat;
+        background-size:100% auto;
+
+      }
+    }
+    .bloxx:after{
+      display:table;
+      content:" ";
+      clear: both;
+    }
+    .blo3{
+      height: rem(190);
+      background: url("http://s1.bbgstatic.com/gshop/images/topic/chouj_bg.png") center rem(-690) no-repeat;
+      background-size:100% auto;
+      padding-top: rem(42);
+      color: #f9df37;
+      font-size: rem(18);
+      .module{
+        position: relative;
+        text-align: center;
+        height: rem(170);
+        overflow-y:hidden;
+        ul{
+          width: 100%;
+          margin: 0 auto;
+          position: absolute;
+          top: 0;
+        }
+      }
+    }
+    .blo4{
+      height: rem(610);
+      padding-top: rem(20);
+      background: url("http://s1.bbgstatic.com/gshop/images/topic/chouj_bg.png") center rem(-924) no-repeat;
+      background-size:100% auto;
+      .title{
+        margin: 0 auto;
+        width: rem(484);
+        font-size:rem(27);
+        text-align: center;
+        line-height: rem(60);
+        height: rem(70);
+        color: #fbe856;
+      }
+      .module{
+        width: rem(484);
+        margin: 0 auto;
+        font-size: rem(20);
+        color: #fff;
+        line-height: rem(32);
+      }
+    }
+  }
+}
+
+

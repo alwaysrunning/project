@@ -1,0 +1,42 @@
+.mod-desc {
+  margin-top: rem(10);
+  height: rem(168);
+  background-color: #fff;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+
+  .mod-cnt {
+    margin-top: rem(25);
+    width: 25%;
+    float: left;
+
+    .mod-icon {
+      margin-left: auto;
+      margin-right: auto;
+      height: rem(84);
+      line-height: rem(84);
+      width: rem(84);
+      border-radius: 50%;
+      text-align: center;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      i {
+        font-size: rem(48);
+        color: #fff;
+      }
+    }
+    .mod-txt {
+      margin-top: rem(8);
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      color: #666;
+      font-size: rem(26);
+    }
+  }
+}
+

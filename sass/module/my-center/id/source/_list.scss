@@ -1,0 +1,72 @@
+.mod-id-list{
+    .id-item{
+        color:#666;
+        margin: rem(20) 0 0 0;
+        background: #fff;
+        border-radius:0.1rem;
+        font-size: rem(28);
+        .hd{
+            padding: rem(20) 0 rem(20) rem(20);
+            .id-number{
+                padding-top: rem(5);
+                font-size: rem(30);
+            }
+            .name {
+                font-size: rem(32);
+            }
+            
+        }
+        .hd-hover {
+            &:active {
+                background: #ddd;
+            }
+        }
+        .bd{
+            padding: 0 rem(20) rem(20) rem(20);
+            .id-img{
+                float: left;
+                margin-right:rem(20);
+                width:rem(240);
+                height:rem(148);
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .ft{
+            border-top: solid #e5e5e5 1px;
+            line-height: rem(65);
+            text-align:right;
+            font-size: rem(28);
+            margin: 0 rem(20) 0 rem(20);
+            a {
+                margin-right: rem(20);
+                color: #333;
+                i {
+                    margin-right: rem(5);
+                    font-size: rem(32);
+                }
+            }
+        }
+    }
+}
+.address_btn_bot {
+    width: 100%;
+    height: rem(90);
+    background: #f0efed;
+    text-align: center;
+    font-size: rem(34);
+    a {
+        display: block;
+        color: #f03468;
+        width: 93%;
+        height: rem(82);
+        background: #fff;
+        line-height: rem(82);
+        margin: 0 auto;
+        margin-top: rem(18);
+        border-radius: 2px;
+        border:solid #f03468 1px;
+    }
+}

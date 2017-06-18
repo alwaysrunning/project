@@ -1,0 +1,22 @@
+<script id="order/list/warehouse/items/info/title" type="text/html">
+	<%  
+		var giftTag = pro['giftTag'];
+		var _styleStr = (_style=='disabled'?'flag-gray':'')
+	%>
+	<div class="info-hd">
+		<div class="des">
+			<% if(customers && customers=='团'){ %>
+				<em class="product-flag <%=_styleStr%>">团</em>
+			<% }else if(giftTag && giftTag == '赠'){ %>
+				<em class="product-flag <%=_styleStr%>">赠</em>
+			<% }else if(_flagHtml && _flagHtml.length!=0){ %>
+				<em class="product-flag <%=_styleStr%>"><%=_flagHtml%></em>
+			<% }else if(pro.bizType && pro.bizType == 'group'){ %>
+				<em class="product-flag <%=_styleStr%>">团</em>
+			<% }else if(pro.bizType && pro.bizType == 'presale'){ %>
+				<em class="product-flag <%=_styleStr%>">预</em>
+			<% } %>
+		<a href="//m.yunhou.com/item/<%=pro['productId']%>.html" ><%=pro['productName']%></a>
+		</div>
+	</div>
+</script>

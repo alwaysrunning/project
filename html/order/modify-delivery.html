@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>更改配送方式</title>
+    <!--#include file="/html/include/common/intro.html"-->
+    <link rel="stylesheet" href="//s1.bbgstatic.com/gshop/css/module/order/modify-delivery.css?v=3.0.22" type="text/css" charset="utf-8"></head>
+<body>
+    <div class="page-view">
+        <head><!--#include file="/html/order/mod/_head-modify-delivery.html"--></head>
+        <div class="page-view-body mod-modify-delivery">
+            <div class="bd">
+                <ul id="jMdInvoice">
+                </ul>
+            </div>
+        </div>
+         <!-- <footer> xx </footer> -->
+    </div>
+    <script id="jMdInvoiceTmpl" type="text/html">
+        <% for(var i = 0;i<list.length;i++){ %>
+        <li>
+            <label>
+                <em class="input"><input type="radio" name="jInType" <% if(list[i]['selected']){ %>checked<% } %> data-shopId="<%=list[i]['shopId']%>" data-id="<%=list[i]['id']%>"/></em>
+                <span class="text"><%=list[i]['title']%></span>
+            </label>
+        </li>
+        <% } %>
+    </script>
+<!--#include file="/html/include/common/outro.html"-->
+<script>require(['conf/order/modify-delivery']);</script>
+
+<!--#include file="/html/include/common/statistics.html"-->
+</body></html>

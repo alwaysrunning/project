@@ -1,0 +1,75 @@
+
+.ui-animated {
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both; }
+.ui-speed-normal,.ui-speed-500 {
+  -webkit-animation-duration: 0.5s;
+  -moz-animation-duration: 0.5s;
+  -o-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+.ui-speed-fast,.ui-speed-200 {
+  -webkit-animation-duration: 0.2s;
+  -moz-animation-duration: 0.2s;
+  -o-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+}
+.ui-speed-i,.ui-speed-0 {
+  -webkit-animation-duration: 0.2ms;
+  -moz-animation-duration: 0.2ms;
+  -o-animation-duration: 0.2ms;
+  animation-duration: 0.2ms;
+}
+
+.ui-speed-slow,.ui-speed-1000 {
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+
+/* ui-ani-bounceIn */
+@-webkit-keyframes scaleIn {
+  0% { opacity: 1; top:100%; }
+  100% {  opacity: 1; top:0;} }
+@-moz-keyframes scaleIn {
+  0% {  opacity: 1; top:100%; }
+  100% {opacity: 1 ; top:0;} }
+@-o-keyframes scaleIn {
+  0% { opacity: 1;top:100%; }
+  100% {opacity: 1; top:0;} }
+@keyframes scaleIn {
+  0% { opacity: 1; top:100%;}
+  100% { opacity: 1;top:0; } }
+.ui-ani-scaleIn {
+  -webkit-animation-name: scaleIn;
+  -moz-animation-name: scaleIn;
+  -o-animation-name: scaleIn;
+  animation-name: scaleIn;
+
+}
+
+/* ui-ani-scaleOut */
+@-webkit-keyframes scaleOut {
+  0% { -webkit-transform: scale(1); opacity: 1;top:0;}
+  100% { -webkit-transform: scale(0.9); opacity: 0; top:10%;left:10%;right: 10%;}
+}
+@-moz-keyframes scaleOut {
+  0% { -moz-transform: scale(1); opacity: 1;top:0;}
+  100% { -moz-transform: scale(0.9); opacity: 0;top:10%;left:10%;right: 10%;}}
+@-o-keyframes scaleOut {
+  0% { -o-transform: scale(1);opacity: 1;top:0; }
+  100% { -o-transform: scale(0.9); opacity: 0;top:10%;left:10%;right: 10%;}}
+@keyframes scaleOut {
+  0% { transform: scale(1); opacity: 1;top:0;}
+  100% { transform: scale(0.9); opacity: 0;top:10%;left:10%;right: 10%;}}
+.ui-ani-scaleOut {
+  -webkit-animation-name: scaleOut;
+  -moz-animation-name: scaleOut;
+  -o-animation-name: scaleOut;
+  animation-name: scaleOut;
+
+}

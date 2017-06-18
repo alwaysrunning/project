@@ -1,0 +1,15 @@
+<script id="cart/list/warehouse/items/info/full-cut" type="text/html">
+<%
+//显示促销信息
+var proP = pro.promotions;
+%>
+<!-- 满减信息 begin -->
+<!--  <% if(proP && proP.length!=0){ 
+	for(var p=0;p<proP.length;p++){
+		var proUrl = proP[p]['url'];
+		var tgStr = (!proUrl || proUrl.length==0)?'span':'a';
+%>
+<div class="pre-info txt-els"><span class="txt-red">[<%=proP[p]['toolName']%>]</span><<%=tgStr%> href="<%=proUrl%>"  class="text"><%=proP[p]['ad']%></<%=tgStr%>></div>
+<% }} %>  -->
+<!-- 满减信息 end -->
+</script>

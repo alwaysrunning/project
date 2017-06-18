@@ -1,0 +1,36 @@
+<div class="pay" id="jPayDom">
+    <div class="hd">
+        <div class="writer">
+            <div class="bg-img"><img src="//s1.bbgstatic.com/gshop/images/pay/pay-bg.png"></div>
+            <div class="text">
+                订单提交成功请尽快付款！<br/>
+                <span id="jTimePay"></span>后未付款，订单将自动取消！
+            </div>
+        </div>
+
+    </div>
+    <div class="bd jPayListContent">
+        <div class="bill-count jBillCount"></div>
+        <div class="title"><span class="title-text"><span class="icon iconglobal ico-payWay">&#xe637;</span>支付方式</span><span class="title-btn jChange">更改<span class="icon iconfont ico-stretch">&#xe60b;</span></span></div>
+        <ul id="jPayLi" class="pay-list" data-code=""></ul>
+    </div>
+
+	<div class="order-d">
+		<ul class="jOrderLi order-cnt"></ul>
+	</div>
+
+    <form action="" method="get" id="jForm" style="display:none">
+        <input type="submit" value="Submit"/>
+    </form>
+</div>
+
+<div class="error-pay" id='jPayErrorDom'>
+    <div class="error-img">
+        <div class="error-img-bj"></div>
+        <div class="error-monkey"></div>
+        <div class="error-tear"></div>
+    </div>
+    <div class="erro-text">
+        倒计时已结束，订单自动关闭。
+    </div>
+</div>

@@ -1,0 +1,36 @@
+
+
+.float-left{
+    float:left;
+}
+.float-right{
+    float:right;
+}
+.display-none{
+    display: none;
+}
+.loading{
+    text-align: center;
+    color: #666;
+    font-size: rem(24);
+    line-height: rem(40);
+    &-tab {
+        line-height: 2.77333rem;
+        &:active {
+            background-color: rgba(255, 255, 255, .2);
+        }
+    }
+}
+.stream-error {
+    @extend .loading;
+}
+
+div{
+    text-align: left;
+}
+// .page-view-body{
+//     padding-bottom: rem(100);
+// }
+.ui-pri{
+    @extend .ui-pri;
+}

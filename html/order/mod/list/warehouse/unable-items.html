@@ -1,0 +1,61 @@
+﻿<script id="order/list/warehouse/unable-items" type="text/html">
+<!-- 不配送商品 begin -->
+<%
+	if(unableItems && unableItems.length!=0){
+		for(var e=0;e<unableItems.length;e++){
+			//赠品标示
+			var giftTag = unableItems[e]['giftTag'];
+			var specAr = unableItems[e]['specList'];
+				specAr = specAr?specAr:[];
+			//规格
+			var strSpec = '';
+			if(specAr && specAr.length!=0){
+				for(var t=0;t<specAr.length;t++){
+					if(t == 0){
+						strSpec = specAr[t].name + ':' + specAr[t].value;
+					}else{
+						strSpec += ','+specAr[t].name + ':' + specAr[t].value;
+					}
+				}
+			}
+			strSpec = (strSpec!='')?(strSpec):strSpec;
+%>
+<tr class="jTableTr">
+	<td colspan="2" class="td-active">
+		<div class="detail">
+			<ul class="box">
+				<li class="tit">
+					<div class="img">
+						<a
+							href="//m.yunhou.com/item/<%=unableItems[e]['productId']%>.html"
+							class="pro-img"><img class="jImg
+							img-error"
+							data-src="<%=getImgByType(unableItems[e]['productImage'],'l1')%>" src="//s1.bbgstatic.com/gshop/images/public/blank.gif"/></a>
+					</div>
+					<div class="info">
+						<div class="info-hd">
+							<div class="des">
+								<% if(customers && customers == '团'){ %><em class="product-flag">团</em><% }else if(giftTag && giftTag == '赠'){ %><em class="product-flag">赠</em><% } %>
+								<a href="//m.yunhou.com/item/<%=unableItems[e]['productId']%>.html"  ><%=unableItems[e]['productName']%></a>
+							</div>
+						</div>
+						<div class="info-bd info-spec"><em class="spec"><%=strSpec%></em></div>
+						<div class="info-ft">
+							<span class="pri">
+								<% if(giftTag && giftTag == '赠'){ %>
+									--
+								<% }else{ %>
+									<em class="txt-red">￥<%=unableItems[e]['subtotal']%></em>
+								<% } %>
+							</span>
+							<span class="quty">X<%=unableItems[e]['quantity']%></span>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</td>
+</tr>
+<% }} %>
+<!-- 不配送商品 end -->
+</script>

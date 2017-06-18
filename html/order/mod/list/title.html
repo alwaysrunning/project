@@ -1,0 +1,17 @@
+<script id="order/list/title" type="text/html">
+	<%
+		var maxWidth = '13.5rem';//最大宽度
+		var shopTag = shopItem['shopTag'];
+		shopTag = (shopTag && shopTag.length!=0)?shopTag:false;
+		if(shopTag){
+			maxWidth = '8.5rem';
+		}
+	%>
+    <div class="hd" data-shopId="<%=shopItem['shopId']%>" class="jShoppingInfo">
+        <!-- 标题 begin -->
+        <div class="inner">
+                <i class="icon iconglobal">&#xe643;</i><a href="<%= shopItem['twoDomain']%>" class="h1 txt-els" style="max-width:<%=maxWidth%>;"><%= shopItem['shopName']%></a>
+        </div>
+        <!-- 标题 end -->
+    </div>
+</script>

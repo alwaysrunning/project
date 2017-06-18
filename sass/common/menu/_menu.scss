@@ -1,0 +1,124 @@
+._menu-html {
+    height: 100% !important;
+
+    body {
+        height: 100% !important;
+    }
+    .page-view {
+        overflow: scroll !important;
+        height: 100% !important;
+    }
+}
+.wrap-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: rem(-186);
+    z-index: 20;
+    background-color: #fff;
+    -webkit-transition: left .3s linear;
+    transition: left .3s linear;
+
+    .mod-menu {
+        position: absolute;
+        top: rem(88);
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        overflow-x: hidden;
+        overflow-y: auto;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-bottom: 2rem;
+        width: rem(186);
+        background: url(//s1.bbgstatic.com/gshop/images/catalogue/bg-left.png) 0 0 repeat-y scroll;
+        background-size: 100% 100%;
+        color: #666;
+        font-size: rem(26);
+
+        ul {
+            position: relative;
+            li {
+                overflow: hidden;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                padding-left: rem(16);
+                width: 102%;
+                height: rem(84);
+                line-height: rem(84);
+
+                @include ellipsis();
+
+                &.current {
+                    border-top: rem(2) solid #e4e4e4;
+                    border-right: none;
+                    border-bottom: rem(2) solid #e4e4e4;
+                    background-color: #fff;
+                }
+                &:first-child {
+                    border-top:  none !important;
+                }
+            }
+        }
+    }
+    .mod-content {
+        position: absolute;
+        top: rem(88);
+        right: 0;
+        bottom: 0;
+        left: rem(186);
+        z-index: 10;
+        overflow-y: auto;
+        background-color: #fff;
+        color: #666;
+        font-size: rem(24);
+        line-height: rem(84);
+        opacity: 0;
+        -webkit-transition: opacity .1s linear .3s;
+        transition: opacity .1s linear .3s;
+
+        ul {
+            padding-left: rem(40);
+        }
+        li {
+            overflow: hidden;
+            padding-left: rem(20);
+            height: rem(84);
+            border-bottom: 1px solid #dfdfdf;
+            &:active{
+                background-color: #f8f8f8;
+            }
+            a {
+                display: block;
+                color: inherit;
+            }
+        }
+    }
+    ._close {
+        position: absolute;
+        right: 1rem;
+        bottom: rem(90);
+        z-index: 15;
+        width: auto;
+        width: rem(70);
+        height: rem(70);
+        border-radius: rem(70);
+        background-color: rgba(0, 0, 0, .28);
+        color: #fff;
+        text-align: center;
+        font-size: 1.5rem;
+        .iconfont {
+            font-size: rem(60);
+            line-height: rem(70);
+        }
+    }
+}
+.wrap-menu-animate {
+    right: 0;
+    left: 0;
+    display: block;
+    .mod-content {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,18 @@
+<script id="order/list/warehouse/items/info/specification" type="text/html">
+	<%
+		var specAr = pro['specList'];
+			specAr = specAr?specAr:[];
+		var strSpec = '';
+		if(specAr && specAr.length!=0){
+			for(var t=0;t<specAr.length;t++){
+				if(t == 0){
+					strSpec = specAr[t].name + ':' + specAr[t].value;
+				}else{
+					strSpec += ','+specAr[t].name + ':' + specAr[t].value;
+				}
+			}
+		}
+		strSpec = (strSpec!='')?(strSpec):strSpec;
+	%>
+	<div class="info-bd info-spec"><em class="spec"><%=strSpec%></em></div>
+</script>

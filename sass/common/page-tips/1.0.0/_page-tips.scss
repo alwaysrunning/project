@@ -1,0 +1,98 @@
+/**
+* @file _page-tips.scss
+* @synopsis 界面提示 
+* @author licuiting, 250602615@qq.com
+* @version 1.0.0
+* @date 2016-06-30
+*/
+.ui-page-tips {
+	text-align: center;
+	padding-top: rem(20);
+	.tips-img {
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: 100%;
+		width: rem(308);
+		height: rem(266);
+		display: inline-block;
+		margin-top: rem(60);
+		font-style: normal;
+	}
+	.tips-txt {
+		font-size: rem(26);
+		margin-top: rem(30);
+	}
+	.tips-detail {
+		@extend .tips-txt;
+		margin-top:0px;
+		font-size:rem(22);
+	}
+	.tips-btn-box {
+		margin-top:rem(20);
+		%btn {
+			padding: 0px rem(46)!important;
+			font-size: rem(26)!important;
+			height: rem(50)!important;
+			line-height: rem(50)!important;
+			margin-top: rem(10)!important;
+			width:auto!important;
+			border-radius:rem(6)!important;
+		}
+		.ui-button, .ui-button-white {
+			@extend %btn;
+		}
+		.btn-mr-l {
+			margin-left:rem(10);
+		}
+	}
+}
+
+/* 界面提示信息 */
+@mixin ui-page-tips(
+	$name:'page-tips',
+	$background-image:'empty/network-error.png',
+	$tips-txt-color:#7c7c88,
+	$tips-detail-color:#aaa9b9
+){
+	.ui-#{$name} {
+		.tips-img {
+			background-image: image-url(#{$background-image});
+		}
+		.tips-txt {
+			color: #{$tips-txt-color};
+		}
+		.tips-detail {
+			color: #{$tips-detail-color};
+		}
+	}
+}
+
+/* 小图标提示 */
+@mixin ui-page-icon(
+   $name: 'page-icon', 
+   $content: '\e66a'
+){
+	.ui-#{$name} {
+		.tips-img {
+			height:rem(120);
+			line-height:rem(120);
+			&:after {
+				font-family: "iconglobal";
+				content: "#{$content}";
+				font-size:rem(122);
+				color:#cecece;
+			}
+		}
+		.tips-txt {
+			max-width:rem(200);
+			margin:0 auto;
+			font-size:rem(22);
+			line-height:rem(30);
+			margin-top:rem(30);
+			color:#7c7c88;
+		}
+	}
+}
+
+@include ui-page-icon('page-icon', '\e676');
+@include ui-page-icon('page-coupon', '\e63d');

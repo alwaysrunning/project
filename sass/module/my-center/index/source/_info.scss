@@ -1,0 +1,87 @@
+.mod-info{
+    width: 100%;
+    .hd{
+        display: block;
+        height:rem(480);
+        background: url(//s1.bbgstatic.com/gshop/images/my-center/index-bg1.jpg) repeat-x center top;
+        background-size:cover;
+        position: relative;
+        .user-img {
+            text-align: center;
+            img {
+                width: rem(150);
+                height: rem(150);
+                border-radius: 150%;
+                margin-top: rem(100);
+            }
+        }
+        .say-hi{
+            font-size: rem(28);
+            color: #fff;
+            text-align: center;
+            margin-top: rem(30);
+        }
+        .card {
+            width: 100%;
+            background: #fff;
+            overflow: hidden;
+            height: rem(110);
+            position: absolute;
+            bottom: 0;
+            opacity: 0.3;
+        }
+        ul{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            li {
+                a {
+                    color: #f03468;
+                }
+                float: left;
+                width: 33%;
+                height: rem(102);
+                i {
+                    font-size: rem(42);
+                    position: relative;
+                    label {
+                        position: absolute;
+                        font-size: rem(18);
+                        color: #fff;
+                        background: #f03468;
+                        border-radius: rem(20);
+                        height: rem(20);
+                        line-height: rem(20);
+                        padding: rem(5) rem(8) rem(5) rem(8);
+                        left: rem(20);
+                    }
+                }
+                .font-icon {
+                    text-align: center;
+                }
+                .font-text {
+                    font-size: rem(26);
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+.index-header {
+    position: fixed;
+    width: 100%;
+    top: rem(27);
+    z-index: 1;
+    a {
+        color: #fff;
+        font-size: rem(52);
+    }
+    .right {
+        float: right;
+        margin-right: rem(20);
+    }
+    .left {
+        float: left;
+        margin-left: rem(10);
+    }
+}

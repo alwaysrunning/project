@@ -1,0 +1,25 @@
+<script id="jDiscountTmpl" type="text/html">
+    <% if(promotions && promotions.length!=0){ 
+    %> 
+    <tr>
+        <td colspan="2" class="info-box">
+            <div class="mod-discount-list jOtherOffer">
+                <div class="bd">
+                    <div class="inner-box">
+                        <div class="i-l txt-els "><em class="delType">已享受：</em><span class="delTxt"><%=promotions.length%>项优惠</span></div>
+                        <i class="i-r icon iconglobal arrow">&#xe641</i>
+                        <% if(totalDis && totalDis.length!=0){ %>
+                        <span class="i-r txt-red">共优惠￥<%=totalDis%></span>
+                        <% } %>
+                    </div>
+                    <div class="inner-cnt jOtherOfferContent" style="display:none;">
+                        <% for(var q=0;q<promotions.length;q++){ %>
+                        <div class="item txt-els"><em class="txt-red txt-name">[<%=promotions[q]['toolName']%>]</em><%=promotions[q]['ad']%></div>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <% }  %>
+</script>

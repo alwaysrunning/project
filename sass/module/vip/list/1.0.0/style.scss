@@ -1,0 +1,28 @@
+/* common */
+@import "../../../../common-750";
+@import "../../../../common/slider/slider";
+@import "../../../../common/form/form";
+@import "../../../../common/button/button";
+@import "../../../../common/scroll-load/scroll-load";
+@import "../../../../common/go-top/go-top";
+
+
+
+html{
+    background: #fff;
+    padding: 0 0 rem(20);
+}
+
+.no-data{
+	text-align: center;
+	padding-top: rem(250);
+	.icon{
+		font-size: rem(300);
+		color: #ccc;
+	}
+	p{
+		margin-top: rem(50);
+		font-size: rem(24);
+		color: #666;
+	}
+}

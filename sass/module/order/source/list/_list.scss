@@ -1,0 +1,9 @@
+@import 'warehouse/warehouse';//仓库
+@import '_total';//店铺总计
+.mod-list {
+	@extend %warehouse;
+    @extend %total;
+}
+.mod-list-no-del {
+	@extend %warehouse;
+}

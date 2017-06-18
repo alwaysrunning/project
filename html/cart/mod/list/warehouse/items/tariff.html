@@ -1,0 +1,15 @@
+<script id="cart/list/warehouse/items/tariff" type="text/html">
+	<% 
+	var isShowTariff = (pro.totalTaxPrice && pro.totalTaxPrice.length!=0 && pro.tax_info && pro.tax_info.length!=0);
+	if(isShowTariff){ 
+	%>
+	<tr class="jTariffCtn items-tariff">
+		<td colspan="3" class="jTariffCtnBox">
+			<div class="tariff-inner">
+				<b class="arrow"></b>
+				<%=pro.tax_info%>
+			</div>
+		</td>
+	</tr>
+	<% } %>
+</script>

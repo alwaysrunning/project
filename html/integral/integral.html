@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>桃子积分</title>
+    <!--#include file="/html/include/common/intro.html"-->
+    <link rel="stylesheet" type="text/css" href="//s1.bbgstatic.com/gshop/css/conf/integral/integral.css">
+</head>
+
+<body>
+
+    <div class="page-view">
+        <header class="ui-header">
+            <a href="javascript:;" class="icon iconfont ui-back">&#xe60d;</a>
+            <span class="ui-title">积分</span>
+        </header>
+        <div class="page-view-body">
+            <!-- cover begin -->
+            <!--#include file="/html/integral/source/text.html"-->
+            <!-- cover end -->
+            <!-- tab begin -->
+            <div class="ui-tab ui-tab-2" id="jWrap">
+                <div class="tab-hd" role="tablist">
+                    <a class="hd-item hover" href="javascript:;"><span class="item-line">兑换优惠券</span></a>
+                    <a class="hd-item" href="javascript:;"><span class="item-line">兑换记录</span></a>
+                </div>
+                <div class="tab-bd">
+                    <div class="bd-item" role="tabpanel">
+						<!--#include file="/html/integral/source/coupon.html"-->
+                    </div>
+                    <div class="bd-item" role="tabpanel">
+						<!--#include file="/html/integral/source/record.html"-->
+                    </div>
+                </div>
+            </div>
+            <!-- tab end -->
+        </div>
+        <footer></footer>
+    </div>
+    <!--#include file="/html/include/common/outro.html"-->
+    <script>
+        require(['conf/integral/integral']);
+    </script>
+</body>
+
+</html>

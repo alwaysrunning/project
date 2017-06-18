@@ -1,0 +1,45 @@
+.mod-discount-list {
+    overflow: hidden;
+	border-bottom:1px solid #e5e5e5;
+    .bd {
+       .inner-box {
+            margin: rem(20);
+            overflow: hidden;
+			@include tap-highlight;
+            .i-l {
+                float: left;
+                .delType {
+                    color: #333333;
+                    vertical-align: middle;
+                    display: inline-block;
+                }
+                .delTxt {
+                    vertical-align: middle;
+                    display: inline-block;
+                }
+            }
+            .i-r {
+                float: right;
+                vertical-align: middle;
+                padding-top: rem(2);
+            }
+            .arrow {
+                font-size: rem(30);
+                margin-left: rem(20);
+            }
+       }
+       .inner-cnt {
+            .item {
+                padding: 0px rem(20) rem(20) rem(20);
+                width: rem(590);
+                .txt-name {
+                    margin-right: rem(4);
+                    color: #f16320;
+                }
+                .txt-red {
+                    color: #f03468;
+                }
+            }
+       } 
+    }
+}

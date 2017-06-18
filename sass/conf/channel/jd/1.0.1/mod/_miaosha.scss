@@ -1,0 +1,81 @@
+.mod-port-ms {
+
+
+  .mod-hd {
+    background-image: image-url('channel/jd/1.0.1/bg-mod-ms.png');
+    background-size: 100% 100%;
+  }
+
+
+  .mod-item {
+    height: rem(300);
+
+    .gd-info {
+      .gd-name {
+        color: #333333;
+        font-size: rem(30);
+        padding-bottom: rem(16);
+        height: rem(108);
+
+        .title {
+          height: rem(108);
+          -webkit-line-clamp: 3;
+        }
+      }
+
+      .gd-price {
+        clear: both;
+        height: rem(50);
+        overflow: hidden;
+        margin-top: 0;
+      }
+
+      .gd-countdown {
+        clear: both;
+        display: block;
+        color: #999999;
+        margin-top: rem(16);
+        font-size: rem(26);
+        width: rem(260);
+        height: rem(32);
+        line-height: rem(32);
+        overflow: hidden;
+
+        .txt {
+          display: inline;
+        }
+        .date {
+          display: inline;
+          color: #fff;
+
+          b {
+            background-color: #8a7a84;
+            border-radius: 4px;
+            padding: 0 rem(4);
+            font-weight: normal;
+          }
+          em {
+            color: #8a7a84;
+            padding: 0 rem(4);
+            font-style: normal;
+          }
+        }
+      }
+    }
+
+
+    .gd-cmd {
+
+      &.btn-disable i {
+        background-color: #fff;
+        color: #ccc;
+      }
+
+      i {
+        background-color: initial;
+        color: #56aeff;
+        font-size: rem(54);
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+/* common */
+@charset "utf-8";
+@import "../../common-750";
+@import "detail-header";
+
+.details {
+	background-color: #fff;
+	.detail-content{
+		width: 100%;
+		overflow: hidden;
+		img{
+			display: block;
+			width: 100%;
+		}
+	}
+	.loading{
+		text-align: center;
+		color: #999;
+		margin-top: rem(40);
+		font-size: rem(26);
+	}
+}

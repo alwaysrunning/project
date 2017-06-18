@@ -1,0 +1,30 @@
+.mod-notice {
+  height: rem(64);
+  line-height: rem(64);
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+
+  .mod-icon {
+    float: left;
+    font-size: rem(32);
+    color: #f03468;
+    margin-left: rem(20);
+    margin-right: rem(20);
+
+  }
+  .mod-cnt {
+    float: left;
+    height: rem(64);
+    overflow: hidden;
+    width: rem(640);
+
+    a {
+      height: rem(64);
+      font-size: rem(28);
+      color: #666;
+      line-height: rem(64);
+      display: block;
+    }
+  }
+}
+

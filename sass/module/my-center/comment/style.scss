@@ -1,0 +1,29 @@
+/* common */
+@import "../../../common-750";
+@import "../../../common/slider/slider";
+@import "../../../common/form/form";
+@import "../../../common/button/button";
+@import "../../../common/dialog/dialog";
+@import "../../../common/scroll-load/scroll-load";
+@import "../../../common/go-top/go-top";
+@import "../../../no-data";
+
+/* modules */
+
+@import "../common/base";
+@import "../common/pros";
+@import "../common/button";
+@import "../common/none";
+@import "../common/comment-star";
+@import "../orders/source/orders";
+@import "./source/head";
+@import "./source/comments";
+@import "./source/comment-order";
+@import "./source/comment-pro";
+html{
+    background: #f0f0ed;
+    padding: 0 0 rem(20);
+}
+a.ui-button-red:visited {
+    color: #fff;
+}

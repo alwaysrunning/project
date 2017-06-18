@@ -1,0 +1,30 @@
+/* common */
+@charset "utf-8";
+@import "../../common";
+@import "../../common/button/button";
+
+.empty{
+	padding: rem(100) rem(60);
+	text-align: center;
+	background-color: #f2f2f2;
+	height: 100%;
+	.icon{
+		font-size: rem(120);
+		display: inline-block;
+		color: #cdcdcd;
+	}
+	.emt-txt{
+		font-size: rem(24);
+		text-align: center;
+		color: #999;
+		margin: rem(40) auto rem(30);
+	}
+	.ui-button-white{
+		display: inline-block;
+		width: rem(138);
+		height: rem(58);
+		line-height: rem(58);
+		font-size: rem(24);
+		color: #666;
+	}
+}

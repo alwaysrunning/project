@@ -1,0 +1,289 @@
+.mod-order{
+    .pro-item {
+        border-bottom: solid #e4e4e4 1px;
+        .pro-img {
+            border: 0;
+        }
+    }
+    .prop-name{
+        float: left;
+        width: rem(142);
+        margin-right:rem(-150);
+        color:#666;
+    }
+    .prop-value{
+        float: left;
+        margin-left: rem(142);
+        min-height: rem(40);
+        color:#333;
+    }
+    .margin-left20{
+        margin-left: rem(20);
+    }
+    .part-zone{
+        background: #fff;
+        margin:0 0 rem(20);
+        padding: rem(20) rem(20);
+        line-height: rem(40);
+        font-size:rem(26);
+        border-radius: rem(8);
+    }
+    .order-buttons{
+        .ui-button{
+            height: auto;
+            line-height: rem(80);
+            font-size: rem(36);
+        }
+    }
+    .order-num{
+        color:#666;
+        font-size:rem(24);
+        .prop-name{
+            color:#666;
+            width:auto;
+            margin-right:0;
+        }
+        .prop-value{
+            color:#666;
+            margin-left: 0;
+        }
+    }
+    .order-count{
+        color:#666;
+        font-size:rem(24);
+        border-bottom:1px solid #e4e4e4;
+        line-height:rem(60);
+        .prop-name{
+            width:auto;
+            margin-right:0;
+        }
+        .prop-value{
+            margin-left: 0;
+            color: #f33066;
+        }
+    }
+    .order-address{
+        border-bottom:1px solid #e4e4e4;
+        padding: rem(10) 0;
+    }
+    .distribution-type{
+        border-bottom:1px solid #e4e4e4;
+        padding: rem(10) 0;
+        line-height:rem(60);
+        .distribution-type-name{
+            color:#666;
+            display: block;
+            width: rem(142);
+            margin-right:rem(-150);
+            float:left;
+        }
+        .distribution-type-value{
+            color:#333;
+            float:right;
+            width: 100%;
+            .distribution-type-content{
+                margin-left: rem(140);
+            }
+        }
+        .content-right{
+            display: block;
+            min-width:rem(80);
+            height: 100%;
+            height: 100%;
+            padding: 0 0 0 rem(20);
+            float:right;
+            text-align: right;
+        }
+    }
+    .order-items{
+        font-size: rem(24);
+        line-height: rem(24);
+    }
+
+    .logis-dt {
+        color:#666;
+        position: relative;
+        line-height: rem(80);
+        border-bottom: 1px solid #e4e4e4;
+        b {
+            display: block;
+            -webkit-backface-visibility: hidden;
+            position: absolute;
+            right: rem(32);
+            top: 40%;
+            width: 0;
+            height: 0;
+            border-width: rem(12);
+            border-style: solid dashed dashed;
+            border-color: #999 transparent transparent;
+            font-size: 0;
+            line-height: 0;
+            -webkit-transition: -webkit-transform .2s ease-in;
+            -moz-transition: -moz-transform .2s ease-in;
+            -o-transition: -o-transform .2s ease-in;
+            transition: transform .2s ease-in;
+            -moz-transform: rotate(0deg);
+            -moz-transform-origin: 50% 30%;
+            -webkit-transform: rotate(0deg);
+            -webkit-transform-origin: 50% 30%;
+            -o-transform: rotate(0deg);
+            -o-transform-origin: 50% 30%;
+            transform: rotate(0deg);
+            transform-origin: 50% 30%;
+        }
+        b.shown {
+            transform: rotate(180deg);
+        }
+        p {
+            position: relative;
+            width: 90%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            .logis-dt-brief {
+                color: #333;
+            }
+        }
+    }
+    .logistics-info{
+        background-color: #ececec;
+        padding:0 rem(20);
+        ul{
+            border-left: rem(2) solid #e4e4e4;
+            padding: rem(30) 0 rem(30) rem(24);
+            li{
+                display: block;
+                position: relative;
+                line-height: 0.8rem;
+                padding: rem(30) rem(30) rem(10) rem(30);
+                border-radius: rem(8);
+                background: #fff;
+                margin-bottom: rem(30);
+                // border: 1px solid #999;
+                &.last{
+                    color:#ff6162;
+                    em{
+                        background:#ff6162;
+                    }
+                }
+                .logis-node-time{
+                    margin: 0 rem(16) 0 0;
+                    text-align: right;
+                    font-size: rem(16);
+                    color: #878787;
+                    font-family: tahoma, arial, 'Hiragino Sans GB', SimSun, sans-serif;
+                }
+                .logis-content{
+                    display: inline;
+                }
+                em{
+                    font-size: 0.1rem;
+                    font-style: normal;
+                    position: absolute;
+                    left:rem(-29);
+                    top: 48%;
+                    line-height: rem(24);
+                    background:#e4e4e4;
+                    height: rem(8);
+                    width: rem(8);
+                    border-radius:rem(8);
+                }
+                i {
+                    border-right: rem(12) solid #fff;
+                    display: inline-block;
+                    border-top: rem(12) solid transparent;
+                    border-bottom: rem(12) solid transparent;
+                    top: 40%;
+                    left: rem(-20);
+                    border-left: rem(12) solid transparent;
+                    width: 0;
+                    height: 0;
+                    position: absolute;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+    .pay-type{
+        border-bottom:1px solid #e4e4e4;
+        padding: rem(10) 0;
+        line-height:rem(60);
+    }
+    .order-save{
+        padding: rem(20) 0 rem(8);
+        .prop-value{
+        }
+    }
+    .order-money{
+        .prop-value{
+            float: right;
+            color:#f33066;
+        }
+    }
+    .order-buttons{
+        a{
+            margin-top: rem(12);
+            margin-bottom: rem(12);
+        }
+    }
+    .imgsrc {
+        img {
+            float: left;
+            width: rem(150);
+            height: rem(100);
+            margin: rem(10) rem(12) 0 0;
+        }
+    }
+}
+
+.cancel-cnt {
+    font-size: rem(28);
+    color: #666;
+    padding: rem(10);
+
+    .other-reason {
+        position: relative;
+        #cancel-lb {
+            position: absolute;
+            z-index: 1;
+            font-size: 0.45rem;
+            color: #e4e4e4;
+            padding-left: 0.25rem;
+            top: 0.25rem;
+            left: 3.5rem;
+            display: block;
+        }
+        #jReason {
+            position: absolute;
+            left: 3.6rem;
+            top: 0.22rem;
+            width: 6.3rem;
+        }
+        .jOtherReason {
+            position: absolute;
+            left: 0;
+        }
+    }
+    .buttons {
+        position: relative;
+        top: 1.6rem;
+        left: 3.6rem;
+    }
+    .ui-item {
+        .ui-label {
+            margin: 0.5rem 0 0.2rem 0;
+            color: #fff;
+            font-size: 0.5rem;
+        }
+        .hint {
+            font-size: 0.4rem;
+            color: #fff;
+        }
+    }
+}
+.ui-button.ui-button-red, .ui-button.ui-button-white {
+    background: #f03468;
+    margin: 0 rem(20) 0 rem(20);
+    color: #fff;
+}

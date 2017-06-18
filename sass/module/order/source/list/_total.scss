@@ -1,0 +1,28 @@
+%total {
+	.list-total-box{
+		background: #fff6f7;
+	}
+    .list-total {
+        /* border-top: 1px solid #e5e5e5; */
+        margin: 0px;
+        padding: 0px rem(20) rem(20) rem(20);
+        .list-p {
+            text-align: right;
+            margin-top: rem(14);
+            .other-money {
+				font-family:'microsoft yahei';
+                color: #b7b6b4;
+                margin-left: rem(20);
+            }
+            .other-money-del {
+                @extend .other-money;
+				text-decoration:line-through;
+            }
+            .total-money {
+				font-family:'microsoft yahei';
+                color: #ed3666;
+                font-size: rem(32);
+            }
+        }
+    }
+}

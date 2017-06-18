@@ -1,0 +1,24 @@
+<script id="cart/list/warehouse/warehouse" type="text/html">
+<%
+	for(var i=0; i<group.warehouse_groups.length;i++){
+		var warehouse = group.warehouse_groups[i];
+%>
+	<div class="jWarehouse list-warehouse" <% if(warehouse.overflowLimitAmount){ %> data-tariff-limit=1 <% } %> <% if(warehouse.overflowLimitTaxation){ %> data-tariff-up=1 <% } %>>
+		<table class="box">
+			<%include('cart/list/warehouse/title', {warehouse: warehouse})%>
+			<%include('cart/list/warehouse/items/items', {items : warehouse.products, _flag: 'products', group:group})%>
+			<%include('cart/list/warehouse/items/unable-items', {items: warehouse.gifts, _flag : 'gifts'})%>
+			<%include('cart/list/warehouse/items/unable-items', {items: warehouse.unableGifts, _flag : 'unable-gifts', _trClass : 'disabled-list' })%>
+			<%include('cart/list/warehouse/items/unable-items', {items: warehouse.unableGroups, _flagHtml: '失效', _flag:'unable-groups', _trClass : 'disabled-list'})%>
+			<%include('cart/list/warehouse/items/unable-items', {items: warehouse.unablePreSale, _flagHtml: '失效', _flag: 'unable-pre-sale', _trClass : 'disabled-list'})%>
+			<%include('cart/list/warehouse/total', {warehouse : warehouse})%>
+			<%include('cart/list/warehouse/tariff', {warehouse : warehouse})%>
+		</table>
+	</div>
+<% } %>
+</script>
+<!--#include file="title.html"-->
+<!--#include file="items/items.html"-->
+<!--#include file="items/unable-items.html"-->
+<!--#include file="total.html"-->
+<!--#include file="tariff.html"-->

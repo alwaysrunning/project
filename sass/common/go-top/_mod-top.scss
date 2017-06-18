@@ -1,0 +1,15 @@
+.mod-gotop{
+    position:fixed;
+    bottom:rem(72);
+    right:rem(8);
+    width:rem(88);
+    height:rem(88);
+    padding: rem(20) 0 0 rem(20);
+    z-index:100;
+    .iconfont{
+        font-size:rem(88);
+        line-height:rem(88);
+        color:#666;
+        opacity:0.8;
+    }
+}

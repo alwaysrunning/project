@@ -1,0 +1,166 @@
+/*
+Generic button mixins
+@author Allex Wang (allex.wxn@gmail.com)
+*/
+
+$button-fg: #fff;
+$button-bg: #f03465;
+$button-border-color: #f03465;
+$button-hover-bg: #fc4b7c;
+$button-hover-border-color: #fc4b7c;
+
+// ui-button mixin defines
+
+@mixin ui-button-style(
+  $fg: $button-fg,
+  $bg: $button-bg,
+  $border-color: $button-border-color,
+  $hover-bg: $button-hover-bg,
+  $hover-border-color: $button-hover-border-color
+) {
+    color: $fg;
+    background-color: $bg;
+    border: none;
+    &:active, &:hover {
+      background-color: $hover-bg;
+      text-decoration: none;
+    }
+    @content;
+}
+
+@mixin ui-button(
+  $name,
+  $fg: $button-fg,
+  $bg: $button-bg,
+  $border-color: $button-border-color,
+  $hover-bg: $button-hover-bg,
+  $hover-border-color: $button-hover-border-color
+) {
+  .ui-button-#{"" + $name} {
+    text-align: center;
+    @include ui-button-style($fg, $bg, $border-color, $hover-bg, $hover-border-color);
+  }
+}
+
+.ui-button {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    height: 1.55rem;
+    font: 400 .75rem/1.6rem sans-serif;
+    cursor: pointer;
+    outline: none;
+    font-size: 0.75rem;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    @include border-radius(3px);
+    @include box-sizing(border-box);
+    @include ui-button-style();
+
+    &:active {
+        text-decoration: none;
+        background: #fc4b7c;
+    }
+
+    &.disabled, &[disabled], &:disabled {
+        @include ui-button-style(#ccc, #999, #ddd, #999, #ddd) {
+            cursor: text;
+        }
+    }
+}
+
+.ui-button-file {
+  line-height: 2.2rem;
+  position: relative;
+  input[type="file"] {
+    display: block;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+
+/* .ui-button-red */
+@include ui-button("red", #fff, #db0000, #db0000, #db0000, #db0000);
+
+/* .ui-button-orange */
+@include ui-button("orange", #fff, #f90, #f90, #ffa800, #ffa800);
+
+/*.ui-button-primary*/
+@include ui-button("primary", #fff, #f03468, #f03468, #f03468, #f03468);
+
+/*.ui-button-primary-o*/
+@include ui-button("primary-o", #f03468, #fff, #f03468, #fff, #f03468);
+
+/* .ui-button-green */
+@include ui-button("green", #fff, #090, #090, #007c00, #007c00);
+
+/* .ui-button-white */
+@include ui-button("white", #666, #fff, #ccc, #fff, #ccc);
+
+/* .ui-button-yunhou */
+@include ui-button("yun", #fff, #f03468, #f03468, #f03468, #f03468);
+
+/* .ui-button-yunhou-font */
+@include ui-button("yun-font", #f03468, none, none, none, none);
+
+/* .ui-button-yunhou-font-gray */
+@include ui-button("yun-font-gray", #d9d9d9, none, none, none, none);
+
+/* .ui-button-disabled */
+@include ui-button("disabled", #fff, #999, #999, #999, #666);
+
+/* .ui-button-block */
+@include ui-button('black', #fff, #333, #333, #3c3c3c, #3c3c3c);
+
+/* button icon */
+.ui-button .icon {
+    margin-right: 5px;
+    font-size: 0.7rem;
+    line-height: 15px;
+    -webkit-text-stroke-width: 0;
+}
+
+/* large button */
+.ui-button-l {
+    height: 46px;
+    padding: 0 20px;
+    font: 400 18px/46px 'microsoft yahei';
+    .iconfont {
+        font-size: 20px;
+    }
+}
+
+/* middle button */
+.ui-button-m {
+    height: 26px;
+    padding: 0 15px;
+    font: 400 16px/26px 'microsoft yahei';
+    .iconfont {
+        font-size: 16px;
+    }
+}
+
+.ui-button-upload {
+    position: relative;
+    &.file-uploaded {
+        .upload-txt { display: none; }
+        .upload-file-ctl { display: none; }
+    }
+    .icon-delete {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        background: url(//s1.bbgstatic.com/lib/plugins/uploadify/3.2.1/uploadify-cancel.png) center center no-repeat;
+    }
+}

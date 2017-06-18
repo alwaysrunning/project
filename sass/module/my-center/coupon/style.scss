@@ -1,0 +1,23 @@
+/* common */
+@import "../../../common-750";
+@import "../../../common/slider/slider";
+@import "../../../common/form/form";
+@import "../../../common/button/button";
+@import "../../../common/dialog/dialog";
+@import "../../../common/scroll-load/scroll-load";
+@import "../../../no-data";
+
+/* modules */
+@import "../common/base";
+@import "../common/none";
+@import "./source/coupon";
+
+html{
+    padding: 0 0 rem(20);
+}
+.float-left{
+    float:left;
+}
+.float-right{
+    float:right;
+}

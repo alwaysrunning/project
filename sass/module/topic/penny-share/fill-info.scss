@@ -1,0 +1,255 @@
+/**
+* @file get-present.scss
+* @synopsis  get present
+* @author licuiting, 250602615@qq.com
+* @version 1.o
+* @date 2015-08-06
+*/
+
+@import "../../../common";
+@import "../../../../fonts/iconfont.css";
+@import "../../../common/dialog/dialog";
+@import "_pop";
+ .txt-els {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.page-view {
+    /* padding-bottom: rem(160); */
+}
+.mod-fill-info {
+    .hd {
+        padding-top: rem(76);
+        background: #ec255e;
+        position: relative;
+        .logo-wrap {
+            position: absolute;
+            width: 100%;
+            bottom: rem(-46);
+            z-index: 1;
+            .ico-logo {
+                width: rem(100);
+                display: block;
+                height: rem(100);
+                margin: 0 auto;
+                background: url('//s1.bbgstatic.com/gshop/images/topic/penny-share/cloud.png') 0px 0px no-repeat;
+                background-size: 100%;
+            }
+        }
+        .ft {
+            background: url('//s1.bbgstatic.com/gshop/images/topic/penny-share/bottom-bg.png') 0px 0px repeat-x;
+            height: 15px;
+            margin-top: -1px;
+        }
+    }
+    .bd {
+        .bd-wrap {}.tips-box {
+            text-align: center;
+            color: #333;
+            font-size: rem(30);
+            padding: rem(100) rem(20) 0 rem(20);
+            line-height: rem(34);
+            .a-click {
+                color: blue;
+            }
+        }
+    }
+}
+.mod-banner {
+    padding-top: rem(60);
+    .bd-banner {
+        width: rem(488);
+        margin: 0 auto;
+        .lft {
+            float: left;
+            width: rem(26);
+            height: rem(60);
+            background: url('//s1.bbgstatic.com/gshop/images/topic/penny-share/banner-lft.png') 0px rem(6) no-repeat;
+            background-size: 100%;
+        }
+        .mid {
+            float: left;
+            text-align: center;
+            background: #ec255e;
+            color: #fff;
+            width: rem(436);
+            height: rem(60);
+            font-size: rem(30);
+            .text-pre, .text-next {
+                display: inline-block;
+                vertical-align: middle;
+                line-height: normal;
+                height: rem(60);
+                line-height: rem(60);
+            }
+            .text-next {
+                padding-left: rem(6);
+            }
+        }
+        .rit {
+            float: left;
+            width: rem(26);
+            height: rem(60);
+            margin-left: -1px;
+            background: url('//s1.bbgstatic.com/gshop/images/topic/penny-share/banner-rit.png') 0px rem(6) no-repeat;
+            background-size: 100%;
+        }
+    }
+}
+.mod-pro {
+    width: rem(350);
+    height: rem(480);
+    margin-top: rem(30);
+    margin: rem(30) auto 0px auto;
+    position: relative;
+    .img-box, .a-box {
+        height: rem(350);
+        display: block;
+    }
+    .a-box {
+        text-align: center;
+        .img-item {
+            width: rem(350);
+            height: rem(350);
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    .price-box {
+        font-size: rem(22);
+        padding: 0px rem(10);
+        margin-top: rem(4);
+        .detail {
+            .a-detail {
+                display: block;
+                color: #666666;
+                /* width: rem(280); */
+                word-wrap: break-word;
+                line-height: rem(30);
+                word-break: normal;
+                height: rem(60);
+                overflow: hidden;
+            }
+        }
+        .buy-info {
+            color: #fff;
+            margin-top: rem(4);
+            .buy-lft {
+                background: #c91143;
+                border-radius: rem(4) 0px 0px rem(4);
+                width: 50%;
+                float: left;
+                height: rem(50);
+                text-align: center;
+                font-size: rem(26);
+                .ico-money {
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-style: normal;
+                    line-height: rem(50);
+                    font-size: rem(22);
+                    text-decoration: line-through;
+                }
+                .money-txt {
+                    display: inline-block;
+                    vertical-align: middle;
+                    line-height: rem(50);
+                    text-decoration: line-through;
+                }
+            }
+            .buy-penny {
+                width: 50%;
+                border-radius: 0px rem(4) rem(4) 0px;
+                background: #ec255e;
+                float: left;
+                text-align: center;
+                height: rem(50);
+                line-height: rem(50);
+                font-size: rem(26);
+            }
+        }
+    }
+}
+.mod-tips {
+    font-size: rem(24);
+    color: #bbbbbb;
+    text-align: center;
+    padding: rem(30) 0px;
+    .user-num {
+        color: #ee3167;
+    }
+	.user-list {
+		display:inline-block;
+		max-width:rem(100);
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		vertical-align:bottom;
+    }
+}
+.mod-form {
+    .form-hd {
+        background: url('//s1.bbgstatic.com/gshop/images/topic/penny-share/wave-white.png') 0px 0px repeat-x;
+        height: 15px;
+        margin-bottom: -1px;
+    }
+    .form-bd {
+        background: #ec255e;
+        padding-bottom: rem(30);
+        .form-item {
+            width: rem(444);
+            margin: 0 auto;
+            padding-top: rem(30);
+            .form-input {
+                position: relative;
+                .input-phone {
+                    font-size: rem(28);
+                    width: rem(254);
+                    height: rem(76);
+                    line-height: rem(76);
+                    text-align: center;
+                    border-radius: 0px;
+                }
+                .btn-security-code {
+                    font-size: rem(28);
+                    width: rem(180);
+                    height: rem(74);
+                    line-height: rem(74);
+                    text-align: center;
+                    border: 1px solid #e0e0e0;
+                    background: #f3f3f3;
+                    color: #666;
+                    display: inline-block;
+                }
+                .btn-security-code:active {
+                    background-color: #e6e6e6;
+                    border-color: #adadad;
+                }
+                .input-security-code {
+                    font-size: rem(28);
+                    width: 100%;
+                    height: rem(76);
+                    line-height: rem(76);
+                    text-align: center;
+                }
+            }
+            .form-btn {
+                display: inline-block;
+                height: rem(120);
+                line-height: rem(120);
+                border-radius: rem(60);
+                color: #ec255e;
+                background: #f1cf3a;
+                font-size: rem(36);
+                width: 100%;
+                text-align: center;
+                font-weight: 700;
+            }
+            .form-btn:active {
+                opacity: 0.8;
+            }
+        }
+    }
+}

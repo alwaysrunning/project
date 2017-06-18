@@ -1,0 +1,25 @@
+.shop-info-hd{
+    font-size: rem(26);
+    height: rem(60);
+    background: #fff;
+    li {
+        width: 50%;
+        float: left;
+        text-align:center;
+    }
+    a {
+        color: #333;
+        border-bottom:solid  #fff rem(3);
+        line-height: rem(57);
+        padding: 0 rem(10) 0 rem(10);
+    }
+    .hover {
+        border-bottom:solid  #f16320 rem(3);
+        color: #f16320;
+    }
+}
+.hd-third{
+    li {
+        width :33.3%;
+    }
+}

@@ -1,0 +1,48 @@
+.mod-edit-bar {
+    display: none;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 9;
+    border-top: 1px solid #e5e5e5;
+    background-color: #fff;
+    input[type="checkbox"] {
+        @extend %checkbox;
+    }
+    .vertical {
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-50%));
+    }
+    .lt {
+        padding-left: rem(10);
+        float: left;
+        line-height: rem(40);
+        span {
+            margin-left: rem(20);
+            font-size: rem(32);
+            color: #333;
+        }
+    }
+    .rt {
+        float: right;
+    }
+    .btn {
+        color: #fff;
+        font-size: rem(28);
+        padding: rem(44) rem(25);
+        line-height: 1;
+        border: none;
+        width: auto;
+        height: auto;
+        float: left;
+		border-left:1px solid #fff;
+	   @include active-btn;  
+        &-red {
+            background-color: #f34568;
+        }
+        &.ui-button-black {
+            background-color: #333;
+        }
+    }
+}

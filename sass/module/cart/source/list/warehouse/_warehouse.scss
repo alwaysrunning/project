@@ -1,0 +1,50 @@
+/* 仓库模块样式 */
+.list-warehouse {
+	border-bottom:1px solid #dedede;
+}
+.list-warehouse-selected {
+    border: rem(2) solid #f03467;
+	@extend %list-warehouse-warehouse-tariff-selected; 
+}
+
+%list-warehouse-warehouse {
+    @extend %list-warehouse-warehouse-title;
+    @extend %list-warehouse-warehouse-items-items;
+	@extend %list-warehouse-warehouse-total;
+	@extend %list-warehouse-warehouse-tariff;
+}
+
+/* ---- mod ---- */
+%list-warehouse-warehouse-title {
+    .warehouse-title {
+        .chk-box {} .flag {
+            color: #fff;
+            background: #f56f94;
+            border-radius: rem(4);
+            padding: rem(2) rem(4);
+            margin-right: rem(10);
+        }
+    }
+}
+%list-warehouse-warehouse-total {
+    .warehouse-total {
+        text-align: right!important;
+        font-size: rem(24)!important;
+        td {
+            background: #fff!important;
+            padding: rem(20)!important;
+            .text-box {
+                margin-left: rem(16);
+            }
+            .price-box {
+                color: #ef3566;
+            }
+            .price-del {
+                text-decoration: line-through;
+                color: #999;
+            }
+        }
+    }
+}
+@import "items/_items";
+@import "_tariff";

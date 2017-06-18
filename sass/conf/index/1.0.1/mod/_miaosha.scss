@@ -1,0 +1,73 @@
+.mod-port-ms {
+  width: rem(750);
+  height: rem(220);
+  display: block;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100% 100%;
+
+
+  @include keyframes(spin-vertical) {
+    from {
+      @include transform(rotateX(-180deg));
+    }
+    to {
+      @include transform(rotateX(-360deg));
+    }
+
+  }
+
+  .ms-info {
+    padding-top: rem(54);
+    text-align: center;
+
+    &.ms-info-now {
+      padding-top: rem(40);
+      min-height: rem(200);
+
+      .date {
+        position: relative;
+        @include transform-style(preserve-3d);
+
+        &.date-animate {
+          @include animation(spin-vertical 1.35s linear);
+        }
+      }
+    }
+
+    .txt {
+      color: #666;
+      font-size: rem(28);
+      text-align: center;
+    }
+    .date {
+      display: inline-block;
+      margin-top: .1rem;
+      padding-bottom: .3rem;
+      color: #393939;
+      border-bottom: 1px solid #333333;
+      font-size: rem(60);
+      text-align: center;
+
+      b,
+      em {
+        font-weight: normal;
+        font-style: normal;
+      }
+    }
+    .next {
+      display: none;
+      color: #666666;
+      font-size: rem(24);
+      text-align: center;
+
+      span {
+        display: inline-block;
+        margin-right: .4rem;
+      }
+      .red {
+        color: #f03468;
+      }
+    }
+  }
+}

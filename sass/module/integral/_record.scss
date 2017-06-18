@@ -1,0 +1,62 @@
+/*  */
+%record-hd {
+	.record-hd {
+        min-height: rem(174);
+        border-radius: rem(4);
+        border: 1px solid #ededed;
+        background: #fff;
+		position:relative;
+        .hd-l {
+            color: #fff;
+            height: rem(174);
+            line-height: rem(190);
+            width: rem(210);
+            text-align: center;
+			position:absolute;
+			top:0px;
+			left:0px;
+			background:image-url('list/coupon.png') no-repeat 50% 50%;
+			background-size:80%;
+            .icon {
+                font-size: rem(24);
+            }
+            .txt {
+                font-size: rem(50);
+            }
+        }
+        .hd-r {
+            height: rem(174);
+			position:relative;
+			margin-left:rem(210);
+			border-left:rem(2) dashed #f2f2f2;
+			.inner {
+				margin-right:rem(20);
+				padding:rem(30) rem(30) 0px;
+			    .title {
+			        color: #666666;
+			        font-size: rem(24);
+					@extend .txt-overflow;
+					line-height:rem(24);
+			    }
+				.des {
+			        color: #b0b0b0;
+			        font-size: rem(24);
+					@extend .txt-overflow;
+					line-height:rem(24);
+					margin-top:rem(20);
+					height:rem(56);
+				}
+			    .time {
+			        color: #b0b0b0;
+			        font-size: rem(20);
+					line-height:rem(20);
+			    }
+			}
+        }
+    }
+}
+
+.mod-list-record{
+	margin-top:rem(20);
+	@extend %record-hd;    
+}

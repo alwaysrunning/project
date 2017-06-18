@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery UI Datepicker - Default functionality</title>
+</head>
+<body>
+
+<div class="ui-calendar">
+    <div>
+        <p>Date: <input type="text" id="datepicker"></p>
+    </div>
+</div>
+
+<div class="ui-datepicker-date-range">
+    <div class="date-start">
+        <input type="text" name="date-start">
+    </div>
+    <div class="date-end">
+        <input type="text" name="date-end">
+    </div>
+</div>
+<script src="http://s1.bbgstatic.com/lib/require/2.1/require.js"></script>
+<script>
+require.config({
+    baseUrl: './',
+    paths: {
+        'jquery': '//s1.bbgstatic.com/lib/jquery/1.11.1/jquery'
+    }
+});
+require(['demo']);
+</script>
+</body></html>
